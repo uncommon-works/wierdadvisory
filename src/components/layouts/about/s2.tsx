@@ -100,7 +100,7 @@ export default function AboutLayout() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-blue-300">
+    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-green-100 text-green-900">
       <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4">
         
         <div className={`${notoEmoji.variable} font-noto absolute inset-0  text-5xl md:text-7xl select-none`}>
@@ -130,7 +130,7 @@ export default function AboutLayout() {
               );
             })}
           </h2>
-          <div ref={textRef} className="text-lg md:text-xl text-gray-800 max-w-xl mt-12">
+          <div ref={textRef} className="text-lg md:text-xl max-w-xl mt-12">
   
             <h2 className="font-bold text-2xl mb-2">The World is Getting Weirder</h2>
             <p className="mb-8 text-base">

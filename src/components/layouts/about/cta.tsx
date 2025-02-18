@@ -16,12 +16,8 @@ const notoEmoji = Noto_Emoji({
 
 export default function CtaLayout() {
   const words = [
-    "Feeling",
-    "a",
-    "Little",
-    "Weird?",
-    "Let's",
-    "Talk.",
+    "Why",
+    "Wierd(A)dvisory?"
   ]
 
   const hand1 = useRef<HTMLDivElement | null>(null)
@@ -87,10 +83,10 @@ export default function CtaLayout() {
   }, [])
 
   return (
-    <div ref={ctaSection} className={`${notoEmoji.variable} antialiased w-full py-[10rem] flex flex-col items-center justify-center`}> 
-      <h2 ref={headingRef} className="text-4xl md:text-5xl font-regular leading-[1.15] max-w-3xl text-center select-none mb-12">
+    <div ref={ctaSection} className={`${notoEmoji.variable} antialiased text-green-900 w-full py-[10rem] flex flex-col items-center justify-center`}> 
+      <h2 ref={headingRef} className="text-4xl md:text-6xl font-regular leading-[1.15] max-w-3xl text-center select-none mb-8">
         {words.map((word, i) => {
-          const isBold = word === "Let's" || word === "Talk."
+          const isBold = word === "Wierd(A)dvisory?"
           return (
             <span key={i} className="relative inline-block md:pb-2 overflow-hidden">
               <span className={`faint inline-block opacity-10 ${isBold ? "font-bold" : ""}`}>
@@ -103,6 +99,9 @@ export default function CtaLayout() {
           )
         })}
       </h2>
+      <p className="text-lg max-w-2xl text-center mb-20">
+        Because the world isn&apos;t getting simpler. Success belongs to leaders who embrace uncertainty, think differently, and make bold moves today.  
+      </p>
       <div className="relative flex justify-center md:space-x-2 font-noto select-none">
         <div ref={hand1} className="text-5xl md:text-7xl font-bold">👆🏻</div>
         <div ref={hand2} className="text-5xl md:text-7xl font-bold">👆🏻</div>
@@ -111,9 +110,17 @@ export default function CtaLayout() {
         <div ref={hand5} className="text-5xl md:text-7xl font-bold">👆🏻</div>
       </div>
 
-      <MagneticButton href="/contact">
-        Get In Touch
-      </MagneticButton>
+      <div className="flex flex-row gap-4">
+
+        <MagneticButton variant="green" href="/capabilities">
+          Our Capabilities
+        </MagneticButton>
+
+        <MagneticButton variant="outlineGreen" href="/contact">
+          Get In Touch
+        </MagneticButton>
+
+      </div>
         
     </div>
   )

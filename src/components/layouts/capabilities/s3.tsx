@@ -3,6 +3,14 @@
 import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Noto_Emoji } from "next/font/google";
+
+const notoEmoji = Noto_Emoji({
+  subsets: ["emoji"],
+  weight: ["400", "700"],
+  style: ["normal"],
+  variable: "--noto",
+})
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -10,9 +18,9 @@ export default function AboutLayout() {
 
   const words = [
     "From",
-    "Takeoff",
+    "Initiation",
     "to",
-    "Altitude"
+    "Transformation"
   ];
 
   const sectionRef = useRef<HTMLDivElement | null>(null)
@@ -68,7 +76,7 @@ export default function AboutLayout() {
         ease: 'power2.out',
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top top',
+          start: 'top bottom',
           end: 'bottom top',
           scrub: true,
         },
@@ -79,13 +87,13 @@ export default function AboutLayout() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-blue-950">
+    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-red-100 text-red-950">
       <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4">
         <div className="max-w-2xl mx-auto flex flex-col items-start text-left">
-          <p className="text-white font-medium mb-8 baskerville">From 0 → A</p>
-          <h2 ref={headingRef} className="text-4xl md:text-6xl text-white leading-[1.15] max-w-3xl select-none">
+          <p className="font-medium mb-8 baskerville">From X → T</p>
+          <h2 ref={headingRef} className="text-4xl md:text-6xl leading-[1.15] max-w-3xl select-none">
             {words.map((word, i) => {
-              const isBold = word === "Altitude";
+              const isBold = word === "Transformation";
               return (
                 <span key={i} className="relative inline-block leading-auto md:pb-1 overflow-hidden">
                   <span className={`faint inline-block opacity-10 ${isBold ? "font-bold" : ""}`}>
@@ -98,22 +106,16 @@ export default function AboutLayout() {
               );
             })}
           </h2>
-          <div ref={textRef} className="text-lg md:text-xl text-white max-w-xl mt-12">
+          <div ref={textRef} className="text-lg md:text-xl max-w-xl mt-12">
             <p className="mb-8 text-lg">
-              Starting anything new—whether it&apos;s a fresh initiative or pushing into leading-edge territory—is hard because you have to get two things right: seeing clearly where you need to go, and executing precisely to get there. We&apos;re good at both. We help you spot the right path forward and build the momentum to actually get there.
+              Real transformation isn&apos;t just making a plan—it&apos;s navigating all the unexpected challenges that come after. We help teams stay focused on where they&apos;re going while adapting to what they find along the way. 
             </p>
+          </div>
+          <div className={`${notoEmoji.variable} antialiased mt-24 font-noto text-7xl my-12 `}>
+            😔 😮 😳 🤯 🚀
           </div>
         </div>
       </div>
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute top-[25vh] left-0 w-full h-full">
-        <path
-          ref={pathRef}
-          d="M 0 50 L 60 50 C 75 50 85 20 100 10"
-          stroke="white"
-          strokeWidth="1"
-          fill="none"
-        />
-      </svg>
     </section>
   )
 }

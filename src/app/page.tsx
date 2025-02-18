@@ -4,15 +4,24 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import Hero from "@/components/layouts/(home)/h1"
-import About from "@/components/layouts/(home)/about"
-import F1 from "@/components/layouts/(home)/f1"
-import Solution from "@/components/layouts/(home)/solution"
-import Sec1 from "@/components/layouts/(home)/s1"
-import Sec2 from "@/components/layouts/(home)/s2"
-import Sec3 from '@/components/layouts/(home)/s3'
-import Sec4 from '@/components/layouts/(home)/s4'
-import Cta from "@/components/layouts/(home)/cta"
+
+// HERO
+import Hero from "@/components/layouts/home/h1"
+
+// INTRO SECTIONS
+import About from "@/components/layouts/home/about"
+import F1 from "@/components/layouts/home/f1"
+import Solution from "@/components/layouts/home/solution"
+
+// BODY SECTIONS
+import Sec1 from "@/components/layouts/home/s1"
+import Sec2 from "@/components/layouts/home/s2"
+import Sec3 from '@/components/layouts/home/s3'
+import Sec4 from '@/components/layouts/home/s4'
+
+// CTA
+import Cta from "@/components/layouts/home/cta"
+
 
 gsap.registerPlugin(ScrollTrigger)
 

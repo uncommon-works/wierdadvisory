@@ -4,10 +4,12 @@ import "@/styles/globals.css";
 
 import Lenis from "@/contexts/Lenis"
 import Vetra from "@/contexts/Vetra"
-import Mavon from "@/contexts/Mavon"
 
-import Nav from "@/components/elements/nav"
-import Footer from "@/components/elements/footer"
+import Mavon from '@/components/ui/mavon-bar'
+
+
+import Nav from "@/components/ui/nav"
+import Footer from "@/components/ui/footer"
 
 import { Toaster } from "@/components/ui/sonner"
 

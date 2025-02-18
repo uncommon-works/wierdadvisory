@@ -3,14 +3,6 @@
 import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Noto_Emoji } from "next/font/google";
-
-const notoEmoji = Noto_Emoji({
-  subsets: ["emoji"],
-  weight: ["400", "700"],
-  style: ["normal"],
-  variable: "--noto",
-})
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -18,9 +10,9 @@ export default function AboutLayout() {
 
   const words = [
     "From",
-    "Initiation",
+    "Barriers",
     "to",
-    "Transformation"
+    "Clarity"
   ];
 
   const sectionRef = useRef<HTMLDivElement | null>(null)
@@ -87,13 +79,13 @@ export default function AboutLayout() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-blue-100">
+    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-red-200 text-red-950">
       <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4">
-        <div className="max-w-2xl mx-auto flex flex-col items-start text-left text-primary">
-          <p className="font-medium mb-8 baskerville">From X → T</p>
+        <div className="max-w-2xl mx-auto flex flex-col items-start text-left">
+          <p className="font-medium mb-8 baskerville">From B → C</p>
           <h2 ref={headingRef} className="text-4xl md:text-6xl leading-[1.15] max-w-3xl select-none">
             {words.map((word, i) => {
-              const isBold = word === "Transformation";
+              const isBold = word === "Clarity";
               return (
                 <span key={i} className="relative inline-block leading-auto md:pb-1 overflow-hidden">
                   <span className={`faint inline-block opacity-10 ${isBold ? "font-bold" : ""}`}>
@@ -108,11 +100,8 @@ export default function AboutLayout() {
           </h2>
           <div ref={textRef} className="text-lg md:text-xl max-w-xl mt-12">
             <p className="mb-8 text-lg">
-              Real transformation isn&apos;t just making a plan—it&apos;s navigating all the unexpected challenges that come after. We help teams stay focused on where they&apos;re going while adapting to what they find along the way. 
+              Most strategic problems persist because something&apos;s blocking clear thinking—whether it&apos;s outdated assumptions, organizational habits, or past approaches that didn&apos;t work. We help teams cut through these barriers. By creating space to think differently, we help you see solutions that were there all along. 
             </p>
-          </div>
-          <div className={`${notoEmoji.variable} antialiased mt-24 font-noto text-7xl my-12 `}>
-            😔 😮 😳 🤯 🚀
           </div>
         </div>
       </div>

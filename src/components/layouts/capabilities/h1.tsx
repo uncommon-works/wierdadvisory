@@ -101,7 +101,7 @@ export default function HeroLayout() {
   }, [])
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center relative bg-white">
+    <section className="h-screen flex flex-col items-center justify-center relative bg-white text-red-950">
       <div className="text-center space-y-4 md:space-y-8">
         <div ref={containerRef}>
           <h1 ref={textRef} className="text-4xl md:text-7xl h-[44px] md:h-[86px] inline-block overflow-hidden"> 

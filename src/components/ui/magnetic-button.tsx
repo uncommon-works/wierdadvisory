@@ -9,7 +9,21 @@ interface MagneticButtonProps {
   children: string
   href: string
   size?: "icon" | "sm" | "lg"
-  variant?: "default" | "secondary" | "outline" | "ghost" | "link"
+  variant?: 
+    "default" | 
+    "blue" | 
+    "red" | 
+    "green" | 
+    "yellow" |
+    "secondary" | 
+    "outline" | 
+    "outlineBlue" | 
+    "outlineRed" | 
+    "outlineGreen" | 
+    "outlineYellow" |
+    "ghost" | 
+    "link"
+  color?: "blue" | "yellow" | "red" | "green"
 }
 
 export default function MagneticButton({ children, size = "lg", variant, href }: MagneticButtonProps) {

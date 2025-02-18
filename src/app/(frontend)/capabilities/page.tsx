@@ -4,13 +4,13 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import Head1 from "@/components/layouts/(capabilities)/h1"
-import Sec1 from "@/components/layouts/(capabilities)/s1"
-import Sec2 from "@/components/layouts/(capabilities)/s2"
-import Sec3 from "@/components/layouts/(capabilities)/s3"
-import Sec4 from "@/components/layouts/(capabilities)/s4"
+import Head1 from "@/components/layouts/capabilities/h1"
+import Sec1 from "@/components/layouts/capabilities/s1"
+import Sec2 from "@/components/layouts/capabilities/s2"
+import Sec3 from "@/components/layouts/capabilities/s3"
+import Sec4 from "@/components/layouts/capabilities/s4"
 
-import Cta from "@/components/layouts/(capabilities)/cta"
+import Cta from "@/components/layouts/capabilities/cta"
 
 gsap.registerPlugin(ScrollTrigger)
 

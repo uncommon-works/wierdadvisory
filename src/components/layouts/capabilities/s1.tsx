@@ -10,9 +10,9 @@ export default function AboutLayout() {
 
   const words = [
     "From",
-    "Barriers",
+    "Takeoff",
     "to",
-    "Clarity"
+    "Altitude"
   ];
 
   const sectionRef = useRef<HTMLDivElement | null>(null)
@@ -42,6 +42,7 @@ export default function AboutLayout() {
           trigger: sectionRef.current,
           start: 'top 20%',
           toggleActions: 'play reverse play reverse',
+          scrub: 1.5,
         },
       })
       .to(fullSpans, {
@@ -68,9 +69,9 @@ export default function AboutLayout() {
         ease: 'power2.out',
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top bottom',
+          start: 'top top',
           end: 'bottom top',
-          scrub: true,
+          scrub: 2,
         },
       });
     }, sectionRef)
@@ -79,13 +80,13 @@ export default function AboutLayout() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-blue-300">
+    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-red-50 text-red-950">
       <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4">
-        <div className="max-w-2xl mx-auto flex flex-col items-start text-left text-primary">
-          <p className="font-medium mb-8 baskerville">From B → C</p>
+        <div className="max-w-2xl mx-auto flex flex-col items-start text-left">
+          <p className="font-medium mb-8 baskerville">From 0 → A</p>
           <h2 ref={headingRef} className="text-4xl md:text-6xl leading-[1.15] max-w-3xl select-none">
             {words.map((word, i) => {
-              const isBold = word === "Clarity";
+              const isBold = word === "Altitude";
               return (
                 <span key={i} className="relative inline-block leading-auto md:pb-1 overflow-hidden">
                   <span className={`faint inline-block opacity-10 ${isBold ? "font-bold" : ""}`}>
@@ -100,11 +101,21 @@ export default function AboutLayout() {
           </h2>
           <div ref={textRef} className="text-lg md:text-xl max-w-xl mt-12">
             <p className="mb-8 text-lg">
-              Most strategic problems persist because something&apos;s blocking clear thinking—whether it&apos;s outdated assumptions, organizational habits, or past approaches that didn&apos;t work. We help teams cut through these barriers. By creating space to think differently, we help you see solutions that were there all along. 
+              Starting anything new—whether it&apos;s a fresh initiative or pushing into leading-edge territory—is hard because you have to get two things right: seeing clearly where you need to go, and executing precisely to get there. We&apos;re good at both. We help you spot the right path forward and build the momentum to actually get there.
             </p>
           </div>
         </div>
       </div>
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute top-[25vh] left-0 w-full h-full">
+        <path
+          ref={pathRef}
+          d="M 0 50 L 60 50 C 75 50 85 20 100 10"
+          stroke="rgb(69 10 10)"
+          strokeWidth="1"
+          strokeLinecap="round"
+          fill="none"
+        />
+      </svg>
     </section>
   )
 }

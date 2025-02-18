@@ -70,29 +70,29 @@ export default function WhoWeAre() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative h-[100vh] py-[30vh] px-6 bg-blue-100">
+    <section ref={sectionRef} className="relative h-[100vh] py-[30vh] px-6 bg-green-50 text-green-900">
       <div className="grid grid-cols-3 h-full top-0 w-full max-w-[1440px] mx-auto px-6 ">
         <div className="flex flex-col justify-center col-span-2 w-full h-full py-[2rem] space-y-8">
           <div className="max-w-4xl mx-auto flex flex-col relative pl-12 py-8">
             {/* Vertical Line */}
             <div 
               ref={lineRef}
-              className="absolute left-0 top-0 w-[4px] h-full bg-primary -translate-x-6"
+              className="absolute left-0 top-0 w-[4px] h-full bg-green-900 -translate-x-6"
             />
 
             <div ref={companyRef} className="baskerville text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
               Who We Are: W<span className="font-bold">(A)</span>
             </div>
 
-            <div ref={phoneticRef} className="flex flex-col items-baseline gap-4 text-xl md:text-2xl text-gray-700 mb-16">
             <p className="text-xl mb-2">Wierd(A)dvisory, or as our friends like to call us, “W(A)”. </p>
+            <div ref={phoneticRef} className="flex flex-col items-baseline gap-4 text-xl md:text-2xl text-green-900/60 mb-16">
               <div className="flex items-baseline gap-4">
                 <span>[wierd ad-vis-or-y]</span>
                 <span className="baskerville italic">noun</span>
               </div>
             </div>
 
-            <div ref={definitionsRef} className="space-y-8">
+            <div ref={definitionsRef} className="space-y-6 font-medium">
               <div className="definition flex gap-4">
                 <span className="text-lg md:text-xl font-medium">1.</span>
                 <span className="text-lg md:text-xl">

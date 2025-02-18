@@ -6,7 +6,6 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Noto_Emoji } from "next/font/google";
 
-
 const notoEmoji = Noto_Emoji({
   subsets: ["emoji"],
   weight: ["400", "700"],
@@ -16,8 +15,12 @@ const notoEmoji = Noto_Emoji({
 
 export default function CtaLayout() {
   const words = [
-    "Why",
-    "Wierd(A)dvisory?"
+    "Feeling",
+    "a",
+    "Little",
+    "Weird?",
+    "Let's",
+    "Talk.",
   ]
 
   const hand1 = useRef<HTMLDivElement | null>(null)
@@ -83,10 +86,10 @@ export default function CtaLayout() {
   }, [])
 
   return (
-    <div ref={ctaSection} className={`${notoEmoji.variable} antialiased w-full py-[10rem] flex flex-col items-center justify-center`}> 
-      <h2 ref={headingRef} className="text-4xl md:text-5xl font-regular leading-[1.15] max-w-3xl text-center select-none mb-8">
+    <div ref={ctaSection} className={`${notoEmoji.variable} antialiased text-red-950 w-full py-[10rem] flex flex-col items-center justify-center`}> 
+      <h2 ref={headingRef} className="text-4xl md:text-5xl font-regular leading-[1.15] max-w-3xl text-center select-none mb-12">
         {words.map((word, i) => {
-          const isBold = word === "Wierd(A)dvisory?"
+          const isBold = word === "Let's" || word === "Talk."
           return (
             <span key={i} className="relative inline-block md:pb-2 overflow-hidden">
               <span className={`faint inline-block opacity-10 ${isBold ? "font-bold" : ""}`}>
@@ -99,9 +102,6 @@ export default function CtaLayout() {
           )
         })}
       </h2>
-      <p className="text-lg max-w-2xl text-center mb-20">
-        Because the world isn&apos;t getting simpler. Success belongs to leaders who embrace uncertainty, think differently, and make bold moves today.  
-      </p>
       <div className="relative flex justify-center md:space-x-2 font-noto select-none">
         <div ref={hand1} className="text-5xl md:text-7xl font-bold">👆🏻</div>
         <div ref={hand2} className="text-5xl md:text-7xl font-bold">👆🏻</div>
@@ -110,9 +110,11 @@ export default function CtaLayout() {
         <div ref={hand5} className="text-5xl md:text-7xl font-bold">👆🏻</div>
       </div>
 
-      <MagneticButton href="/contact">
+      <MagneticButton variant="red" href="/contact">
         Get In Touch
       </MagneticButton>
+
+      
         
     </div>
   )

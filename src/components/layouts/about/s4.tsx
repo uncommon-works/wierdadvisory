@@ -149,7 +149,7 @@ export default function SolutionLayout() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative px-6 bg-white min-h-[100vh]">
+    <section ref={sectionRef} className="relative px-6 bg-white min-h-[100vh] text-green-900">
       <div className="grid grid-cols-2 h-full top-0 size-12 w-full max-w-[1440px] mx-auto ">
         <div className="flex flex-col items-center justify-center col-span-1 md:pr-[20px] lg:px-[80px] w-full h-full pt-[25vh] space-y-8">
           <div className="max-w-3xl mx-auto flex flex-col">
@@ -169,15 +169,15 @@ export default function SolutionLayout() {
               })}
             </h3>
 
-            <p ref={textRefs[0]} className="text-lg md:text-[1.675vh] leading-relaxed text-gray-800 max-w-xl mt-12">
+            <p ref={textRefs[0]} className="text-lg md:text-[1.675vh] leading-relaxed max-w-xl mt-12">
               Hi, I&apos;m Sean Wierda. I started Wierd(A)dvisory because I noticed something odd: as the world got more complex, consulting got more formulaic. 
             </p>
 
-            <p ref={textRefs[1]} className="text-lg md:text-[1.675vh] leading-relaxed text-gray-800 max-w-xl mt-12">
+            <p ref={textRefs[1]} className="text-lg md:text-[1.675vh] leading-relaxed max-w-xl mt-12">
               The best solutions I&apos;d seen came from people who thought differently and weren&apos;t afraid to challenge conventional wisdom. So I built a firm around that idea - bringing together talented people who see patterns others miss and aren&apos;t constrained by how things &quot;should&quot; be done.
             </p>
 
-            <p ref={textRefs[2]} className="text-lg md:text-[1.675vh] leading-relaxed text-gray-800 max-w-xl mt-12">
+            <p ref={textRefs[2]} className="text-lg md:text-[1.675vh] leading-relaxed max-w-xl mt-12">
               We take on the kind of problems that make other consultants uncomfortable. The ones where the playbook doesn&apos;t work. Where you need to think from first principles and draw insights from unexpected places.
             </p>
 
@@ -187,10 +187,10 @@ export default function SolutionLayout() {
       </div>
 
 
-      <div ref={halfSectionRef} className="absolute w-[50%] right-0 top-0 h-full bg-blue-50 z-40">
-        <div className="absolute inset-0 bg-blue-50 overflow-hidden">
+      <div ref={halfSectionRef} className="absolute w-[50%] right-0 top-0 h-full bg-green-50 z-40">
+        <div className="absolute inset-0 bg-green-100 overflow-hidden">
           <Image 
-            src="/founder.jpg"
+            src="/founder.png"
             alt="Founder"
             width={1080}
             height={800}
