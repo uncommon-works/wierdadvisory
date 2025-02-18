@@ -110,7 +110,7 @@ export default function CtaLayout() {
         <div ref={hand5} className="text-5xl md:text-7xl font-bold">👆🏻</div>
       </div>
 
-      <MagneticButton href="/about">
+      <MagneticButton href="/contact">
         Get In Touch
       </MagneticButton>
         

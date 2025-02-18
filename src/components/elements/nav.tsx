@@ -14,7 +14,7 @@ const links: LinkProps[] = [
   { href: "/", text: "Home" },
   { href: "/about", text: "About" },
   { href: "/capabilities", text: "Capabilities" },
-  { href: "mailto:hello@wierdadvisory.com", text: "Contact" },
+  { href: "/contact", text: "Contact" },
 ]
 
 export default function Nav() {
