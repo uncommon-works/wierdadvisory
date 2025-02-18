@@ -6,59 +6,94 @@ export default function Page() {
   return (
     <section className="pt-[12rem] pb-[8rem] px-6">
       <div className="max-w-[600px] mx-auto">
-        <h1 className="text-3xl mb-4">Privacy Policy for Wierd<span className="font-bold">(A)</span>dvisory</h1>
 
-        <p className="mb-12"><strong>Effective Date:</strong> February 13, 2025</p>
 
-        <h2 className="text-2xl font-semibold mb-2 ">Introduction</h2>
-        <p className="mb-8">
-        Welcome to <em>Wierd(A)dvisory</em> (<em>W(A)</em>). Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect the information you provide through our contact form.
+        <h1 className="text-3xl mb-2">
+          Privacy Policy
+        </h1>
+        <p className="mb-4">
+          <strong>Last Updated:</strong> February 13, 2025
+        </p>
+        <p className="mb-10">
+          At Wierd(A)dvisory, we respect your privacy and are committed to protecting any personal information you share with us. This Privacy Policy explains how we handle data on our website.        
         </p>
 
-        <h2 className="text-2xl font-semibold mb-2">Information We Collect</h2>
+
+        <h2 className="text-2xl font-semibold mb-2">
+          Information We Collect
+        </h2>
         <p className="mb-2">
-        We only collect the following information when you submit a message through our contact form:
+          We collect minimal personal information, primarily when you voluntarily provide it through:
         </p>
-        <ul className="list-disc ml-6 mb-8">
-        <li><strong>Email Address:</strong> Provided by you to respond to your inquiry.</li>
+        <ul className="list-disc ml-6 mb-2">
+          <li>Our contact form</li>
+          <li>Direct email communication</li>
+        </ul>
+        <p className="mb-2">
+          We collect minimal personal information, primarily when you voluntarily provide it through:
+        </p>
+        <ul className="list-disc ml-6 mb-10">
+          <li>Your name</li>
+          <li>Your email address</li>
+          <li>Any information you include in your message</li>
         </ul>
 
-        <h2 className="text-2xl font-semibold mb-2">How We Use Your Information</h2>
+
+        <h2 className="text-2xl font-semibold mb-2">
+          Cookies & Website Analytics
+        </h2>
         <p className="mb-4">
-        The email address you provide is used solely for the purpose of responding to your inquiry or providing requested information.
+          Like most websites, ours may use cookies or similar technologies for basic functionality and performance monitoring. We do not track individuals or sell data.
         </p>
-        <p className="mb-8">
-        We do not use your email address for marketing purposes unless you explicitly opt-in to receive such communications.
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2">Data Storage and Protection</h2>
-        <p className="mb-8">
-        We take reasonable measures to protect the email address you provide. However, please note that no method of transmission over the internet or electronic storage is completely secure.
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-2">Sharing of Information</h2>
-        <p className="mb-8">
-        We do not sell, trade, or share your email address with any third parties, except as required by law.
+        <ul className="list-disc ml-6 mb-2">
+          <li>Our website is hosted by a third-party provider, which may log technical data (e.g., IP address, browser type) for security and maintenance purposes.</li>
+          <li>We may use third-party analytics services (e.g., Google Analytics) to understand general website traffic patterns.</li>
+        </ul>
+        <p className="mb-10">
+          You can adjust your browser settings to manage or disable cookies if desired.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-2">Your Rights</h2>
-        <p className="mb-8">
-        You have the right to request access to the email address you provided, update it, or request its deletion. To do so, please contact us at: <a href="mailto:hello@wierdadvisory.com" className="font-bold">hello@wierdadvisory.com</a>.
+
+        <h2 className="text-2xl font-semibold mb-2">
+          How We Use Your Information
+        </h2>
+        <p className="mb-2">
+          We use the information you provide solely to:
+        </p>
+        <ul className="list-disc ml-6 mb-2">
+          <li>Respond to inquiries</li>
+          <li>Communicate about our services</li>
+          <li>Maintain appropriate business records</li>
+        </ul>
+        <p className="mb-10">
+        We do not share, sell, or use your data for marketing purposes without your consent.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-2">Changes to This Policy</h2>
-        <p className="mb-8">
-        We reserve the right to update this Privacy Policy at any time. Changes will be posted on this page with the updated effective date.
+
+        <h2 className="text-2xl font-semibold mb-2">
+          Data Retention & Security
+        </h2>
+        <ul className="list-disc ml-6 mb-10">
+          <li>Emails and contact form submissions are retained as long as needed for business or legal purposes.</li>
+          <li>Our website and email systems are hosted by reputable third-party providers with industry-standard security measures.</li>
+        </ul>
+
+
+        <h2 className="text-2xl font-semibold mb-2">
+          Your Rights & Contact Information
+        </h2>
+        <p className="mb-10">
+        As a Canadian business, we comply with applicable privacy laws. If you have any questions or wish to request access, correction, or deletion of your data, contact us at: <a href="mailto:hello@wierdadvisory.com" className="font-bold">hello@wierdadvisory.com</a>.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
+
+        <h2 className="text-2xl font-semibold mb-2">
+          Updates to This Policy
+        </h2>
         <p className="mb-8">
-        If you have any questions about this Privacy Policy, please reach out to us at: [insert contact email].
+        We may update this Privacy Policy periodically. Any changes will be posted on this page.
         </p>
 
-        <p className="mt-6">
-        Thank you for trusting <em>Wierd<span className="font-bold">(A)</span>dvisory</em> with your data.
-        </p>
 
       </div>
     </section>

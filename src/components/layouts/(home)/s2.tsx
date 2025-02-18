@@ -13,7 +13,7 @@ const notoEmoji = Noto_Emoji({
 export default function Sec2() {
   return (
     <div className="bg-blue-300 h-[100vh] p-[5vw]">
-      <div className="absolute inset-0 top-[27vh] px-6">
+      <div className="absolute inset-0 top-[27vh] px-24">
         <div className="max-w-[1440px] grid grid-cols-2 items-center mx-auto">
           <div className="col-span-1 flex flex-col items-center pr-[8rem]">
             <h2 className="text-2xl md:text-3xl font-regular leading-[1.15] select-none">
