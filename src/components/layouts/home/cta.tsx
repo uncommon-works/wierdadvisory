@@ -1,10 +1,13 @@
 'use client'
 
-import MagneticButton from '../../ui/magnetic-button'
+import MagneticWrapper from '@/components/ui/magnetic-wrapper'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Noto_Emoji } from "next/font/google";
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useSheet } from '@/components/ui/sheet-provider'
 
 
 const notoEmoji = Noto_Emoji({
@@ -15,6 +18,18 @@ const notoEmoji = Noto_Emoji({
 })
 
 export default function CtaLayout() {
+
+  const { openSheet } = useSheet()
+
+  const handleOpenSheet = () => {
+    openSheet(
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold">Sheet Content</h2>
+        <p>This content can be anything you want to show in the sheet!</p>
+      </div>,
+    )
+  }
+
   const words = [
     "Feeling",
     "a",
@@ -33,6 +48,7 @@ export default function CtaLayout() {
   const headingRef = useRef<HTMLHeadingElement | null>(null)
 
   useEffect(() => {
+
     gsap.registerPlugin(ScrollTrigger)
 
     if (
@@ -43,10 +59,8 @@ export default function CtaLayout() {
       !hand5.current ||
       !ctaSection.current ||
       !headingRef.current 
-    ) {
-      return
-    }
-
+    ) return
+    
     const handItems = [
       { ref: hand1.current, rotation: "125deg" },
       { ref: hand2.current, rotation: "152deg" },
@@ -111,15 +125,23 @@ export default function CtaLayout() {
         <div ref={hand5} className="text-5xl md:text-7xl font-bold">👆🏻</div>
       </div>
 
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-4 pt-12 ">
             
-        <MagneticButton href="/about">
-          About W(A)
-        </MagneticButton>
+        <MagneticWrapper asChild>
+          <Button asChild variant="blue" size="lg" className="">
+            <Link href="/about">
+              About W(A)
+            </Link>
+          </Button>
+        </MagneticWrapper>
 
-        <MagneticButton variant="outline" href="/contact">
-          Get In Touch
-        </MagneticButton>
+        <MagneticWrapper >
+          <Button onClick={ handleOpenSheet } variant="outlineBlue" size="lg" >
+            <p>
+              Contact Us
+            </p>
+          </Button>
+        </MagneticWrapper>
 
       </div>
         

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useRef, useEffect } from 'react'
+import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -64,7 +65,7 @@ export default function AboutLayout() {
 
       gsap.to(path, {
         strokeDashoffset: 0,
-        duration: 3,
+        duration: 2,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -103,7 +104,15 @@ export default function AboutLayout() {
               Most strategic problems persist because something&apos;s blocking clear thinking—whether it&apos;s outdated assumptions, organizational habits, or past approaches that didn&apos;t work. We help teams cut through these barriers. By creating space to think differently, we help you see solutions that were there all along. 
             </p>
           </div>
+          
         </div>
+        <Image 
+            src="/clarity.png"
+            alt="Clarity"
+            width={1080}
+            height={800}
+            className="relative right-0 h-full object-cover mt-12"
+          />
       </div>
     </section>
   )

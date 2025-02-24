@@ -7,6 +7,7 @@ import Vetra from "@/contexts/Vetra"
 
 import Mavon from '@/components/ui/mavon-bar'
 
+import { SheetProvider } from "@/components/ui/sheet-provider";
 
 import Nav from "@/components/ui/nav"
 import Footer from "@/components/ui/footer"
@@ -32,14 +33,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${libreBaskerville.variable} antialiased`}>
+      <body className={`${libreBaskerville.variable} antialiased`} >
         <Lenis>
           <Vetra>
-            <Mavon />
-            <Nav />
-            {children}
-            <Footer />
-            <Toaster />
+            <SheetProvider>
+              <Mavon />
+              <Nav />
+              {children}
+              <Footer />
+              <Toaster />
+            </SheetProvider>
           </Vetra>
         </Lenis>
       </body>

@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-
 // HERO
 import Hero from "@/components/layouts/home/h1"
 
@@ -27,8 +26,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Page() {
 
-
-
   const section1Ref = useRef<HTMLDivElement | null>(null)
   const section2Ref = useRef<HTMLDivElement | null>(null)
   const section3Ref = useRef<HTMLDivElement | null>(null)
@@ -45,9 +42,6 @@ export default function Page() {
   const A2 = useRef<HTMLDivElement | null>(null)
   const A3 = useRef<HTMLDivElement | null>(null)
   const section4Ref = useRef<HTMLDivElement | null>(null)
-
-
-
 
   useEffect(() => {
 
@@ -122,9 +116,6 @@ export default function Page() {
     return () => ctx.revert()
     
   }, [])
-
-
-
 
   useEffect(() => {
     if (
@@ -228,6 +219,7 @@ export default function Page() {
             <div ref={wrapper4Ref} className="relative h-[100vh] z-10 overflow-hidden">
               <div ref={A3} className="relative h-[200vh] -mt-[25vh] z-10">
                 <Sec3 />
+                
               </div>
             </div>  
           </div>
@@ -237,6 +229,7 @@ export default function Page() {
 
 
       </div>
+     
       <Cta />
     </main>
   )

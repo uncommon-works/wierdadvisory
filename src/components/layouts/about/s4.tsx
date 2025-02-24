@@ -15,7 +15,7 @@ export default function SolutionLayout() {
 
   const sectionRef = useRef<HTMLDivElement | null>(null)
   const headingRef = useRef<HTMLHeadingElement | null>(null)
-  const textRefs = [useRef<HTMLParagraphElement>(null), useRef<HTMLParagraphElement>(null), useRef<HTMLParagraphElement>(null)]
+  const textRefs = [useRef<HTMLParagraphElement>(null), useRef<HTMLParagraphElement>(null), useRef<HTMLParagraphElement>(null), useRef<HTMLParagraphElement>(null)]
 
   const halfSectionRef = useRef<HTMLDivElement | null>(null)
 
@@ -62,7 +62,7 @@ export default function SolutionLayout() {
         stagger: 0.1,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 80%',
+          start: 'top 40%',
           toggleActions: 'play reverse play reverse',
         }
       })
@@ -169,15 +169,19 @@ export default function SolutionLayout() {
               })}
             </h3>
 
-            <p ref={textRefs[0]} className="text-lg md:text-[1.675vh] leading-relaxed max-w-xl mt-12">
-              Hi, I&apos;m Sean Wierda. I started Wierd(A)dvisory because I noticed something odd: as the world got more complex, consulting got more formulaic. 
+            <h4 ref={textRefs[0]} className="text-lg md:text-[2.675vh] leading-relaxed max-w-xl mt-12">
+              Hi, I&apos;m <a className="font-bold underline hover:opacity-60 transition-opacity cursor-pointer" href="https://seanwierda.com" target="_blank" rel="noopener noreferrer">Sean Wierda</a>. <span className=" font-noto">👋</span>
+            </h4>
+
+            <p ref={textRefs[1]} className="text-lg md:text-[1.675vh] leading-relaxed max-w-xl mt-6">
+              I started Wierd(A)dvisory because I noticed something odd: as the world got more complex, consulting got more formulaic. 
             </p>
 
-            <p ref={textRefs[1]} className="text-lg md:text-[1.675vh] leading-relaxed max-w-xl mt-12">
+            <p ref={textRefs[2]} className="text-lg md:text-[1.675vh] leading-relaxed max-w-xl mt-6">
               The best solutions I&apos;d seen came from people who thought differently and weren&apos;t afraid to challenge conventional wisdom. So I built a firm around that idea - bringing together talented people who see patterns others miss and aren&apos;t constrained by how things &quot;should&quot; be done.
             </p>
 
-            <p ref={textRefs[2]} className="text-lg md:text-[1.675vh] leading-relaxed max-w-xl mt-12">
+            <p ref={textRefs[3]} className="text-lg md:text-[1.675vh] leading-relaxed max-w-xl mt-6">
               We take on the kind of problems that make other consultants uncomfortable. The ones where the playbook doesn&apos;t work. Where you need to think from first principles and draw insights from unexpected places.
             </p>
 

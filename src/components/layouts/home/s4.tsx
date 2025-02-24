@@ -8,11 +8,6 @@ export default function s4() {
           <h2 className="text-2xl md:text-4xl font-regular leading-[1.15] select-none">
             At our core, we&apos;re <span className="font-bold">strategic advisors</span> who value clarifying questions, disciplined decision-making, elegant design, structured collaboration, meaningful story-telling, and confronting hard truths head-on.​
           </h2>
-          <div>
-
-            {/* EMOJIS HERE */}
-
-          </div>
         </div>
       </div>
     </div>

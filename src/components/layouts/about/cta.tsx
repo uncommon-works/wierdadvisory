@@ -1,11 +1,14 @@
 'use client'
 
-import MagneticButton from '../../ui/magnetic-button'
+import MagneticWrapper from '@/components/ui/magnetic-wrapper'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Noto_Emoji } from "next/font/google";
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
+import { useSheet } from '@/components/ui/sheet-provider'
 
 const notoEmoji = Noto_Emoji({
   subsets: ["emoji"],
@@ -15,6 +18,18 @@ const notoEmoji = Noto_Emoji({
 })
 
 export default function CtaLayout() {
+
+  const { openSheet } = useSheet()
+  
+  const handleOpenSheet = () => {
+    openSheet(
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold">Sheet Content</h2>
+        <p>This content can be anything you want to show in the sheet!</p>
+      </div>,
+    )
+  }
+
   const words = [
     "Why",
     "Wierd(A)dvisory?"
@@ -84,7 +99,7 @@ export default function CtaLayout() {
 
   return (
     <div ref={ctaSection} className={`${notoEmoji.variable} antialiased text-green-900 w-full py-[10rem] flex flex-col items-center justify-center`}> 
-      <h2 ref={headingRef} className="text-4xl md:text-6xl font-regular leading-[1.15] max-w-3xl text-center select-none mb-8">
+      <h2 ref={headingRef} className="text-4xl md:text-6xl font-regular leading-[1.15] max-w-3xl text-center select-none mb-8 baskerville">
         {words.map((word, i) => {
           const isBold = word === "Wierd(A)dvisory?"
           return (
@@ -99,9 +114,14 @@ export default function CtaLayout() {
           )
         })}
       </h2>
-      <p className="text-lg max-w-2xl text-center mb-20">
+      <p className="text-lg max-w-2xl text-center mb-4">
         Because the world isn&apos;t getting simpler. Success belongs to leaders who embrace uncertainty, think differently, and make bold moves today.  
       </p>
+      <p className="text-lg max-w-2xl text-center mb-20 font-bold">
+      Let&apos;s create something extraordinary together.
+      </p>
+
+
       <div className="relative flex justify-center md:space-x-2 font-noto select-none">
         <div ref={hand1} className="text-5xl md:text-7xl font-bold">👆🏻</div>
         <div ref={hand2} className="text-5xl md:text-7xl font-bold">👆🏻</div>
@@ -110,15 +130,23 @@ export default function CtaLayout() {
         <div ref={hand5} className="text-5xl md:text-7xl font-bold">👆🏻</div>
       </div>
 
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-4 pt-12">
 
-        <MagneticButton variant="green" href="/capabilities">
-          Our Capabilities
-        </MagneticButton>
+        <MagneticWrapper asChild>
+          <Button asChild variant="green" size="lg" className="">
+            <Link href="/capabilities">
+              Our Capabilities
+            </Link>
+          </Button>
+        </MagneticWrapper>
 
-        <MagneticButton variant="outlineGreen" href="/contact">
-          Get In Touch
-        </MagneticButton>
+        <MagneticWrapper >
+          <Button onClick={ handleOpenSheet } variant="outlineGreen" size="lg" >
+            <p>
+              Contact Us
+            </p>
+          </Button>
+        </MagneticWrapper>
 
       </div>
         

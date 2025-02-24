@@ -1,10 +1,14 @@
 'use client'
 
-import MagneticButton from '../../ui/magnetic-button'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Noto_Emoji } from "next/font/google";
+import { Button } from '@/components/ui/button'
+import MagneticWrapper from '@/components/ui/magnetic-wrapper'
+// import Link from 'next/link'
+
+import { useSheet } from '@/components/ui/sheet-provider'
 
 const notoEmoji = Noto_Emoji({
   subsets: ["emoji"],
@@ -14,6 +18,18 @@ const notoEmoji = Noto_Emoji({
 })
 
 export default function CtaLayout() {
+
+  const { openSheet } = useSheet()
+  
+    const handleOpenSheet = () => {
+      openSheet(
+        <div className="space-y-4">
+          <h2 className="text-2xl font-bold">Sheet Content</h2>
+          <p>This content can be anything you want to show in the sheet!</p>
+        </div>,
+      )
+    }
+
   const words = [
     "Feeling",
     "a",
@@ -110,12 +126,25 @@ export default function CtaLayout() {
         <div ref={hand5} className="text-5xl md:text-7xl font-bold">👆🏻</div>
       </div>
 
-      <MagneticButton variant="red" href="/contact">
-        Get In Touch
-      </MagneticButton>
+      <div className="flex flex-row gap-4 pt-12 ">
+            
+       {/*  <MagneticWrapper asChild>
+          <Button asChild variant="red" size="lg" className="">
+            <Link href="/case-studies">
+              View Case Studies
+            </Link>
+          </Button>
+        </MagneticWrapper>
+ */}
+        <MagneticWrapper >
+          <Button onClick={ handleOpenSheet } variant="outlineRed" size="lg" >
+            <p>
+              Contact Us
+            </p>
+          </Button>
+        </MagneticWrapper>
 
-      
-        
+      </div>
     </div>
   )
 }

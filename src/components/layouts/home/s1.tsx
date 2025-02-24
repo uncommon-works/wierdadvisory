@@ -22,7 +22,7 @@ export default function Sec1() {
             Our clients tend to be people who share our values of prioritizing <span className="font-bold">quality, reliability, and originality over brand prestige.</span>
           </p>
           <div className={`${notoEmoji.variable} antialiased mt-24 font-noto text-7xl my-12 `}>
-            🔳🔲🔳🔲🔳🔲♣♠🔘🥹
+            🔳🔲🔨🔲🌟🔲🔘♠🔲🔳
           </div>
         </div>
       </div>

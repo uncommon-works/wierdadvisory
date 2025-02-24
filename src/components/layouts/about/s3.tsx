@@ -84,10 +84,10 @@ export default function WhoWeAre() {
               Who We Are: W<span className="font-bold">(A)</span>
             </div>
 
-            <p className="text-xl mb-2">Wierd(A)dvisory, or as our friends like to call us, “W(A)”. </p>
             <div ref={phoneticRef} className="flex flex-col items-baseline gap-4 text-xl md:text-2xl text-green-900/60 mb-16">
+              <p className="text-xl mb-2">Wierd(A)dvisory, or as our friends like to call us, “W(A)”. </p>
               <div className="flex items-baseline gap-4">
-                <span>[wierd ad-vis-or-y]</span>
+                <span>[weird ad-vis-or-y]</span>
                 <span className="baskerville italic">noun</span>
               </div>
             </div>

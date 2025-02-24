@@ -104,12 +104,12 @@ export default function AboutLayout() {
       <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4">
         
         <div className={`${notoEmoji.variable} font-noto absolute inset-0  text-5xl md:text-7xl select-none`}>
-          <div ref={emoji1} className="absolute left-[12%] top-[15%] md:top-[22%]">🌎</div>
-          <div ref={emoji2} className="absolute left-[46%] top-[8%]">🚝</div>
-          <div ref={emoji3} className="absolute right-[10%] top-[15%] md:top-[20%]">😷</div>
-          <div ref={emoji4} className="absolute left-[10%] bottom-[15%] md:bottom-[20%]">💣</div>
-          <div ref={emoji5} className="absolute left-[42%] md:left-[50%] bottom-[10%]">💎</div>
-          <div ref={emoji6} className="absolute right-[10%] bottom-[15%] md:bottom-[22%]">👑</div>
+          <div ref={emoji1} className="absolute left-[12%] top-[15%] md:top-[22%]">🍻</div>
+          <div ref={emoji2} className="absolute left-[46%] top-[8%]">🪡</div>
+          <div ref={emoji3} className="absolute right-[10%] top-[15%] md:top-[20%]">🏥</div>
+          <div ref={emoji4} className="absolute left-[10%] bottom-[15%] md:bottom-[20%]">🎓</div>
+          <div ref={emoji5} className="absolute left-[42%] md:left-[50%] bottom-[10%]">🍎</div>
+          <div ref={emoji6} className="absolute right-[10%] bottom-[15%] md:bottom-[22%]">🛹</div>
         </div>
 
         <div className="max-w-2xl mx-auto flex flex-col items-start text-left">
@@ -132,21 +132,19 @@ export default function AboutLayout() {
           </h2>
           <div ref={textRef} className="text-lg md:text-xl max-w-xl mt-12">
   
-            <h2 className="font-bold text-2xl mb-2">The World is Getting Weirder</h2>
+            <h2 className="font-bold text-2xl mb-2">Hands-On</h2>
             <p className="mb-8 text-base">
-              The pace of change and growing complexity demands approaches that go beyond expertise alone. 
-              True success lies in the ability to adapt, create, and think differently.
+            Senior principals lead from the front, embedding themselves in the work to ensure quality and alignment.
             </p>
 
-            <h2 className="font-bold text-2xl mb-2">Extraordinary Talent Comes in Unexpected Forms</h2>
+            <h2 className="font-bold text-2xl mb-2">Bespoke</h2>
             <p className="mb-8 text-base">
-              The best ideas often come from those who defy traditional roles and expectations. 
-              We create environments where unconventional thinkers thrive and produce extraordinary work.
+            We apply first principles thinking and use the familiar tools to unfamiliar solutions unique to each situation.
             </p>
 
-            <h2 className="font-bold text-2xl mb-2">Craft Prevails Over Scale</h2>
+            <h2 className="font-bold text-2xl mb-2">Industry Agnostic</h2>
             <p className="mb-8 text-base">
-              Bigger doesn&apos;t mean better. Strategy isn&apos;t a commodity—it&apos;s a craft, and we treat it as such.
+            The best insights often come from seeing patterns where others see boundaries. We work across industries because the most interesting problems don&apos;t care what sector they&apos;re in.
             </p>
 
           </div>

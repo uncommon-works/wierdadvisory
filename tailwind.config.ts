@@ -9,6 +9,28 @@ export default {
   ],
   theme: {
   	extend: {
+  		animation: {
+        enter: "enter 500ms ease-out",
+        exit: "exit 500ms ease-in",
+      },
+  		keyframes: {
+  			slideIn: {
+  				'0%': {
+  					transform: 'translateX(100%)'
+  				},
+  				'100%': {
+  					transform: 'translateX(0)'
+  				}
+  			},
+  			slideOut: {
+  				'0%': {
+  					transform: 'translateX(0)'
+  				},
+  				'100%': {
+  					transform: 'translateX(100%)'
+  				}
+  			}
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -51,9 +73,9 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
-			fontFamily: {
-        noto: 'var(--noto), sans-serif',
-      },
+  		fontFamily: {
+  			noto: 'var(--noto), sans-serif'
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
@@ -61,5 +83,6 @@ export default {
   		}
   	}
   },
-  plugins: [],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;

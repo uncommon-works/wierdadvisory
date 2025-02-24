@@ -25,7 +25,7 @@ export default function F1() {
       </div>
       <div className="flex flex-col items-center justify-center max-w-3xl px-6 text-center">
         <h2 className="text-2xl md:text-2xl font-regular md:max-w-2xl select-none">
-          Welcome to<br /> <span className="inline-block py-6 text-4xl md:text-7xl baskerville">Wierd<span className="font-bold">(A)</span>dvisory</span>
+          Welcome to<br /> <span className="inline-block py-12 text-4xl md:text-[100px] baskerville">W<span className="font-bold">(A)</span></span>
         </h2>
         <p className="text-lg md:text-3xl w-auto md:max-w-xl mt-12">
         We are a strategy consultancy with a focus on helping leaders navigate a  <span className="font-bold">&apos;weird world.&apos;</span>
