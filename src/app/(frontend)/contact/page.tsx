@@ -7,7 +7,6 @@ export default function page() {
   return (
     <div className="relative">
       <Head1 />
-      <ContactForm />
     </div>
   )
 }

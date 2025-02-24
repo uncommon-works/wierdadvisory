@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 
-import { Button } from "@/components/ui/button"
+import { ContactForm } from "@/components/forms/contact-form"
 
 export default function HeroLayout() {
 
@@ -119,41 +119,8 @@ export default function HeroLayout() {
             <span className="relative inline-block">(A)</span>
           </h1>
         </div>
-        <form className="space-y-12 text-left">
-          <div className="space-y-4">
-            <label htmlFor="email" className="block text-sm text-gray-400">
-              Email address
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-              className="w-full bg-blue-50 rounded-xl p-4 text-lg border-0 focus:ring-1 focus:ring-gray-400 placeholder:text-gray-600"
-            />
-          </div>
 
-          <div className="space-y-4">
-            <label htmlFor="message" className="block text-sm text-gray-400">
-              How can we help?
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message"
-              required
-              rows={6}
-              className="w-full bg-blue-50 rounded-xl p-4 text-lg border-0 focus:ring-1 focus:ring-gray-400 placeholder:text-gray-600 resize-none"
-            />
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
-            <Button size="lg" color="blue" type="submit">
-              Submit Message
-            </Button>
-          </div>
-        </form>
+        <ContactForm />
         
       </div>
       

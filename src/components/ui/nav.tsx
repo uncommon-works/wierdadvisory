@@ -23,7 +23,7 @@ const links: LinkProps[] = [
   { href: "/", text: "Home", color: "bg-blue-200", hoverTextColor: "hover:text-blue-950", activeTextColor: "text-blue-950" },
   { href: "/about", text: "About", color: "bg-green-200", hoverTextColor: "hover:text-green-900", activeTextColor: "text-green-900" },
   { href: "/capabilities", text: "Capabilities", color: "bg-red-200", hoverTextColor: "hover:text-red-900", activeTextColor: "text-red-900" },
-  { href: "/case-studies", text: "Case Studies", color: "bg-yellow-200", hoverTextColor: "hover:text-yellow-500", activeTextColor: "text-yellow-500" },
+  // { href: "/case-studies", text: "Case Studies", color: "bg-yellow-200", hoverTextColor: "hover:text-yellow-500", activeTextColor: "text-yellow-500" },
   { href: "/contact", text: "Contact", color: "bg-purple-200", hoverTextColor: "hover:text-purple-800", activeTextColor: "text-purple-800" },
 ]
 
