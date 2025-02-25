@@ -103,8 +103,8 @@ export default function HeroLayout() {
   }, [])
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center relative bg-white">
-      <div className="text-center space-y-4 md:space-y-8">
+    <section className="h-auto md:h-screen flex flex-col md:items-center justify-stretch md:justify-center relative bg-white py-[8rem] px-8 gap-12">
+      <div className="text-left md:text-center space-y-4 md:space-y-8">
         <div ref={containerRef}>
           <h1 ref={textRef} className="text-4xl md:text-7xl h-[44px] md:h-[86px] inline-block overflow-hidden"> 
             <span className="relative inline-block">C</span>
@@ -120,8 +120,11 @@ export default function HeroLayout() {
           </h1>
         </div>
 
-        <ContactForm />
         
+      </div>
+      <div className="w-full md:max-w-2xl">
+        <ContactForm />
+
       </div>
       
     </section>

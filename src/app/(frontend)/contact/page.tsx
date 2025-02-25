@@ -4,7 +4,7 @@ import Head1 from "@/components/layouts/contact/h1"
 
 export default function page() {
   return (
-    <div className="relative">
+    <div className="">
       <Head1 />
     </div>
   )
