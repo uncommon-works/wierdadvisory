@@ -11,7 +11,8 @@ interface LinkProps {
 const links: LinkProps[] = [
   { href: "/", text: "Home" },
   { href: "/about", text: "About" },
-  { href: "/case-studies", text: "Case Studies" },
+  { href: "/capabilities", text: "Our Capabilities" },
+  // { href: "/case-studies", text: "Case Studies" },
   { href: "/contact", text: "Contact" },
 ]
 
