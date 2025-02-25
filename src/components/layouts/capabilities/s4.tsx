@@ -91,7 +91,7 @@ export default function AboutLayout() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top -15%",
-          end: "bottom 15%",
+          end: "bottom 30%",
           toggleActions: "play reverse play reverse",
           scrub: 1,
         },
@@ -268,7 +268,7 @@ export default function AboutLayout() {
                   <Tooltip key={index}>
                     <TooltipTrigger asChild>
                       <div
-                        className="fixed w-3 h-3 bg-primary rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-150 transition-transform"
+                        className="absolute w-4 h-4 bg-primary rounded-full cursor-auto transform -translate-x-1/2 -translate-y-1/2"
                         style={{
                           left: `calc(50% + (${study.x - 50}% * 0.8))`,
                           top: `calc(50% + (${study.y - 50}% * 0.8))`,
