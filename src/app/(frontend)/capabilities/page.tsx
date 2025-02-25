@@ -22,7 +22,6 @@ export default function Page() {
   const A1 = useRef<HTMLDivElement | null>(null)
   const A2 = useRef<HTMLDivElement | null>(null)
   const A3 = useRef<HTMLDivElement | null>(null)
-  const A4 = useRef<HTMLDivElement | null>(null)
   const A5 = useRef<HTMLDivElement | null>(null)
 
   const S1 = useRef<HTMLDivElement | null>(null)
@@ -31,7 +30,6 @@ export default function Page() {
   const wrapper1Ref = useRef<HTMLDivElement | null>(null)
   const wrapper2Ref = useRef<HTMLDivElement | null>(null)
   const wrapper3Ref = useRef<HTMLDivElement | null>(null)
-  const wrapper4Ref = useRef<HTMLDivElement | null>(null)
   const wrapper5Ref = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {

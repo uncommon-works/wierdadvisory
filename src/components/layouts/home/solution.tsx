@@ -116,7 +116,7 @@ export default function SolutionLayout() {
     }, sectionRef)
 
     return () => ctx.revert()
-  }, [])
+  }, [ sectionRef, headingRef, textRefs, emojiRefs ])
 
   return (
     <section ref={sectionRef} className="relative px-6 min-h-screen">
