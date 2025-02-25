@@ -107,7 +107,7 @@ export default function CtaLayout() {
   }, [])
 
   return (
-    <div ref={ctaSection} className={`${notoEmoji.variable} antialiased text-red-950 w-full py-[10rem] flex flex-col items-center justify-center`}> 
+    <div ref={ctaSection} className={`${notoEmoji.variable} antialiased text-red-950 w-full py-[10rem] flex flex-col items-center justify-center bg-white`}> 
       <h2 ref={headingRef} className="text-4xl md:text-5xl font-regular leading-[1.15] max-w-3xl text-center select-none mb-12">
         {words.map((word, i) => {
           const isBold = word === "Let's" || word === "Talk."

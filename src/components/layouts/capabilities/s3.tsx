@@ -88,7 +88,7 @@ export default function AboutLayout() {
 
   return (
     <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-red-100 text-red-950">
-      <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4">
+      <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-8">
         <div className="max-w-2xl mx-auto flex flex-col items-start text-left">
           <p className="font-medium mb-8 baskerville">From X → T</p>
           <h2 ref={headingRef} className="text-4xl md:text-6xl leading-[1.15] max-w-3xl select-none">
@@ -112,7 +112,7 @@ export default function AboutLayout() {
             </p>
           </div>
           <div className={`${notoEmoji.variable} antialiased mt-24 font-noto text-5xl md:text-7xl my-12 `}>
-            😔 😮 😳 🤯 🚀
+            😔😮😳🤯🚀
           </div>
         </div>
       </div>

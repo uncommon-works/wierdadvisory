@@ -103,20 +103,7 @@ export default function Page() {
         },
       })
 
-      gsap.set(A4.current, {
-        translateY: "-50vh",
-      })
-
-      gsap.to(A4.current, {
-        translateY: "50vh",
-        scrollTrigger: {
-          trigger: wrapper4Ref.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      })
-
+      
       gsap.set(A5.current, {
         translateY: "-50vh",
       })
@@ -185,7 +172,7 @@ export default function Page() {
 
         <div ref={S2} className="sticky bg-gray-50 top-[100vh] z-20"></div>
 
-        <div ref={section2Ref} className="relative md:h-[450vh] overflow-hidden">
+        <div ref={section2Ref} className="relative md:h-[350vh] overflow-hidden">
           
           <div ref={wrapper1Ref} className="relative md:h-[150vh] z-10 overflow-hidden">
             <div ref={A1} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
@@ -204,16 +191,13 @@ export default function Page() {
               <Sec3 />
             </div>
           </div>  
-
-          <div ref={wrapper4Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
-            <div ref={A4} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
-              <Sec4 />
-            </div>
-          </div>  
-
           
         </div>  
+        <div className="relative z-10">
+          <Sec4 />
+        </div>  
       </div>
+      
       <Cta />
     </main>
   )

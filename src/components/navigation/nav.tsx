@@ -395,9 +395,12 @@ export default function Nav() {
                   Privacy<span className="block md:hidden">&nbsp;Policy</span>
                 </Link>
 
+                {/* 
+                CREDITS TAB
+
                 <Link href="https://piecemakr.com" className="text-black md:text-gray-400 hover:font-bold transition-all duration-500 hover:text-gray-500 flex items-center">
                   Credits
-                </Link>
+                </Link> */}
               </div>
             </footer>
 

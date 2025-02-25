@@ -37,9 +37,9 @@ export default function Footer() {
             Privacy<span className="block md:hidden">&nbsp;Policy</span>
           </Link>
 
-          <Link href="https://piecemakr.com" className="text-black md:text-gray-400 hover:font-bold transition-all duration-500">
+          {/* <Link href="https://piecemakr.com" className="text-black md:text-gray-400 hover:font-bold transition-all duration-500">
             Credits
-          </Link>
+          </Link> */}
         </div>
       </div>
     </footer>

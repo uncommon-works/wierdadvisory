@@ -110,7 +110,7 @@ export default function AboutLayout() {
           <div ref={emoji2} className="absolute left-[46%] top-[8%]">🚂</div>
           <div ref={emoji3} className="absolute right-[10%] top-[15%] md:top-[20%]">📡</div>
           <div ref={emoji4} className="absolute left-[10%] bottom-[15%] md:bottom-[20%]">💣</div>
-          <div ref={emoji5} className="absolute left-[42%] md:left-[50%] bottom-[10%]">💎</div>
+          <div ref={emoji5} className="absolute left-[42%] md:left-[50%] bottom-[15%]">💎</div>
           <div ref={emoji6} className="absolute right-[10%] bottom-[15%] md:bottom-[22%]">🔋</div>
         </div>
 
