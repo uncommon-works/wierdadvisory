@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function SolutionLayout() {
 
+
   const words = ["Meet", "Our", "Founder"];
 
   const sectionRef = useRef<HTMLDivElement | null>(null)
@@ -20,6 +21,8 @@ export default function SolutionLayout() {
   const halfSectionRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
+
+    if (window.innerWidth < 500) return;
 
     if (
       !sectionRef.current ||
@@ -49,6 +52,9 @@ export default function SolutionLayout() {
   }, [sectionRef])
 
   useEffect(() => {
+
+    if (window.innerWidth < 500) return;
+    
     if (!sectionRef.current || !headingRef.current) return;
 
     const ctx = gsap.context(() => {
@@ -149,10 +155,10 @@ export default function SolutionLayout() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative px-6 bg-white min-h-[100vh] text-green-900">
-      <div className="grid grid-cols-2 h-full top-0 size-12 w-full max-w-[1440px] mx-auto ">
-        <div className="flex flex-col items-center justify-center col-span-1 md:pr-[20px] lg:px-[80px] w-full h-full pt-[25vh] space-y-8">
-          <div className="max-w-3xl mx-auto flex flex-col">
+    <section ref={sectionRef} className="relative flex flex-col-reverse md:flex-row gap-16 md:gap-0 px-8 py-[8rem] md:py-0 bg-white min-h-[100vh] text-green-900">
+      <div className="flex md:grid grid-cols-2 h-full top-0 size-12 w-full max-w-[1440px] mx-auto ">
+        <div className="flex md:flex-col items-center justify-center col-span-1 md:pr-[20px] lg:px-[80px] w-full h-full md:pt-[25vh] space-y-8">
+          <div className="md:max-w-3xl mx-auto flex flex-col">
             <h3 ref={headingRef} className="text-4xl md:text-5xl font-regular leading-[1.15] max-w-3xl select-none">
               {words.map((word, i) => {
                 const isBold = word === "Founder";
@@ -187,18 +193,17 @@ export default function SolutionLayout() {
 
           </div>
         </div>
-        
       </div>
 
 
-      <div ref={halfSectionRef} className="absolute w-[50%] right-0 top-0 h-full bg-green-50 z-40">
-        <div className="absolute inset-0 bg-green-100 overflow-hidden">
+      <div ref={halfSectionRef} className="relative md:absolute md:w-[50%] right-0 top-0 h-full bg-green-50 z-40">
+        <div className="relative md:absolute md:inset-0 bg-green-100 overflow-hidden">
           <Image 
             src="/founder.png"
             alt="Founder"
             width={1080}
             height={800}
-            className="absolute right-0 w-[50vw] h-full object-cover"
+            className="md:absolute right-0 md:w-[50vw] h-full object-cover"
           />
         </div>
       </div>

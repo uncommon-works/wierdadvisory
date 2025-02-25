@@ -172,14 +172,20 @@ export default function Page() {
 
   return (
     <main className="text-primary">
-      
+
       <div ref={section1Ref} className="relative h-auto min-h-[300vh]">
-        <div ref={S1} className="sm:sticky top-0"><Hero /></div>
+        <div ref={S1} className="sm:sticky top-0">
+          <Hero />
+        </div>
         <div ref={section2Ref} className="relative bg-white z-10 sm:min-h-[400vh]">
-          <div ref={S2} className="sm:sticky top-0 bg-blue-50"><About /></div>
-          <div className="relative sm:absolute sm:inset-0 z-20 h-auto sm:h-[400vh]">
-            <div ref={S3} className="relative sm:sticky sm:w-[0%] sm:top-0 h-auto sm:h-screen z-30 bg-blue-200 overflow-hidden text-[#051241]">
-              <div className="relative sm:absolute sm:inset-0 w-screen h-screen flex flex-col items-center justify-center "><F1 /></div>
+          <div ref={S2} className="sm:sticky top-0 bg-blue-50">
+            <About />
+          </div>
+          <div className="relative sm:absolute sm:inset-0 z-20 h-[200vh] sm:h-[400vh]">
+            <div ref={S3} className="relative sm:sticky w-screen sm:w-[0%] sm:top-0 h-auto sm:h-screen z-30 bg-blue-200 overflow-hidden text-[#051241]">
+              <div className="relative sm:absolute sm:inset-0 w-screen h-screen flex flex-col items-center justify-center ">
+                <F1 />
+              </div>
             </div>
           </div>
         </div>

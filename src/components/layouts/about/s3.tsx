@@ -15,6 +15,8 @@ export default function WhoWeAre() {
   const lineRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
+    if (window.innerWidth < 500) return;
+
     if (
       !sectionRef.current
     ) return
@@ -70,14 +72,14 @@ export default function WhoWeAre() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative h-[100vh] py-[30vh] px-6 bg-green-50 text-green-900">
-      <div className="grid grid-cols-3 h-full top-0 w-full max-w-[1440px] mx-auto px-6 ">
-        <div className="flex flex-col justify-center col-span-2 w-full h-full py-[2rem] space-y-8">
-          <div className="max-w-4xl mx-auto flex flex-col relative pl-12 py-8">
+    <section ref={sectionRef} className="relative md:h-[100vh] md:py-[30vh] px-8 bg-green-50 text-green-900">
+      <div className="flex md:grid grid-cols-3 h-full top-0 w-full max-w-[1440px] mx-auto md:px-8 ">
+        <div className="flex flex-col justify-center md:col-span-2 w-full h-full py-[8rem] md:py-[2rem] space-y-8">
+          <div className="max-w-4xl mx-auto flex flex-col relative md:pl-12 md:py-8">
             {/* Vertical Line */}
             <div 
               ref={lineRef}
-              className="absolute left-0 top-0 w-[4px] h-full bg-green-900 -translate-x-6"
+              className="hidden md:block absolute left-0 top-0 w-[4px] h-full bg-green-900 -translate-x-6"
             />
 
             <div ref={companyRef} className="baskerville text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">

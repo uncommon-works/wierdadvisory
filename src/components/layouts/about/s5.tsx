@@ -33,6 +33,9 @@ export default function AboutLayout() {
   const emoji6 = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
+
+    if (window.innerWidth < 500) return;
+
     if (
       !sectionRef.current ||
       !headingRef.current ||
@@ -100,10 +103,10 @@ export default function AboutLayout() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-green-200 text-green-900 ">
-      <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4">
+    <section ref={sectionRef} className="relative h-auto py-[8rem] md:py-0 md:h-[100vh] bg-green-200 text-green-900 ">
+      <div className="md:sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-8">
         
-        <div className={`${notoEmoji.variable} font-noto absolute inset-0  text-5xl md:text-7xl select-none`}>
+        <div className={`${notoEmoji.variable} font-noto absolute inset-0 text-5xl md:text-7xl select-none`}>
           <div ref={emoji1} className="absolute left-[12%] top-[15%] md:top-[22%]">🍻</div>
           <div ref={emoji2} className="absolute left-[46%] top-[8%]">🪡</div>
           <div ref={emoji3} className="absolute right-[10%] top-[15%] md:top-[20%]">🏥</div>

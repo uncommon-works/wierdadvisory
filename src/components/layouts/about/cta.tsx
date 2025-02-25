@@ -98,7 +98,7 @@ export default function CtaLayout() {
   }, [])
 
   return (
-    <div ref={ctaSection} className={`${notoEmoji.variable} antialiased text-green-900 w-full py-[10rem] flex flex-col items-center justify-center`}> 
+    <div ref={ctaSection} className={`${notoEmoji.variable} antialiased text-green-900 w-full py-[10rem] px-8 flex flex-col items-center justify-center`}> 
       <h2 ref={headingRef} className="text-4xl md:text-6xl font-regular leading-[1.15] max-w-3xl text-center select-none mb-8 baskerville">
         {words.map((word, i) => {
           const isBold = word === "Wierd(A)dvisory?"
@@ -130,7 +130,7 @@ export default function CtaLayout() {
         <div ref={hand5} className="text-5xl md:text-7xl font-bold">👆🏻</div>
       </div>
 
-      <div className="flex flex-row gap-4 pt-12">
+      <div className="flex flex-col md:flex-row gap-4 pt-12">
 
         <MagneticWrapper asChild>
           <Button asChild variant="green" size="lg" className="">
