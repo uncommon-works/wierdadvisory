@@ -39,7 +39,7 @@ export function SheetProvider({ children }: { children: React.ReactNode }) {
     <SheetContext.Provider value={{ isOpen, content, title, openSheet, closeSheet }}>
       {children}
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetContent className="w-[90vw] sm:min-w-[580px] overflow-scroll space-y-6">
+        <SheetContent className="w-[90vw] sm:min-w-[580px] overflow-scroll space-y-6 text-left">
           <SheetHeader>
             <SheetTitle>Contact Wierd(A)dvisory</SheetTitle>
           </SheetHeader>
