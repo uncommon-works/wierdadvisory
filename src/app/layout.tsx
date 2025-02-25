@@ -9,7 +9,7 @@ import Mavon from '@/components/ui/mavon-bar'
 
 import { SheetProvider } from "@/components/ui/sheet-provider";
 
-import Nav from "@/components/ui/nav"
+import Nav from "@/components/navigation/nav"
 import Footer from "@/components/ui/footer"
 
 import { Toaster } from "@/components/ui/sonner"

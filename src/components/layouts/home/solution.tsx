@@ -118,75 +118,12 @@ export default function SolutionLayout() {
     return () => ctx.revert()
   }, [])
 
-  const svgRef = useRef<SVGSVGElement>(null)
-  const pathRef = useRef<SVGPathElement>(null)
-
-  useEffect(() => {
-    const updateSvgSize = () => {
-      if (svgRef.current && pathRef.current) {
-        const viewportWidth = window.innerWidth
-        const viewportHeight = window.innerHeight
-        const originalWidth = 2307
-        const originalHeight = 5919
-
-        let newWidth, newHeight
-
-        if (viewportHeight / viewportWidth > originalHeight / originalWidth) {
-          // Viewport is taller than the original aspect ratio
-          newWidth = viewportWidth
-          newHeight = (viewportWidth * originalHeight) / originalWidth
-        } else {
-          // Viewport is wider than the original aspect ratio
-          newHeight = viewportHeight
-          newWidth = (viewportHeight * originalWidth) / originalHeight
-        }
-
-        svgRef.current.style.width = `${newWidth}px`
-        svgRef.current.style.height = `${newHeight}px`
-        svgRef.current.setAttribute("viewBox", `0 0 ${originalWidth} ${originalHeight}`)
-
-        // Center the SVG
-        svgRef.current.style.left = `${(viewportWidth - newWidth) / 2}px`
-        svgRef.current.style.top = `${(viewportHeight - newHeight) / 2}px`
-      }
-    }
-
-    updateSvgSize()
-    window.addEventListener("resize", updateSvgSize)
-
-    if (pathRef.current) {
-      const path = pathRef.current
-      const length = path.getTotalLength()
-
-      gsap.set(path, {
-        strokeDasharray: length,
-        strokeDashoffset: length,
-      })
-
-      gsap.to(path, {
-        strokeDashoffset: 0,
-        duration: 2,
-        ease: "none",
-        scrollTrigger: {
-          trigger: document.body,
-          start: "top top",
-          end: "bottom bottom",
-          scrub: 1,
-        },
-      })
-    }
-
-    return () => {
-      window.removeEventListener("resize", updateSvgSize)
-    }
-  }, [])
-
   return (
-    <section ref={sectionRef} className="relative px-6 min-h-[100vh]">
-      <div className="grid grid-cols-2 h-full top-0 size-12 w-full max-w-[1440px] mx-auto ">
-        <div className="flex flex-col justify-center col-span-1 md:pr-[20px] lg:px-[80px] w-full h-full py-[12rem]">
+    <section ref={sectionRef} className="relative px-6 min-h-screen">
+      <div className="grid grid-cols-1 sm:grid-cols-2 h-full w-full max-w-[1440px] mx-auto">
+        <div className="flex flex-col justify-center col-span-1 sm:pr-[20px] lg:px-[80px] w-full h-full py-16 sm:py-[16rem]">
           <div className="max-w-3xl mx-auto flex flex-col">
-            <h3 ref={headingRef} className="text-4xl md:text-5xl font-regular leading-[1.15] max-w-3xl select-none mb-16">
+            <h3 ref={headingRef} className="text-3xl sm:text-4xl md:text-5xl font-regular leading-snug sm:leading-[1.15] max-w-3xl select-none mb-10 sm:mb-16">
               {words.map((word, i) => {
                 const isBold = word === "'Weird'"
                 return (
@@ -204,55 +141,60 @@ export default function SolutionLayout() {
               })}
             </h3>
 
-            <p ref={textRefs[0]} className="text-lg md:text-xl text-gray-800 max-w-xl mb-[12.5%]">
+            {/* Paragraph 1 + Mobile Emoji Row */}
+            <p ref={textRefs[0]} className="text-base sm:text-lg md:text-xl text-gray-800 max-w-xl mb-6 sm:mb-[12.5%]">
               We&apos;re living in a time of unprecedented change and complexity, which has resulted in unusual social,
               technological, and cultural phenomena.
             </p>
+            <div className={`${notoEmoji.variable} flex sm:hidden justify-between text-4xl mb-12 font-noto`}>
+              {emojis1.map((emoji, i) => (
+                <span key={i}>{emoji}</span>
+              ))}
+            </div>
 
-            <p ref={textRefs[1]} className="text-lg md:text-xl text-gray-800 max-w-xl mb-[12.5%]">
+            {/* Paragraph 2 + Mobile Emoji Row */}
+            <p ref={textRefs[1]} className="text-base sm:text-lg md:text-xl text-gray-800 max-w-xl mb-6 sm:mb-[12.5%]">
               Deeply ingrained norms, traditions, and organizational dynamics are increasingly being challenged, opening
               the door for odd and unconventional possibilities.
             </p>
+            <div className={`${notoEmoji.variable} flex sm:hidden justify-between text-4xl mb-12 font-noto`}>
+              {emojis2.map((emoji, i) => (
+                <span key={i}>{emoji}</span>
+              ))}
+            </div>
 
-            <p ref={textRefs[2]} className="text-lg md:text-xl text-gray-800 max-w-xl">
+            {/* Paragraph 3 + Mobile Emoji Row */}
+            <p ref={textRefs[2]} className="text-base sm:text-lg md:text-xl text-gray-800 max-w-xl">
               Every organization&apos;s culture and personality has quirks that exert an influence on decision-making,
               leading to peculiarities that need to be thoughtfully considered and managed.
             </p>
+            <div className={`${notoEmoji.variable} flex sm:hidden justify-between text-4xl mt-6 font-noto`}>
+              {emojis3.map((emoji, i) => (
+                <span key={i}>{emoji}</span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      <div ref={halfSectionRef} className="absolute w-[50%] right-0 top-0 h-full bg-blue-50 z-40">
-        <div className="absolute inset-0 left-0 bg-blue-50 m-[5vw] overflow-hidden">
-          <p ref={emojiRefs[0]} className={`${notoEmoji.variable} font-noto text-6xl absolute top-[22.5%] left-0`}>
-            {emojis1.map((emoji, i) => (
-              <span key={i} className="relative inline-block leading-auto md:py-2 overflow-hidden">
-                <span className="faint opacity-10">{emoji}</span>
-                <span className="full absolute top-2 left-0">{emoji}</span>
-              </span>
-            ))}
-          </p>
-
-          <p ref={emojiRefs[1]} className={`${notoEmoji.variable} font-noto text-6xl absolute top-[38.5%] left-0`}>
-            {emojis2.map((emoji, i) => (
-              <span key={i} className="relative inline-block leading-auto md:py-2 overflow-hidden">
-                <span className="faint opacity-10">{emoji}</span>
-                <span className="full absolute top-2 left-0">{emoji}</span>
-              </span>
-            ))}
-          </p>
-
-          <p ref={emojiRefs[2]} className={`${notoEmoji.variable} font-noto text-6xl absolute top-[55%] left-0`}>
-            {emojis3.map((emoji, i) => (
-              <span key={i} className="relative inline-block leading-auto md:py-2 overflow-hidden">
-                <span className="faint opacity-10">{emoji}</span>
-                <span className="full absolute top-2 left-0">{emoji}</span>
-              </span>
-            ))}
-          </p>
+      {/* Desktop-Only Blue Emoji Section */}
+      <div ref={halfSectionRef} className="hidden sm:block absolute w-[50%] right-0 top-0 h-full bg-blue-50 z-40">
+        <div className="absolute inset-0 bg-blue-50 mx-[5vw] overflow-hidden flex flex-col gap-24 justify-center">
+          {[emojis1, emojis2, emojis3].map((row, rowIndex) => (
+            <p
+              key={rowIndex}
+              ref={emojiRefs[rowIndex]}
+              className={`${notoEmoji.variable} font-noto text-5xl md:text-6xl flex justify-between`}
+            >
+              {row.map((emoji, i) => (
+                <span key={i} className="relative inline-block leading-auto">
+                  {emoji}
+                </span>
+              ))}
+            </p>
+          ))}
         </div>
       </div>
     </section>
   )
 }
-

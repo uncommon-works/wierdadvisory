@@ -30,16 +30,16 @@ const emojiData = [
 export default function Sec3() {
   return (
     <div className="bg-blue-50 h-[100vh] p-[5vw] text-blue-950">
-      <div className="absolute inset-0 top-[30vh] px-6">
+      <div className="absolute inset-0 top-[20vh] sm:top-[30vh] px-6">
         <div className="max-w-[1180px] mx-auto text-center flex flex-col items-center ">
           <h2 className="text-2xl md:text-4xl font-regular leading-[1.15] select-none">
             Our team is comprised of exceptional interdisciplinary thinkers and doers who are passionate about problems that are anything but ordinary.
           </h2>
-          <p className="text-lg md:text-xl text-blue-950 font-regular max-w-3xl mt-12 mb-24">
+          <p className="text-lg md:text-xl text-blue-950 font-regular max-w-3xl mt-12 mb-12 md:mb-24">
             Although we&apos;re based in Toronto, Canada, we are strong disciples of the future of work and service clients <span className="font-bold ">around the world.</span>
           </p>
           <div className="mx-auto max-w-3xl">
-            <div className="grid grid-cols-6 grid-rows-2 gap-x-16 gap-y-16">
+            <div className="grid grid-cols-4 md:grid-cols-6 grid-rows-2 gap-6 md:gap-x-16 md:gap-y-16">
               {emojiData.map((item, index) => (
                 <EmojiCell key={index} emoji={item.emoji} name={item.name} />
               ))}
@@ -121,7 +121,7 @@ function EmojiCell({ emoji, name }: { emoji: string; name: string }) {
       rotateZ: rotation,
       x: xOffset,
       duration: 0.3,
-      ease: "power2.out",
+      ease: "power4.out",
       overwrite: "auto", // Automatically overwrite conflicting animations
     })
   }
@@ -137,19 +137,19 @@ function EmojiCell({ emoji, name }: { emoji: string; name: string }) {
   return (
     <div
       ref={containerRef}
-      className="relative flex aspect-square items-center justify-center font-noto"
+      className="relative flex flex-col aspect-square items-center justify-center font-noto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
     >
 
-      <div className={`${notoEmoji.variable} font-noto flex h-16 w-16 cursor-pointer items-center justify-center text-7xl transition-transform select-none`}
+      <div className={`${notoEmoji.variable} font-noto flex h-16 w-16 cursor-pointer items-center justify-center text-5xl md:text-7xl transition-transform select-none`}
       >
         {emoji}
       </div>
       <div
         ref={tooltipRef}
-        className="pointer-events-none absolute opacity-0 whitespace-nowrap rounded-full bg-blue-100 px-6 py-2 text-sm font-medium text-blue-900 shadow-lg before:absolute before:left-1/2 before:top-[95%] before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-blue-100"
+        className="pointer-events-none absolute opacity-0 whitespace-nowrap rounded-full bg-blue-100 px-6 py-2 text-sm font-medium text-blue-950 shadow-lg before:absolute before:left-1/2 before:top-[95%] before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-blue-100"
       >
         {name}
       </div>

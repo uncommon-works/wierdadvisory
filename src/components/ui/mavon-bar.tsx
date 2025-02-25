@@ -42,7 +42,7 @@ const ScrollProgressBar = () => {
   return (
     <div
       ref={progressBarRef}
-      className={`fixed top-0 left-0 w-[6px] z-50 transition-colors duration-300 ${bgColor}`}
+      className={`fixed top-0 left-0 w-[6px] z-[100] transition-colors duration-300 ${bgColor}`}
       style={{ height: '0vh' }}
     />
   )

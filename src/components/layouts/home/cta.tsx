@@ -8,6 +8,7 @@ import { Noto_Emoji } from "next/font/google";
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useSheet } from '@/components/ui/sheet-provider'
+import { ContactForm } from '@/components/forms/contact-form'
 
 
 const notoEmoji = Noto_Emoji({
@@ -23,10 +24,14 @@ export default function CtaLayout() {
 
   const handleOpenSheet = () => {
     openSheet(
-      <div className="space-y-4">
-        <h2 className="text-2xl font-bold">Sheet Content</h2>
-        <p>This content can be anything you want to show in the sheet!</p>
-      </div>,
+      <>
+        <div className="mb-10">
+          <p className="text-sm text-muted-foreground">
+            For any request, please fill in the following form. Our team will get back to you as soon as possible.
+          </p>
+        </div>
+        <ContactForm />
+      </>,
     )
   }
 
@@ -125,7 +130,7 @@ export default function CtaLayout() {
         <div ref={hand5} className="text-5xl md:text-7xl font-bold">👆🏻</div>
       </div>
 
-      <div className="flex flex-row gap-4 pt-12 ">
+      <div className="flex flex-col md:flex-row gap-4 pt-12 ">
             
         <MagneticWrapper asChild>
           <Button asChild variant="blue" size="lg" className="">
