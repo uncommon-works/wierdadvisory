@@ -44,7 +44,8 @@ export default function Page() {
   const section4Ref = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-
+    if (window.innerWidth < 500) return;
+  
     if (
       !wrapper1Ref.current ||
       !wrapper2Ref.current ||
@@ -54,11 +55,9 @@ export default function Page() {
       !A2.current ||
       !A3.current ||
       !section4Ref.current
-    ) return
-
-    
+    ) return;
+  
     const ctx = gsap.context(() => {
-      
       gsap.to(wrapper1Ref.current, {
         translateY: "100vh",
         scrollTrigger: {
@@ -67,12 +66,9 @@ export default function Page() {
           end: "bottom top",
           scrub: true,
         },
-      })
-
-      gsap.set(A1.current, {
-        translateY: "-50vh",
-      })
-
+      });
+  
+      gsap.set(A1.current, { translateY: "-50vh" });
       gsap.to(A1.current, {
         translateY: "50vh",
         scrollTrigger: {
@@ -81,12 +77,9 @@ export default function Page() {
           end: "bottom top",
           scrub: true,
         },
-      })
-
-      gsap.set(A2.current, {
-        translateY: "-50vh",
-      })
-
+      });
+  
+      gsap.set(A2.current, { translateY: "-50vh" });
       gsap.to(A2.current, {
         translateY: "50vh",
         scrollTrigger: {
@@ -95,12 +88,9 @@ export default function Page() {
           end: "bottom top",
           scrub: true,
         },
-      })
-
-      gsap.set(A3.current, {
-        translateY: "-50vh",
-      })
-
+      });
+  
+      gsap.set(A3.current, { translateY: "-50vh" });
       gsap.to(A3.current, {
         translateY: "50vh",
         scrollTrigger: {
@@ -109,15 +99,15 @@ export default function Page() {
           end: "bottom top",
           scrub: true,
         },
-      })
-
-    }, A1)
-
-    return () => ctx.revert()
-    
-  }, [])
+      });
+    }, A1);
+  
+    return () => ctx.revert();
+  }, []);
 
   useEffect(() => {
+    if (window.innerWidth < 500) return;
+  
     if (
       !section1Ref.current ||
       !section2Ref.current ||
@@ -125,8 +115,8 @@ export default function Page() {
       !S1.current ||
       !S2.current ||
       !S3.current
-    ) return
-
+    ) return;
+  
     const ctx = gsap.context(() => {
       gsap.to(S1.current, {
         scale: 0.65,
@@ -136,8 +126,8 @@ export default function Page() {
           end: "bottom top",
           scrub: true,
         },
-      })
-
+      });
+  
       gsap.to(S3.current, {
         width: "100%",
         scrollTrigger: {
@@ -146,8 +136,8 @@ export default function Page() {
           end: "bottom 200%",
           scrub: true,
         },
-      })
-
+      });
+  
       gsap.to(S3.current, {
         width: "100%",
         scrollTrigger: {
@@ -156,16 +146,15 @@ export default function Page() {
           end: "bottom 200%",
           scrub: true,
           onUpdate: (self) => {
-            // Check if S3 width is fully expanded
             if (self.progress >= 1) {
-              gsap.to(S2.current, { backgroundColor: "rgb(191, 219, 254)", duration: 0 })
+              gsap.to(S2.current, { backgroundColor: "rgb(191, 219, 254)", duration: 0 });
             } else {
-              gsap.to(S2.current, { backgroundColor: "rgb(239, 246, 255)", duration: 0 }) // Reset to original color
+              gsap.to(S2.current, { backgroundColor: "rgb(239, 246, 255)", duration: 0 });
             }
-          }
+          },
         },
-      })
-
+      });
+  
       gsap.to(S3.current, {
         scale: 0.75,
         scrollTrigger: {
@@ -175,24 +164,22 @@ export default function Page() {
           scrub: true,
         },
       });
-      
-    })
-
-    return () => {
-      ctx.revert()
-    }
-
-  }, [])
+    });
+  
+    return () => ctx.revert();
+  }, []);
+  
 
   return (
     <main className="text-primary">
-      <div ref={section1Ref} className="relative min-h-[300vh]">
-        <div ref={S1} className="sticky top-0"><Hero /></div>
-        <div ref={section2Ref} className="relative bg-white z-10 min-h-[400vh]">
-          <div ref={S2} className="sticky top-0 bg-blue-50"><About /></div>
-          <div className="absolute inset-0 z-20 h-[400vh]">
-            <div ref={S3} className="sticky w-[0%] top-0 h-screen z-30 bg-blue-200 overflow-hidden text-[#051241]">
-              <div className="absolute inset-0 w-screen h-screen flex flex-col items-center justify-center "><F1 /></div>
+      
+      <div ref={section1Ref} className="relative h-auto min-h-[300vh]">
+        <div ref={S1} className="sm:sticky top-0"><Hero /></div>
+        <div ref={section2Ref} className="relative bg-white z-10 sm:min-h-[400vh]">
+          <div ref={S2} className="sm:sticky top-0 bg-blue-50"><About /></div>
+          <div className="relative sm:absolute sm:inset-0 z-20 h-auto sm:h-[400vh]">
+            <div ref={S3} className="relative sm:sticky sm:w-[0%] sm:top-0 h-auto sm:h-screen z-30 bg-blue-200 overflow-hidden text-[#051241]">
+              <div className="relative sm:absolute sm:inset-0 w-screen h-screen flex flex-col items-center justify-center "><F1 /></div>
             </div>
           </div>
         </div>
@@ -205,19 +192,19 @@ export default function Page() {
           <div ref={section4Ref} className="relative h-[300vh] overflow-hidden">
               
             <div ref={wrapper2Ref} className="relative h-[100vh] z-10 overflow-hidden">
-              <div ref={A1} className="relative h-[200vh] -mt-[25vh] z-10">
+              <div ref={A1} className="relative h-[200vh] sm:-mt-[25vh] z-10">
                 <Sec1 />
               </div>
             </div>  
 
-            <div ref={wrapper3Ref} className="relative h-[100vh] z-10 overflow-hidden">
-              <div ref={A2} className="relative h-[200vh] -mt-[25vh] z-10">
+            <div ref={wrapper3Ref} className="relative h-auto sm:h-[100vh] z-10 overflow-hidden">
+              <div ref={A2} className="relative h-auto sm:h-[200vh] sm:-mt-[25vh] z-10">
                 <Sec2 />
               </div>
             </div>  
 
-            <div ref={wrapper4Ref} className="relative h-[100vh] z-10 overflow-hidden">
-              <div ref={A3} className="relative h-[200vh] -mt-[25vh] z-10">
+            <div ref={wrapper4Ref} className="relative h-auto sm:h-[100vh] z-10 overflow-hidden">
+              <div ref={A3} className="relative h-auto sm:h-[200vh] sm:-mt-[25vh] z-10">
                 <Sec3 />
                 
               </div>
