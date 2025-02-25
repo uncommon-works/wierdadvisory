@@ -92,7 +92,7 @@ export default function AboutLayout() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-blue-50">
+    <section ref={sectionRef} className="relative h-auto py-[8rem] md:py-0 md:h-[100vh] bg-blue-50">
       <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4">
         <div className="max-w-[1080px] mx-auto flex flex-col items-start text-left w-full">
           <h2 ref={headingRef} className="text-4xl md:text-6xl text-priamry leading-[1.15] max-w-3xl select-none mb-12">

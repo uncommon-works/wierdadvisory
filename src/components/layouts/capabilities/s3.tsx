@@ -111,7 +111,7 @@ export default function AboutLayout() {
               Real transformation isn&apos;t just making a plan—it&apos;s navigating all the unexpected challenges that come after. We help teams stay focused on where they&apos;re going while adapting to what they find along the way. 
             </p>
           </div>
-          <div className={`${notoEmoji.variable} antialiased mt-24 font-noto text-7xl my-12 `}>
+          <div className={`${notoEmoji.variable} antialiased mt-24 font-noto text-5xl md:text-7xl my-12 `}>
             😔 😮 😳 🤯 🚀
           </div>
         </div>

@@ -36,6 +36,8 @@ export default function Page() {
 
   useEffect(() => {
 
+    if (window.innerWidth < 500) return;
+
     if (
       !wrapper1Ref.current ||
       !wrapper2Ref.current ||
@@ -175,35 +177,36 @@ export default function Page() {
 
   return (
     <main className="text-primary">
-      <div ref={section1Ref} className="relative min-h-[200vh]">
-        <div ref={S1} className="sticky top-0 z-10 min-h-[100vh]">
+      <div ref={section1Ref} className="relative md:min-h-[200vh]">
+
+        <div ref={S1} className="md:sticky top-0 z-10 min-h-[100vh]">
           <Head1 />
         </div>
 
         <div ref={S2} className="sticky bg-gray-50 top-[100vh] z-20"></div>
 
-        <div ref={section2Ref} className="relative h-[450vh] overflow-hidden">
+        <div ref={section2Ref} className="relative md:h-[450vh] overflow-hidden">
           
-          <div ref={wrapper1Ref} className="relative h-[150vh] z-10 overflow-hidden">
-            <div ref={A1} className="relative h-[200vh] -mt-[25vh] z-10">
+          <div ref={wrapper1Ref} className="relative md:h-[150vh] z-10 overflow-hidden">
+            <div ref={A1} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
               <Sec1 />
             </div>
           </div>  
 
-          <div ref={wrapper2Ref} className="relative h-[100vh] z-10 overflow-hidden">
-            <div ref={A2} className="relative h-[200vh] -mt-[25vh] z-10">
+          <div ref={wrapper2Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
+            <div ref={A2} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
               <Sec2 />
             </div>
           </div>  
 
-          <div ref={wrapper3Ref} className="relative h-[100vh] z-10 overflow-hidden">
-            <div ref={A3} className="relative h-[200vh] -mt-[25vh] z-10">
+          <div ref={wrapper3Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
+            <div ref={A3} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
               <Sec3 />
             </div>
           </div>  
 
-          <div ref={wrapper4Ref} className="relative h-[100vh] z-10 overflow-hidden">
-            <div ref={A4} className="relative h-[200vh] -mt-[25vh] z-10">
+          <div ref={wrapper4Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
+            <div ref={A4} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
               <Sec4 />
             </div>
           </div>  

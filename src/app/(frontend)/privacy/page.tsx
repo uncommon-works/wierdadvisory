@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Page() {
   return (
-    <section className="pt-[12rem] pb-[8rem] px-6">
+    <section className="pt-[12rem] pb-[8rem] px-8">
       <div className="max-w-[600px] mx-auto">
 
 

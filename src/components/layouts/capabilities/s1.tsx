@@ -3,6 +3,14 @@
 import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Noto_Emoji } from "next/font/google";
+
+const notoEmoji = Noto_Emoji({
+  subsets: ["emoji"],
+  weight: ["400", "700"],
+  style: ["normal"],
+  variable: "--noto",
+})
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -21,6 +29,9 @@ export default function AboutLayout() {
   const pathRef = useRef<SVGPathElement | null>(null)
 
   useEffect(() => {
+
+    if (window.innerWidth < 500) return;
+
     if (
       !sectionRef.current ||
       !headingRef.current ||
@@ -99,14 +110,18 @@ export default function AboutLayout() {
               );
             })}
           </h2>
-          <div ref={textRef} className="text-lg md:text-xl max-w-xl mt-12">
+          <div ref={textRef} className="text-lg md:text-xl max-w-xl my-12">
             <p className="mb-8 text-lg">
               Starting anything new—whether it&apos;s a fresh initiative or pushing into leading-edge territory—is hard because you have to get two things right: seeing clearly where you need to go, and executing precisely to get there. We&apos;re good at both. We help you spot the right path forward and build the momentum to actually get there.
             </p>
+            
+          </div>
+          <div className={`${notoEmoji.variable} block md:hidden antialiased font-noto text-7xl `}>
+            🚂 🛫 🚀
           </div>
         </div>
       </div>
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute top-[25vh] left-0 w-full h-full">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute top-[25vh] left-0 w-full h-full hidden md:block">
         <path
           ref={pathRef}
           d="M 0 50 L 60 50 C 75 50 85 20 100 10"
