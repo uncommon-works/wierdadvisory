@@ -106,11 +106,11 @@ export default function AboutLayout() {
       <div className="sticky top-0 flex flex-col items-center justify-center py-[20rem] md:min-h-screen w-full overflow-hidden px-8">
         
         <div className={`${notoEmoji.variable} font-noto absolute inset-0 text-5xl md:text-7xl select-none`}>
-          <div ref={emoji1} className="absolute left-[12%] top-[15%] md:top-[22%]">💡</div>
-          <div ref={emoji2} className="absolute left-[46%] top-[8%]">🚂</div>
+          <div ref={emoji1} className="absolute left-[10%] top-[15%] md:top-[22%]">💡</div>
+          <div ref={emoji2} className="absolute left-[45%] top-[12%] md:top-[10%]">🚂</div>
           <div ref={emoji3} className="absolute right-[10%] top-[15%] md:top-[20%]">📡</div>
           <div ref={emoji4} className="absolute left-[10%] bottom-[15%] md:bottom-[20%]">💣</div>
-          <div ref={emoji5} className="absolute left-[42%] md:left-[50%] bottom-[15%]">💎</div>
+          <div ref={emoji5} className="absolute left-[42%] md:left-[50%] bottom-[10%] md:bottom-[12%]">💎</div>
           <div ref={emoji6} className="absolute right-[10%] bottom-[15%] md:bottom-[22%]">🔋</div>
         </div>
 

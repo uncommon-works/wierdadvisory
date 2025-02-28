@@ -104,7 +104,7 @@ export default function HeroLayout() {
     <section className="h-screen flex flex-col items-center justify-center relative bg-white text-green-900 px-8">
       <div className="text-center space-y-4 md:space-y-8">
         <div ref={containerRef}>
-          <h1 ref={textRef} className="text-4xl md:text-7xl h-[44px] md:h-[86px] inline-block overflow-hidden"> 
+          <h1 ref={textRef} className="text-4xl md:text-7xl h-[40px] md:h-[86px] inline-block overflow-hidden"> 
             <span className="relative inline-block">A</span>
             <span className="relative inline-block">b</span>
             <span className="relative inline-block">o</span>

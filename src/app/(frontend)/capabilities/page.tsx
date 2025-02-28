@@ -8,7 +8,7 @@ import Head1 from "@/components/layouts/capabilities/h1"
 import Sec1 from "@/components/layouts/capabilities/s1"
 import Sec2 from "@/components/layouts/capabilities/s2"
 import Sec3 from "@/components/layouts/capabilities/s3"
-import Sec4 from "@/components/layouts/capabilities/s4"
+import Sec4 from "@/components/layouts/capabilities/c0"
 
 import Cta from "@/components/layouts/capabilities/cta"
 
@@ -173,7 +173,7 @@ export default function Page() {
         <div ref={section2Ref} className="relative md:h-[350vh] overflow-hidden">
           
           <div ref={wrapper1Ref} className="relative md:h-[150vh] z-10 overflow-hidden">
-            <div ref={A1} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
+            <div ref={A1} className="relative md:h-[200vh] md:-mt-[37.5vh] z-10">
               <Sec1 />
             </div>
           </div>  
@@ -192,7 +192,9 @@ export default function Page() {
           
         </div>  
         <div className="relative z-10">
+
           <Sec4 />
+
         </div>  
       </div>
       

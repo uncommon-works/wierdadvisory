@@ -8,7 +8,8 @@ const pageColors: { [key: string]: string } = {
   '/': 'bg-blue-950',
   '/about': 'bg-green-900',
   '/capabilities': 'bg-red-950',
-  '/contact': 'bg-yellow-500',
+  '/case-studies': 'bg-yellow-500',
+  '/contact': 'bg-purple-400',
 }
 
 const ScrollProgressBar = () => {

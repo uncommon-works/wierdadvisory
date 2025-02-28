@@ -12,6 +12,9 @@ const notoEmoji = Noto_Emoji({
   variable: "--noto",
 })
 
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger)
 
 export default function AboutLayout() {
@@ -27,6 +30,55 @@ export default function AboutLayout() {
   const headingRef = useRef<HTMLHeadingElement | null>(null)
   const textRef = useRef<HTMLParagraphElement | null>(null)
   const pathRef = useRef<SVGPathElement | null>(null)
+
+
+  const planeRef = useRef<HTMLDivElement | null>(null); // Add reference for the plane
+
+  useEffect(() => {
+    if (window.innerWidth < 500) return;
+
+    if (!sectionRef.current || !pathRef.current || !planeRef.current) {
+      return;
+    }
+
+    const path = pathRef.current;
+    const pathLength = path?.getTotalLength();
+
+    gsap.set(path, {
+      strokeDasharray: pathLength,
+      strokeDashoffset: pathLength,
+    });
+
+    gsap.to(path, {
+      strokeDashoffset: 0,
+      duration: 3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 2,
+      },
+    });
+
+    gsap.to(planeRef.current, {
+      motionPath: {
+        path: path,
+        align: path,
+        alignOrigin: [0.5, 0.5],
+        autoRotate: true,
+      },
+      duration: 3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 2,
+      },
+    });
+  }, []);
+
 
   useEffect(() => {
 
@@ -51,7 +103,7 @@ export default function AboutLayout() {
       gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 20%',
+          start: 'top 10%',
           toggleActions: 'play reverse play reverse',
           scrub: 1.5,
         },
@@ -76,7 +128,7 @@ export default function AboutLayout() {
 
       gsap.to(path, {
         strokeDashoffset: 0,
-        duration: 3,
+        duration: 5,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -121,16 +173,27 @@ export default function AboutLayout() {
           </div>
         </div>
       </div>
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute top-[25vh] left-0 w-full h-full hidden md:block">
+      
+      <svg 
+        viewBox="0 0 1000 100" 
+        preserveAspectRatio="xMidYMid meet" 
+        className="absolute top-[25vh] left-0 w-full h-full hidden md:block"
+      >
         <path
           ref={pathRef}
-          d="M 0 50 L 60 50 C 75 50 85 20 100 10"
+          d="M 0 50 L 600 50 C 750 50 850 20 1020 -100"
           stroke="rgb(69 10 10)"
-          strokeWidth="1"
+          strokeWidth="6"  // Adjusted for higher resolution
           strokeLinecap="round"
           fill="none"
         />
       </svg>
+      <div
+        ref={planeRef}
+        className={`${notoEmoji.variable} font-noto absolute w-12 h-[12.5rem] text-[100px]`}
+      >
+        <p className="rotate-45">✈</p>
+      </div>
     </section>
   )
 }

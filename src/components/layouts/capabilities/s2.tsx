@@ -4,6 +4,14 @@ import React, { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Noto_Emoji } from "next/font/google";
+
+const notoEmoji = Noto_Emoji({
+  subsets: ["emoji"],
+  weight: ["400", "700"],
+  style: ["normal"],
+  variable: "--noto",
+})
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -81,7 +89,7 @@ export default function AboutLayout() {
 
   return (
     <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-red-200 text-red-950">
-      <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-8">
+      <div className="sticky top-0 flex flex-col sm:items-center justify-center min-h-screen w-full overflow-hidden px-8">
         <div className="max-w-2xl mx-auto flex flex-col items-start text-left">
           <p className="font-medium mb-8 baskerville">From B → C</p>
           <h2 ref={headingRef} className="text-4xl md:text-6xl leading-[1.15] max-w-3xl select-none">
@@ -106,12 +114,17 @@ export default function AboutLayout() {
           </div>
           
         </div>
+
+        <div className={`${notoEmoji.className} sm:hidden font-noto font-bold text-red-900 relative tezxt-left text-6xl mt-12`}>
+          🤔 💭 💡
+        </div>
+
         <Image 
             src="/clarity.png"
             alt="Clarity"
             width={1080}
             height={800}
-            className="relative right-0 h-full object-cover mt-12"
+            className="hidden sm:block relative right-0 h-full object-cover mt-12"
           />
       </div>
     </section>
