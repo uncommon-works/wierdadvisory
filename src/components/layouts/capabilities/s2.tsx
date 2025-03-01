@@ -165,10 +165,7 @@ export default function AboutLayout() {
         </div>
 
         {/* Small screen emoji */}
-        <div 
-          ref={emojiRef}
-          className={`${notoEmoji.className} md:hidden font-noto font-bold text-red-900 relative text-left text-6xl mt-12`}
-        >
+        <div className={`${notoEmoji.className} md:hidden font-noto font-bold text-red-900 relative text-left text-6xl mt-12`}>
           <span className="">🤔</span>
           <span className="">💭</span>
           <span className="">💡</span>

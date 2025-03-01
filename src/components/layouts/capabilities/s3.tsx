@@ -33,7 +33,7 @@ export default function AboutLayout() {
   useEffect(() => {
 
     if (window.innerWidth < 500) return;
-    
+
     if (
       !sectionRef.current ||
       !headingRef.current ||
@@ -174,7 +174,7 @@ export default function AboutLayout() {
           </div>
         </div>
 
-        <div className={`${notoEmoji.className} sm:hidden font-noto font-bold text-red-900 relative tezxt-left text-6xl mt-12`}>
+        <div className={`${notoEmoji.className} sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl mt-12`}>
           🐛 🦋 🌟
         </div>
 
