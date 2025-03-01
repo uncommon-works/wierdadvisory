@@ -9,7 +9,6 @@ const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   surname: z.string().min(2, "Surname must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
-  subject: z.string().min(1, "Please select a subject"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 })
 
@@ -26,12 +25,11 @@ export async function sendEmail(data: FormData) {
     await resend.emails.send({
       from: "Contact Form <no-reply@wierdadvisory.com>",
       to: "me@troyhancock.com",
-      subject: `New Contact Form Submission: ${data.subject}`,
+      subject: `New Contact Form Submission:`,
       text: `
-Name: ${data.name} ${data.surname}
-Email: ${data.email}
-Subject: ${data.subject}
-Message: ${data.message}
+        Name: ${data.name} ${data.surname}
+        Email: ${data.email}
+        Message: ${data.message}
       `,
     })
 

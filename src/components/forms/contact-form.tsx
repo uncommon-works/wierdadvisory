@@ -16,20 +16,11 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 
-// Moved validation schema here for consistency
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   surname: z.string().min(2, "Surname must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
-  subject: z.string().min(1, "Please select a subject"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 })
 
@@ -44,7 +35,6 @@ export function ContactForm() {
       name: "",
       surname: "",
       email: "",
-      subject: "",
       message: "",
     },
   })
@@ -137,31 +127,6 @@ export function ContactForm() {
                   className="border-0 border-b border-input rounded-none px-0 shadow-none focus-visible:ring-0 focus-visible:border-primary"
                 />
               </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="subject"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className="text-xs uppercase tracking-wide text-muted-foreground">
-                Subject
-              </FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger className="border-0 border-b border-input rounded-none px-0 shadow-none focus:ring-0">
-                    <SelectValue placeholder="Select a subject" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="estimate">Estimate</SelectItem>
-                  <SelectItem value="question">Question</SelectItem>
-                  <SelectItem value="support">Support</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
               <FormMessage />
             </FormItem>
           )}

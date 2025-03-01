@@ -143,7 +143,7 @@ export default function AboutLayout() {
   
 
   return (
-    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-red-100 text-red-950">
+    <section ref={sectionRef} className="relative h-auto md:h-[110vh] bg-red-100 text-red-950">
       <div className="sticky top-0 flex flex-col items-start sm:items-center justify-center min-h-screen w-full overflow-hidden px-8">
         <div className="max-w-2xl mx-auto flex flex-col items-start text-left">
           <p className="font-medium mb-8 baskerville">From X → T</p>
@@ -180,7 +180,7 @@ export default function AboutLayout() {
               className="thought-path"
               d="M 50,100 C 150,100 150,100 250,100 C 350,100 350,100 450,100 C 550,100 550,100 1000,100"
               stroke="rgb(69 10 10)"
-              strokeWidth="6"
+              strokeWidth="7"
               fill="none"
               strokeLinecap="round"
             />

@@ -170,22 +170,22 @@ export default function Page() {
 
         <div ref={S2} className="sticky bg-gray-50 top-[100vh] z-20"></div>
 
-        <div ref={section2Ref} className="relative md:h-[350vh] overflow-hidden">
+        <div ref={section2Ref} className="relative md:h-[370vh] overflow-hidden">
           
           <div ref={wrapper1Ref} className="relative md:h-[150vh] z-10 overflow-hidden">
-            <div ref={A1} className="relative md:h-[200vh] md:-mt-[37.5vh] z-10">
+            <div ref={A1} className="relative md:h-[250vh] md:-mt-[40vh] z-10">
               <Sec1 />
             </div>
           </div>  
 
-          <div ref={wrapper2Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
-            <div ref={A2} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
+          <div ref={wrapper2Ref} className="relative md:h-[110vh] z-10 overflow-hidden">
+            <div ref={A2} className="relative md:h-[250vh] md:-mt-[20vh] z-10">
               <Sec2 />
             </div>
           </div>  
 
-          <div ref={wrapper3Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
-            <div ref={A3} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
+          <div ref={wrapper3Ref} className="relative md:h-[115vh] z-10 overflow-hidden">
+            <div ref={A3} className="relative md:h-[250vh] md:-mt-[25vh] z-10">
               <Sec3 />
             </div>
           </div>  

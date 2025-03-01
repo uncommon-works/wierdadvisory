@@ -57,7 +57,7 @@ export default function AboutLayout() {
         trigger: sectionRef.current,
         start: "top top",
         end: "bottom top",
-        scrub: 2,
+        scrub: 3,
       },
     });
 
@@ -190,7 +190,7 @@ export default function AboutLayout() {
       </svg>
       <div
         ref={planeRef}
-        className={`${notoEmoji.variable} font-noto absolute w-12 h-[12.5rem] text-[100px]`}
+        className={`${notoEmoji.variable} font-noto absolute w-14 h-[12.5rem] text-[100px]`}
       >
         <p className="rotate-45">✈</p>
       </div>

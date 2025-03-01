@@ -1,10 +1,9 @@
 'use client'
 
 import React, { useRef, useEffect } from 'react'
-import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Noto_Emoji } from "next/font/google";
+import { Noto_Emoji } from "next/font/google"
 
 const notoEmoji = Noto_Emoji({
   subsets: ["emoji"],
@@ -16,31 +15,23 @@ const notoEmoji = Noto_Emoji({
 gsap.registerPlugin(ScrollTrigger)
 
 export default function AboutLayout() {
-
-  const words = [
-    "From",
-    "Barriers",
-    "to",
-    "Clarity"
-  ];
+  const words = ["From", "Barriers", "to", "Clarity"]
 
   const sectionRef = useRef<HTMLDivElement | null>(null)
   const headingRef = useRef<HTMLHeadingElement | null>(null)
   const textRef = useRef<HTMLParagraphElement | null>(null)
-  const pathRef = useRef<SVGPathElement | null>(null)
+  const emojiRef = useRef<HTMLDivElement | null>(null)
+  const emojiLargeRef = useRef<HTMLDivElement | null>(null)
+
+  const svgRef = useRef<SVGSVGElement>(null)
 
   useEffect(() => {
-    if (
-      !sectionRef.current ||
-      !headingRef.current ||
-      !textRef.current ||
-      !pathRef.current
-    ) {
-      return
-    }
+
+    if (window.innerWidth < 500) return;
+
+    if (!sectionRef.current || !headingRef.current || !textRef.current) return
 
     const ctx = gsap.context(() => {
-      gsap.set(sectionRef.current, { })
       gsap.set(textRef.current, { autoAlpha: 0.05 })
 
       const fullSpans = headingRef.current?.querySelectorAll('.full') || []
@@ -63,29 +54,86 @@ export default function AboutLayout() {
         autoAlpha: 1 
       }, 0.2)
 
-      const path = pathRef.current;
-      const pathLength = path?.getTotalLength();
+      // Emoji stagger animation
+      const animateEmojis = (emojiContainer: HTMLDivElement | null) => {
+        if (!emojiContainer) return
+        const emojiSpans = emojiContainer.querySelectorAll('.emoji') as NodeListOf<HTMLSpanElement>
 
-      gsap.set(path, {
-        strokeDasharray: pathLength,
-        strokeDashoffset: pathLength,
-      });
+        gsap.set(emojiSpans, { autoAlpha: 0, y: 20 }) // Start hidden and slightly below
 
-      gsap.to(path, {
-        strokeDashoffset: 0,
-        duration: 2,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true,
-        },
-      });
+        gsap.to(emojiSpans, {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          stagger: 0.2, // Delay between each emoji
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top center',
+            toggleActions: 'play none none reverse',
+          },
+        })
+      }
+
+      animateEmojis(emojiRef.current)
+      animateEmojis(emojiLargeRef.current)
+      
     }, sectionRef)
 
     return () => ctx.revert()
   }, [])
+
+  useEffect(() => {
+  
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "bottom 80%", 
+        scrub: 4,
+      },
+    });
+  
+    const path = svgRef.current?.querySelector(".thought-path") as SVGPathElement | null;
+    const emojis = Array.from(svgRef.current?.querySelectorAll(".emoji") ?? []) as SVGGElement[];
+  
+    if (path) {
+      const length = path.getTotalLength();
+      gsap.set(path, {
+        strokeDasharray: length,
+        strokeDashoffset: length,
+      });
+    }
+  
+    gsap.set(emojis, { scale: 0, opacity: 0 });
+  
+    if (path) {
+      tl.to(path, {
+        duration: 10,
+        strokeDashoffset: 0,
+        ease: "power1.inOut",
+      });
+    }
+  
+    // Animate emojis
+    if (emojis.length) {
+      tl.to(
+        emojis,
+        {
+          duration: 1.5,
+          scale: 1,
+          opacity: 1,
+          stagger: 1,
+          ease: "power1.out)",
+        },
+        "-=8",
+      );
+    }
+  
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   return (
     <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-red-200 text-red-950">
@@ -94,7 +142,7 @@ export default function AboutLayout() {
           <p className="font-medium mb-8 baskerville">From B → C</p>
           <h2 ref={headingRef} className="text-4xl md:text-6xl leading-[1.15] max-w-3xl select-none">
             {words.map((word, i) => {
-              const isBold = word === "Clarity";
+              const isBold = word === "Clarity"
               return (
                 <span key={i} className="relative inline-block leading-auto md:pb-1 overflow-hidden">
                   <span className={`faint inline-block opacity-10 ${isBold ? "font-bold" : ""}`}>
@@ -104,7 +152,7 @@ export default function AboutLayout() {
                     {word}{i !== words.length - 1 && "\u00A0"}
                   </span>
                 </span>
-              );
+              )
             })}
           </h2>
           <div ref={textRef} className="text-lg md:text-xl max-w-xl mt-12">
@@ -112,20 +160,55 @@ export default function AboutLayout() {
               Most strategic problems persist because something&apos;s blocking clear thinking—whether it&apos;s outdated assumptions, organizational habits, or past approaches that didn&apos;t work. We help teams cut through these barriers. By creating space to think differently, we help you see solutions that were there all along. 
             </p>
           </div>
-          
         </div>
 
-        <div className={`${notoEmoji.className} sm:hidden font-noto font-bold text-red-900 relative tezxt-left text-6xl mt-12`}>
-          🤔 💭 💡
+        {/* Small screen emoji */}
+        <div 
+          ref={emojiRef}
+          className={`${notoEmoji.className} sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl mt-12`}
+        >
+          <span className="emoji">🤔</span>
+          <span className="emoji">💭</span>
+          <span className="emoji">💡</span>
         </div>
 
-        <Image 
-            src="/clarity.png"
-            alt="Clarity"
-            width={1080}
-            height={800}
-            className="hidden sm:block relative right-0 h-full object-cover mt-12"
-          />
+        {/* Large screen emoji */}
+        <div className={`${notoEmoji.className} hidden sm:block font-noto font-bold text-red-900 relative mx-auto w-screen min-h-[30vh]`}>
+          <svg ref={svgRef} viewBox="0 0 1000 200" className="h-auto w-full">
+            {/* Curved path that jumps over the emojis */}
+            <path
+              className="thought-path"
+              d="M 50,150 
+                C 150,20 250,20 350,150
+                C 450,20 550,20 650,150
+                C 750,20 850,20 950,150"
+              stroke="rgb(69 10 10)"
+              strokeWidth="7"
+              fill="none"
+              strokeLinecap="round"
+            />
+
+            {/* Emoji containers with background circles */}
+            <g className="emoji" transform="translate(200, 150)">
+              <text x="0" y="2" fontSize="60" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
+                🚧
+              </text>
+            </g>
+
+            <g className="emoji" transform="translate(500, 150)">
+              <text x="0" y="2" fontSize="60" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
+                💭
+              </text>
+            </g>
+
+            <g className="emoji" transform="translate(800, 150)">
+              <text x="0" y="2" fontSize="60" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
+                💡
+              </text>
+            </g>
+          </svg>
+
+        </div>
       </div>
     </section>
   )
