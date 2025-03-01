@@ -143,8 +143,8 @@ export default function SolutionLayout() {
         scrollTrigger: {
           trigger: document.body,
           start: "top top",
-          end: "bottom bottom",
-          scrub: 1,
+          end: "bottom 25%",
+          scrub: 3,
         },
       })
     }

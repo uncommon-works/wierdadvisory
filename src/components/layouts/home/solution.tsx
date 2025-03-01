@@ -65,6 +65,7 @@ export default function SolutionLayout() {
     const ctx = gsap.context(() => {
       const fullSpans = headingRef.current?.querySelectorAll(".full") || []
       gsap.set(fullSpans, { y: "100%" })
+
       gsap.to(fullSpans, {
         y: "0%",
         duration: 1,
@@ -119,7 +120,7 @@ export default function SolutionLayout() {
   }, [ sectionRef, headingRef, textRefs, emojiRefs ])
 
   return (
-    <section ref={sectionRef} className="relative px-6 min-h-screen">
+    <section ref={sectionRef} className="relative px-6 py-[6rem] sm:min-h-screen">
       <div className="grid grid-cols-1 sm:grid-cols-2 h-full w-full max-w-[1440px] mx-auto">
         <div className="flex flex-col justify-center col-span-1 sm:pr-[20px] lg:px-[80px] w-full h-full py-16 sm:py-[16rem]">
           <div className="max-w-3xl mx-auto flex flex-col">
@@ -179,7 +180,7 @@ export default function SolutionLayout() {
 
       {/* Desktop-Only Blue Emoji Section */}
       <div ref={halfSectionRef} className="hidden sm:block absolute w-[50%] right-0 top-0 h-full bg-blue-50 z-40">
-        <div className="absolute inset-0 bg-blue-50 mx-[5vw] overflow-hidden flex flex-col gap-24 justify-center">
+        <div className="absolute inset-0 bg-blue-50 mx-[7vw] overflow-hidden flex flex-col gap-24 justify-center mt-24">
           {[emojis1, emojis2, emojis3].map((row, rowIndex) => (
             <p
               key={rowIndex}

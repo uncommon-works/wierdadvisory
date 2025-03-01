@@ -93,7 +93,7 @@ export default function AboutLayout() {
 
       .to(textRef.current, { 
         autoAlpha: 1 
-      }, 1)
+      }, "-=0.75")
 
     }, sectionRef)
 
@@ -103,7 +103,7 @@ export default function AboutLayout() {
 
   return (
     <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-green-100 text-green-900">
-      <div className="sticky top-0 flex flex-col items-center justify-center py-[20rem] md:min-h-screen w-full overflow-hidden px-8">
+      <div className="sticky top-0 flex flex-col items-center justify-center md:min-h-screen w-full overflow-hidden px-8">
         
         <div className={`${notoEmoji.variable} font-noto absolute inset-0 text-5xl md:text-7xl select-none`}>
           <div ref={emoji1} className="absolute left-[10%] top-[15%] md:top-[22%]">💡</div>

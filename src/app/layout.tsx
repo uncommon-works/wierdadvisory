@@ -23,8 +23,10 @@ const libreBaskerville = Libre_Baskerville({
 
 export const metadata: Metadata = {
   title: "Wierd(A)dvisory",
-  description: "",
+  description: "W(A): Strategy consultancy helping leaders navigate a weird world. Our clients seek us when they need thinking and service that goes beyond the conventional.",
 };
+
+
 
 export default function RootLayout({
   children,
@@ -37,11 +39,13 @@ export default function RootLayout({
         <Lenis>
           <Vetra>
             <SheetProvider>
+              
               <Mavon />
               <Nav />
               {children}
               <Footer />
               <Toaster />
+
             </SheetProvider>
           </Vetra>
         </Lenis>

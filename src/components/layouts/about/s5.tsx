@@ -94,7 +94,7 @@ export default function AboutLayout() {
 
       .to(textRef.current, { 
         autoAlpha: 1 
-      }, 1)
+      }, "-=0.75")
 
     }, sectionRef)
 

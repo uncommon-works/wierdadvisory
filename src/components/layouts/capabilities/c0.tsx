@@ -173,7 +173,7 @@ export default function AboutLayout() {
                 className="absolute right-10 bottom-4 origin-left transform translate-x-0"
               >
                 <div className="text-4xl font-normal text-nowrap -rotate-90 w-0 transform-gpu opacity-60">
-                  <div className="flex flex-row gap-4 w-max items-center justify-center">
+                  <div className="flex flex-row gap-4 w-max items-center justify-center text-[2.75vh]">
                     {item.icon && <item.icon className="size-8" />}
                     {item.title}
                   </div>
@@ -181,7 +181,7 @@ export default function AboutLayout() {
               </div>
 
               <div className="absolute inset-0 container mx-auto h-screen text-left font-semibold text-lg min-w-[300px]">
-                <div className="absolute h-screen pt-36 w-full px-12 flex flex-col items-start justify-top sm:min-w-[400px] md:min-w-[500px] lg:min-w-[1080px]">
+                <div className="absolute h-screen pt-[10vh] w-full px-12 flex flex-col items-start justify-top sm:min-w-[400px] md:min-w-[500px] lg:min-w-[1080px]">
                   
 
                   

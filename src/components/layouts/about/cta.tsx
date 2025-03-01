@@ -139,7 +139,7 @@ export default function CtaLayout() {
 
         <MagneticWrapper asChild>
           <Button asChild variant="green" size="lg" className="">
-            <Link href="/capabilities">
+            <Link href="/capabilities" scroll={true}>
               Our Capabilities
             </Link>
           </Button>
