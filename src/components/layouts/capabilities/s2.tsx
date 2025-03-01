@@ -84,6 +84,8 @@ export default function AboutLayout() {
   }, [])
 
   useEffect(() => {
+
+    if (window.innerWidth < 500) return;
   
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -165,11 +167,11 @@ export default function AboutLayout() {
         {/* Small screen emoji */}
         <div 
           ref={emojiRef}
-          className={`${notoEmoji.className} sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl mt-12`}
+          className={`${notoEmoji.className} md:hidden font-noto font-bold text-red-900 relative text-left text-6xl mt-12`}
         >
-          <span className="emoji">🤔</span>
-          <span className="emoji">💭</span>
-          <span className="emoji">💡</span>
+          <span className="">🤔</span>
+          <span className="">💭</span>
+          <span className="">💡</span>
         </div>
 
         {/* Large screen emoji */}

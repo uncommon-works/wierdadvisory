@@ -31,6 +31,9 @@ export default function AboutLayout() {
   const svgRef = useRef<SVGSVGElement>(null)
 
   useEffect(() => {
+
+    if (window.innerWidth < 500) return;
+    
     if (
       !sectionRef.current ||
       !headingRef.current ||
@@ -91,6 +94,8 @@ export default function AboutLayout() {
 
   useEffect(() => {
   
+    if (window.innerWidth < 500) return;
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
