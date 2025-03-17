@@ -102,9 +102,10 @@ export default function HeroLayout() {
 
   return (
     <section className="h-screen flex flex-col items-center justify-center relative bg-white text-red-950 px-8">
-      <div className="text-center space-y-4 md:space-y-8">
+      <div className="texmd:text-center space-y-4 md:space-y-8">
         <div ref={containerRef}>
-          <h1 ref={textRef} className="text-3xl md:text-7xl h-[40px] md:h-[86px] inline-block overflow-hidden"> 
+          
+          <h1 ref={textRef} className="text-3xl md:text-7xl h-[36px] md:h-[86px] inline-block overflow-hidden"> 
             <span className="relative inline-block">W</span>
             <span className="relative inline-block">h</span>
             <span className="relative inline-block">e</span>
@@ -122,15 +123,14 @@ export default function HeroLayout() {
             <span className="relative inline-block">n</span>
             <span className="relative inline-block">s</span>
           </h1>
+
         </div>
         <p ref={subtitleRef} className="text-lg md:text-2xl max-w-3xl mt-4">
           At Wierd(A)dvisory, we seek out the problems that make others nervous - the ones where there isn&apos;t an obvious playbook to follow. We focus on challenges where thinking differently isn&apos;t just helpful—it&apos;s necessary. 
           <br /><br />
           Whether you&apos;re starting something new, stuck because conventional approaches aren&apos;t working, or navigating complexity that doesn&apos;t fit into neat boxes, we help you see a path forward that others miss. 
         </p>
-        
       </div>
-      
     </section>
   )
 }

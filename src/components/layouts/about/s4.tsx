@@ -1,11 +1,17 @@
 'use client'
 
-// MEET OUR FOUNDER
-
 import { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Noto_Emoji } from "next/font/google";
+
+const notoEmoji = Noto_Emoji({
+  subsets: ["emoji"],
+  weight: ["400", "700"],
+  style: ["normal"],
+  variable: "--noto",
+})
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -176,7 +182,7 @@ export default function SolutionLayout() {
             </h3>
 
             <h4 ref={textRefs[0]} className="text-lg md:text-[2.675vh] leading-relaxed max-w-xl mt-12">
-              Hi, I&apos;m <a className="font-bold underline hover:opacity-60 transition-opacity cursor-pointer" href="https://seanwierda.com" target="_blank" rel="noopener noreferrer">Sean Wierda</a>. <span className=" font-noto">👋</span>
+              Hi, I&apos;m <a className="font-bold underline hover:opacity-60 transition-opacity cursor-pointer" href="https://seanwierda.com" target="_blank" rel="noopener noreferrer">Sean Wierda</a>. <span className={`${notoEmoji.variable} font-noto font-bold`}>👋</span>
             </h4>
 
             <p ref={textRefs[1]} className="text-lg md:text-[1.675vh] leading-relaxed max-w-xl mt-6">

@@ -4,6 +4,10 @@ import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Noto_Emoji } from "next/font/google";
+import MagneticWrapper from '@/components/ui/magnetic-wrapper';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 const notoEmoji = Noto_Emoji({
   subsets: ["emoji"],
@@ -167,10 +171,18 @@ export default function AboutLayout() {
               );
             })}
           </h2>
-          <div ref={textRef} className="text-lg md:text-xl max-w-xl mt-12">
+          <div ref={textRef} className="flex flex-col items-start text-lg md:text-xl max-w-xl mt-12">
             <p className="mb-8 text-lg">
               Real transformation isn&apos;t just making a plan—it&apos;s navigating all the unexpected challenges that come after. We help teams stay focused on where they&apos;re going while adapting to what they find along the way. 
             </p>
+            <MagneticWrapper>
+              <Button variant="red">
+                <Link href="/case-studies/" className="flex flex-row space-x-1 items-center font-medium">
+                  <p>Read about How We Helped</p>
+                  <ArrowRight />
+                </Link>
+              </Button>
+            </MagneticWrapper>
           </div>
         </div>
 

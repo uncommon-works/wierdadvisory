@@ -21,7 +21,7 @@ const menuItems = [
   { href: "/", label: "Home", color: "rgb(219 234 254)", hoverColor: "rgb(191 219 254)" },
   { href: "/about", label: "About", color: "rgb(188 248 208)", hoverColor: "rgb(191 219 254)" },
   { href: "/capabilities", label: "Capabilities", color: "rgb(254 226 226)", hoverColor: "rgb(254 202 202)" },
-  // { href: "/case-studies", label: "Case Studies", color: "rgb(254 240 138)", hoverColor: "rgb(253 224 71)" },
+  { href: "/case-studies", label: "Case Studies", color: "rgb(254 240 138)", hoverColor: "rgb(253 224 71)" },
   { href: "/contact", label: "Contact Us", color: "rgb(233 213 255)", hoverColor: "rgb(216 180 254)" },
 ]
 
@@ -46,6 +46,13 @@ const links: LinkProps[] = [
     color: "bg-red-200",
     hoverTextColor: "hover:text-red-900",
     activeTextColor: "text-red-900",
+  },
+  {
+    href: "/case-studies",
+    text: "Case Studies",
+    color: "bg-yellow-200",
+    hoverTextColor: "hover:text-yellow-900",
+    activeTextColor: "text-yellow-900",
   },
   {
     href: "/contact",
@@ -98,8 +105,8 @@ export default function Nav() {
     } else {
       gsap.to(menuRef.current, {
         x: "-100vw",
-        duration: 1,
-        ease: "power4.in",
+        duration: 0.5,
+        ease: "power4.out",
       })
     }
   }, [isOpen])

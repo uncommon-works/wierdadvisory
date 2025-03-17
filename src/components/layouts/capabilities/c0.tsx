@@ -3,7 +3,10 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { Search, Lightbulb, Target, Users2 } from "lucide-react"
+import { Search, Lightbulb, Target, Users2, ArrowRight } from "lucide-react"
+import MagneticWrapper from "@/components/ui/magnetic-wrapper"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -21,6 +24,11 @@ export default function AboutLayout() {
       icon: Search,
       bgColor: "bg-blue-100",
       textColor: "text-blue-950",
+      case: {
+        title: "",
+        description: "",
+        buttonColor: "blue",
+      }
     },
     {
       title: "Strategic Storytelling",
@@ -28,6 +36,11 @@ export default function AboutLayout() {
       icon: Lightbulb,
       bgColor: "bg-green-100",
       textColor: "text-green-900",
+      case: {
+        title: "",
+        description: "",
+        buttonColor: "green",
+      }
     },
     {
       title: "Problem Solving",
@@ -35,6 +48,11 @@ export default function AboutLayout() {
       icon: Target,
       bgColor: "bg-red-200",
       textColor: "text-red-900",
+      case: {
+        title: "",
+        description: "",
+        buttonColor: "red",
+      }
     },
     {
       title: "Structured Collaboration",
@@ -42,6 +60,11 @@ export default function AboutLayout() {
       icon: Users2,
       bgColor: "bg-yellow-50",
       textColor: "text-yellow-600",
+      case: {
+        title: "",
+        description: "",
+        buttonColor: "yellow",
+      }
     },
   ]
 
@@ -112,16 +135,37 @@ export default function AboutLayout() {
     <>
       <section className="block sm:hidden">
         <div className="relative sm:sticky top-0 flex flex-col sm:flex-row w-full">
+          <div className="sticky z-10 -top-36 pt-12 flex flex-col items-center justify-center w-full bg-red-100 space-y-12">
+            <h2 className="text-4xl md:text-6xl font-regular leading-[1.15] max-w-3xl select-none text-red-950">
+              Our Capabilities
+            </h2>
+            <div className="flex flex-row justify-stretch items-stretch h-24 w-full">
+              <div className="bg-blue-900 w-full flex items-center justify-center text-blue-100">
+                <Search />
+              </div>
+              <div className="bg-green-200 w-full flex items-center justify-center text-green-900">
+                <Lightbulb />
+              </div>
+              <div className="bg-red-300 w-full flex items-center justify-center text-red-900">
+                <Target />
+              </div>
+              <div className="bg-yellow-200 w-full flex items-center justify-center text-yellow-600">
+                <Users2 />
+              </div>
+            </div>
+
+          </div>
+          
           {capabilities.map((item, index) => (
             <div
               key={index}
               className={`
                 ${item.bgColor} ${item.textColor} 
-                flex-grow flex flex-col items-center justify-center overflow-hidden relative
+                flex flex-col items-center justify-center overflow-hidden relative
               `}
             >
               <div className="relative inset-0 container mx-auto min-h-screen text-left font-semibold text-lg w-full">
-                <div className="relative h-screen pt-36 w-full px-8 flex flex-col items-start justify-top sm:min-w-[400px] md:min-w-[500px] lg:min-w-[1080px]">
+                <div className="relative h-screen py-24 w-full px-8 flex flex-col items-start justify-top sm:min-w-[400px] md:min-w-[500px] lg:min-w-[1080px]">
                   
                   <div className="relative overflow-hidden w-full h-auto py-12 transition-all duration-500">
                     <div className="w-full text-wrap">
@@ -133,21 +177,16 @@ export default function AboutLayout() {
                   <div className="relative">
 
                     {item.icon && <item.icon className="size-12 mb-8 " />}
-
                     <h2 className="text-5xl md:text-6xl top-0">
                       {item.title}
                     </h2>
-                    
                     <p className="text-lg md:text-2xl my-12">
                       {item.description}
                     </p>
-
                     <div className="flex flex-col gap-4">
-
                       <div className="">
                         
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -219,12 +258,15 @@ export default function AboutLayout() {
                       {item.description}
                     </p>
 
-                    <div className="flex flex-col gap-4">
-                      <div className="">
-                        
-
-
-                      </div>
+                    <div className="flex flex-col items-start gap-4">
+                      <MagneticWrapper>
+                        <Button variant={item.case.buttonColor as any}>
+                          <Link href="/case-studies/" className="flex flex-row space-x-1 items-center font-medium">
+                            <p>Read about How We Helped</p>
+                            <ArrowRight />
+                          </Link>
+                        </Button>
+                      </MagneticWrapper>
                     </div>
                   </div>
 

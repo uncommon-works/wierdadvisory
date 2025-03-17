@@ -29,7 +29,7 @@ const emojiData = [
 
 export default function Sec3() {
   return (
-    <div className="bg-blue-50 h-[100vh] p-[5vw] text-blue-950">
+    <div className="relative bg-blue-50 h-[100vh] p-[5vw] text-blue-950">
       <div className="absolute inset-0 top-[20vh] sm:top-[30vh] px-6">
         <div className="max-w-[1180px] mx-auto text-center flex flex-col items-center ">
           <h2 className="text-2xl md:text-4xl font-regular leading-[1.15] select-none">
