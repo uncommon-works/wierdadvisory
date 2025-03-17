@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import MagneticWrapper from "@/components/ui/magnetic-wrapper";
 import {
   Breadcrumb,
@@ -31,7 +31,8 @@ async function getPost(slug: string) {
   }
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: { slug: string } }) {
+  
   const post = await getPost(params.slug);
 
   if (!post) return notFound();
@@ -58,7 +59,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           <div className="w-full h-px bg-gray-200 mt-24 mb-12 "></div>
 
           <h3 className="text-3xl">
-            Feeling a Little Weird? <span className="font-bold">Let's talk.</span>
+            Feeling a Little Weird? <span className="font-bold">Let&apos;s talk.</span>
           </h3>
           <div className="flex flex-row gap-4">
             <MagneticWrapper>

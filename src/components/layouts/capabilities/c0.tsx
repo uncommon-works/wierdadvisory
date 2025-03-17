@@ -87,7 +87,7 @@ export default function AboutLayout() {
     }, sectionRef)
 
     return () => ctx.revert()
-  }, [])
+  });
 
   function animateSize(activeIndex: number) {
     gsap.killTweensOf(divRefs.current)
@@ -260,7 +260,7 @@ export default function AboutLayout() {
 
                     <div className="flex flex-col items-start gap-4">
                       <MagneticWrapper>
-                        <Button variant={item.case.buttonColor as any}>
+                        <Button variant={item.case.buttonColor as "blue" | "red" | "green" | "yellow" | null }>
                           <Link href="/case-studies/" className="flex flex-row space-x-1 items-center font-medium">
                             <p>Read about How We Helped</p>
                             <ArrowRight />

@@ -51,7 +51,7 @@ export default async function BlogPage() {
           </h1>
         </div>
         <ul className="">
-          {posts.map(({ slug, title, date, description }) => (
+          {posts.map(({ slug, title }) => (
             <li key={slug} className="mb-8">
               <Link href={`/case-studies/${slug}`} className="flex flex-row gap-2 hover:gap-4 transition-all duration-300 items-center text-black font-medium">
                 <h2 className="text-2xl">{title}</h2>
