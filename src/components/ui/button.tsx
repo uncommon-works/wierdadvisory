@@ -20,7 +20,7 @@ const buttonVariants = cva(
         green:
           "bg-green-900 text-green-50 foreground shadow hover:bg-green/90",
         yellow:
-          "bg-yellow-700 text-yellow-50 shadow hover:bg-yellow-700/80",
+          "bg-yellow-500 text-yellow-50 shadow hover:bg-yellow-500/80",
 
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
@@ -33,9 +33,9 @@ const buttonVariants = cva(
         outlineRed:
           "text-red-950 border border-red-100 bg-red-50 shadow-sm hover:bg-red-100 hover:text-red-950",
         outlineGreen:
-          "text-green-900 border border-green-100 bg-green-50 shadow-sm hover:bg-green-100",
+          "text-green-900 border border-green-900 bg-green-50 shadow-sm hover:bg-green-100",
         outlineYellow:
-          "text-yellow-500 border border-yellow-500 bg-yellow-100 shadow-sm hover:bg-yellow-100",
+          "text-yellow-500 border border-yellow-500 bg-yellow-50 shadow-sm hover:bg-yellow-100",
         
         secondary:
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",

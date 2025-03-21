@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Search, Lightbulb, Target, Users2, ArrowRight } from "lucide-react"
 import MagneticWrapper from "@/components/ui/magnetic-wrapper"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -25,8 +24,8 @@ export default function AboutLayout() {
       bgColor: "bg-blue-100",
       textColor: "text-blue-950",
       case: {
-        title: "",
-        description: "",
+        title: "See How We Uncovered Hidden Ecosystem Insights To Redefine Purpose",
+        link: "/ecosystem-intelligence-renewing-purpose-for-a-national-innovation-catalyst/",
         buttonColor: "blue",
       }
     },
@@ -37,8 +36,8 @@ export default function AboutLayout() {
       bgColor: "bg-green-100",
       textColor: "text-green-900",
       case: {
-        title: "",
-        description: "",
+        title: "Discover How We Used Strategic Storytelling To Unite Technical Tribes ",
+        link: "/uniting-technical-tribes-into-a-shared-narrative/",
         buttonColor: "green",
       }
     },
@@ -49,8 +48,8 @@ export default function AboutLayout() {
       bgColor: "bg-red-200",
       textColor: "text-red-900",
       case: {
-        title: "",
-        description: "",
+        title: "Read About How e Used Strategy To Solve Silos",
+        link: "/from-silos-to-synergy",
         buttonColor: "red",
       }
     },
@@ -61,8 +60,8 @@ export default function AboutLayout() {
       bgColor: "bg-yellow-50",
       textColor: "text-yellow-600",
       case: {
-        title: "",
-        description: "",
+        title: "Read About How we Helped 200 Leaders Solve Challenges Together",
+        link: "/driving-200-leaders-to-one-vision/",
         buttonColor: "yellow",
       }
     },
@@ -184,9 +183,12 @@ export default function AboutLayout() {
                       {item.description}
                     </p>
                     <div className="flex flex-col gap-4">
-                      <div className="">
-                        
-                      </div>
+                      <Button asChild size="lg" variant={item.case.buttonColor as "blue" | "red" | "green" | "yellow" | null }>
+                        <a href={'/case-studies/' + item.case.link} className="flex flex-row space-x-1 items-center font-medium h-auto">
+                          <p className="text-wrap sm:py-0 sm:text-nowrap">Read More</p>
+                          <ArrowRight />
+                        </a>
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -261,10 +263,10 @@ export default function AboutLayout() {
                     <div className="flex flex-col items-start gap-4">
                       <MagneticWrapper>
                         <Button variant={item.case.buttonColor as "blue" | "red" | "green" | "yellow" | null }>
-                          <Link href="/case-studies/" className="flex flex-row space-x-1 items-center font-medium">
-                            <p>Read about How We Helped</p>
+                          <a href={'/case-studies/' + item.case.link} className="flex flex-row space-x-1 items-center font-medium">
+                            <p>{item.case.title}</p>
                             <ArrowRight />
-                          </Link>
+                          </a>
                         </Button>
                       </MagneticWrapper>
                     </div>

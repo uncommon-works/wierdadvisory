@@ -6,7 +6,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Noto_Emoji } from "next/font/google";
 import MagneticWrapper from '@/components/ui/magnetic-wrapper';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 const notoEmoji = Noto_Emoji({
@@ -176,11 +175,12 @@ export default function AboutLayout() {
               Real transformation isn&apos;t just making a plan—it&apos;s navigating all the unexpected challenges that come after. We help teams stay focused on where they&apos;re going while adapting to what they find along the way. 
             </p>
             <MagneticWrapper>
-              <Button variant="red">
-                <Link href="/case-studies/" className="flex flex-row space-x-1 items-center font-medium">
-                  <p>Read about How We Helped</p>
+              <Button asChild variant="red" >
+                <a href="/case-studies/ai-vision-to-execution" className="flex flex-row space-x-1 items-center font-medium text-left pt-8 pb-8 sm:pt-0 sm:pb-0 text-wrap sm:text-nowrap">
+                  <p className="hidden sm:block">Discover how we turned AI dreams into reality</p>
+                  <p className="block sm:hidden">Read More</p>
                   <ArrowRight />
-                </Link>
+                </a>
               </Button>
             </MagneticWrapper>
           </div>

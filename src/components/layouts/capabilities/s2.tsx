@@ -6,7 +6,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Noto_Emoji } from "next/font/google"
 import MagneticWrapper from '@/components/ui/magnetic-wrapper'
 import { Button } from '@/components/ui/button'
-import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 const notoEmoji = Noto_Emoji({
@@ -166,11 +165,14 @@ export default function AboutLayout() {
               Most strategic problems persist because something&apos;s blocking clear thinking—whether it&apos;s outdated assumptions, organizational habits, or past approaches that didn&apos;t work. We help teams cut through these barriers. By creating space to think differently, we help you see solutions that were there all along. 
             </p>
             <MagneticWrapper>
-              <Button variant="red">
-                <Link href="/case-studies/" className="flex flex-row space-x-1 items-center font-medium">
-                  <p>Read about How We Helped</p>
+              <Button asChild variant="red" size="lg">
+                <a 
+                  href="/case-studies/from-underdogs-to-launch-ready/"
+                  className="flex flex-row space-x-1 items-center font-medium pt-8 pb-8 sm:pt-0 sm:pb-0 text-wrap sm:text-nowrap cursor-pointer">
+                  <p className="hidden sm:block">Read about how we unlocked hidden market potential</p> 
+                  <p className="block sm:hidden">Read More</p> 
                   <ArrowRight />
-                </Link>
+                </a>
               </Button>
             </MagneticWrapper>
           </div>

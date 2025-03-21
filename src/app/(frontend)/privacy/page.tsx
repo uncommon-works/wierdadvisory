@@ -5,13 +5,13 @@ import React from 'react'
 export default function Page() {
   return (
     <section className="pt-[12rem] pb-[8rem] px-8">
-      <div className="max-w-[600px] mx-auto">
+      <div className="max-w-2xl mx-auto">
 
 
-        <h1 className="text-3xl mb-2">
+        <h1 className="text-5xl mb-8">
           Privacy Policy
         </h1>
-        <p className="mb-4">
+        <p className="mb-8">
           <strong>Last Updated:</strong> February 13, 2025
         </p>
         <p className="mb-10">

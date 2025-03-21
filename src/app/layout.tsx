@@ -13,6 +13,7 @@ import Nav from "@/components/navigation/nav"
 import Footer from "@/components/ui/footer"
 
 import { Toaster } from "@/components/ui/sonner"
+import ScrollRestoration from "@/components/utils/scroll-restoration";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${libreBaskerville.variable} antialiased`} >
+        <ScrollRestoration />
         <Lenis>
           <Vetra>
             <SheetProvider>

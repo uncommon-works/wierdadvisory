@@ -14,7 +14,6 @@ const notoEmoji = Noto_Emoji({
 
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import MagneticWrapper from '@/components/ui/magnetic-wrapper';
 
@@ -171,11 +170,14 @@ export default function AboutLayout() {
               Starting anything new—whether it&apos;s a fresh initiative or pushing into leading-edge territory—is hard because you have to get two things right: seeing clearly where you need to go, and executing precisely to get there. We&apos;re good at both. We help you spot the right path forward and build the momentum to actually get there.
             </p>
             <MagneticWrapper>
-              <Button variant="red">
-                <Link href="/case-studies/" className="flex flex-row space-x-1 items-center font-medium">
-                  <p>Read about How We Helped</p>
+              <Button asChild variant="red" size="lg">
+                <a 
+                  href="/case-studies/bridging-the-wealth-divide/" 
+                  className="flex flex-row space-x-1 items-center font-medium pt-8 pb-8 sm:pt-0 sm:pb-0 text-wrap sm:text-nowrap cursor-pointer">
+                  <p className="hidden sm:block">Read About How We Unlocked $2B In New Wealth Opportunities</p> 
+                  <p className="block sm:hidden">Read More</p> 
                   <ArrowRight />
-                </Link>
+                </a>
               </Button>
             </MagneticWrapper>
           </div>
