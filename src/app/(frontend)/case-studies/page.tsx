@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 
 import { Noto_Emoji } from "next/font/google"
+import { Badge } from "@/components/ui/badge"
+import { Lightbulb, Search, Target, User } from "lucide-react"
 
 const notoEmoji = Noto_Emoji({
   subsets: ["emoji"],
@@ -28,9 +30,11 @@ export default function CaseStudiesPage() {
     slug: string
     size: string
     bgColor: string
+    badgeColor: string
     textColor: string
     hoverBg: string
     ariaLabel?: string
+    category?: "Structured Collaboration" | "Investigation & Insights Generation" | "Strategic Storytelling" | "Problem Solving",
   }
 
   const caseStudies: CaseStudy[] = [
@@ -40,17 +44,21 @@ export default function CaseStudiesPage() {
       slug: "/ai-vision-to-execution",
       size: "col-span-2 row-span-1 md:col-span-1 md:row-span-2",
       bgColor: "bg-yellow-50",
-      textColor: "text-yellow-950",
+      badgeColor: "bg-yellow-100",
+      textColor: "text-yellow-600",
       hoverBg: "group-hover:bg-yellow-100",
+      category: "Structured Collaboration",
     },
     {
-      title: "Bridging the Wealth Divide",
-      emoji: "💰",
-      slug: "/bridging-the-wealth-divide",
-      size: "col-span-1 row-span-1",
-      bgColor: "bg-blue-50",
-      textColor: "text-blue-950",
-      hoverBg: "group-hover:bg-blue-100",
+      title: "Uniting Technical Tribes Into a Shared Narrative",
+      emoji: "👥",
+      slug: "/uniting-technical-tribes-into-a-shared-narrative",
+      size: "col-span-1 row-span-1 md:col-span-1 md:row-span-1",
+      bgColor: "bg-green-50",
+      badgeColor: "bg-green-100",
+      textColor: "text-green-950",
+      hoverBg: "group-hover:bg-green-100",
+      category: "Strategic Storytelling",
     },
     {
       title: "Driving 200 Leaders to One Vision",
@@ -58,8 +66,10 @@ export default function CaseStudiesPage() {
       slug: "/driving-200-leaders-to-one-vision",
       size: "col-span-1 row-span-1",
       bgColor: "bg-yellow-50",
-      textColor: "text-yellow-950",
+      badgeColor: "bg-yellow-100",
+      textColor: "text-yellow-600",
       hoverBg: "group-hover:bg-yellow-100",
+      category: "Structured Collaboration",
     },
     {
       title: "Ecosystem Intelligence Renewing Purpose for a National Innovation Catalyst",
@@ -67,8 +77,10 @@ export default function CaseStudiesPage() {
       slug: "/ecosystem-intelligence-renewing-purpose-for-a-national-innovation-catalyst",
       size: "col-span-2 row-span-1",
       bgColor: "bg-blue-50",
+      badgeColor: "bg-blue-100",
       textColor: "text-blue-950",
       hoverBg: "group-hover:bg-blue-100",
+      category: "Investigation & Insights Generation",
     },
     {
       title: "From Silos to Synergy",
@@ -76,8 +88,10 @@ export default function CaseStudiesPage() {
       slug: "/from-silos-to-synergy",
       size: "col-span-2 row-span-1",
       bgColor: "bg-red-50",
+      badgeColor: "bg-red-100",
       textColor: "text-red-950",
       hoverBg: "group-hover:bg-red-100",
+      category: "Problem Solving",
     },
     {
       title: "From Underdogs to Launch Ready",
@@ -85,18 +99,23 @@ export default function CaseStudiesPage() {
       slug: "/from-underdogs-to-launch-ready",
       size: "col-span-1 row-span-1",
       bgColor: "bg-red-50",
+      badgeColor: "bg-red-100",
       textColor: "text-red-950",
       hoverBg: "group-hover:bg-red-100",
+      category: "Problem Solving",
     },
     {
-      title: "Uniting Technical Tribes Into a Shared Narrative",
-      emoji: "👥",
-      slug: "/uniting-technical-tribes-into-a-shared-narrative",
-      size: "col-span-1 row-span-1 md:col-span-3 md:row-span-1",
-      bgColor: "bg-green-50",
-      textColor: "text-green-950",
-      hoverBg: "group-hover:bg-green-100",
+      title: "Bridging the Wealth Divide",
+      emoji: "💰",
+      slug: "/bridging-the-wealth-divide",
+      size: "col-span-3 row-span-1",
+      bgColor: "bg-blue-50",
+      badgeColor: "bg-blue-100",
+      textColor: "text-blue-950",
+      hoverBg: "group-hover:bg-blue-100",
+      category: "Investigation & Insights Generation",
     },
+    
   ]
 
   useEffect(() => {
@@ -246,16 +265,24 @@ export default function CaseStudiesPage() {
                 aria-hidden="true"
               ></div>
 
-              <div className="relative z-10 flex h-full flex-col p-6">
+              <div className="relative z-10 flex h-full flex-col p-6 mb-12">
                 <div
-                  className={`${study.textColor} ${notoEmoji.variable} font-noto mb-2 text-4xl transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}
+                  className={`${study.textColor} ${notoEmoji.variable} font-noto mb-2 text-4xl transform transition-all duration-500 group-hover:scale-102 group-hover:rotate-2`}
                   aria-hidden="true"
                 >
                   {study.emoji}
                 </div>
-                <div className="mt-auto">
+                <div className="flex flex-col items-start mt-auto">
+                  <Badge className={`${study.badgeColor} ${study.textColor} mb-2 flex items-center gap-1 text-sm`}>
+                    {study.category === "Structured Collaboration" && <User size='16' />}
+                    {study.category === "Investigation & Insights Generation" && <Search size='16' /> }
+                    {study.category === "Strategic Storytelling" && <Lightbulb size='16' />}
+                    {study.category === "Problem Solving" && <Target size='16' />}
+                    {study.category}
+                  </Badge>
+
                   <h2
-                    className={`${study.textColor} text-xl font-semibold leading-6 pt-8 transition-all duration-300 group-hover:translate-x-1`}
+                    className={`${study.textColor} text-xl font-semibold leading-6 pt-2 transition-all duration-300 group-hover:translate-x-1`}
                   >
                     {study.title}
                   </h2>

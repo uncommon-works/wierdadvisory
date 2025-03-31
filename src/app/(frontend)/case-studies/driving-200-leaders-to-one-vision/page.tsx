@@ -370,7 +370,7 @@ export default function Page() {
                             "Coordinating 200 senior leaders across six strategic priorities required innovative engagement frameworks",
                             "Deeply entrenched silos threatened to derail cross-functional integration efforts"
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
                       </div>  
@@ -382,26 +382,26 @@ export default function Page() {
   
             <div ref={wrapper2Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
               <div ref={A2} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
-                <div className="bg-yellow-100 text-yellow-800 h-auto sm:h-screen flex flex-col items-center px-6 py-[8rem] justify-center">
-                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-0 items-center mx-auto">
+                <div className="bg-yellow-100 text-yellow-800 h-auto sm:h-screen flex flex-col items-center  px-6 md:px-[7vw] py-[8rem] justify-center">
+                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-0 items-center mx-auto">
                     <div className="col-span-1 flex flex-col items-start pr-0 sm:pr-[8rem]">
                       <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] select-none text-left mb-12">
                         Our Approach
                       </h2>
                       <p className="text-lg md:text-2xl max-w-2xl mb-4">
-                        We designed a dynamic self-guided facilitation model where:
+                        We designed a dynamic self-guided facilitation model where: 
                       </p>
                       <ul className="text-xl">
                         {[
-                          "200 leaders engaged with six interconnected topics through structured pathways.",
-                          "Subject matter experts facilitated targeted discussions within a cohesive framework.",
-                          "Collaborative exercises turned diverse perspectives into aligned strategies."
+                          "200 leaders moved through six immersive environments—each transformed into interactive zones with visual prompts, tactile elements, and collaborative canvases.",
+                          "Subject matter experts guided organic discussions, encouraging participants to build upon and react to emerging visual artifacts.",
+                          "Shared creation exercises converted individual perspectives into collective intelligence through cycles of building, feedback, and refinement."
                         ].map((item, index) => (
-                          <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                          <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                         ))}
                       </ul>
                       <p className="text-lg md:text-xl max-w-2xl mt-12">
-                      This collaborative, strategically focused approach fostered an environment of shared learning and mutual benefit and ensured the organization could develop its priorities with authentic stakeholder engagement, while advancing industry-wide progress.
+                        This experiential, visually-driven approach generated palpable energy as participants witnessed their contributions evolve into tangible strategies. Leaders left with both aligned priorities and the emotional investment that comes from seeing their personal imprint on the organization's future direction. 
                       </p>
                     </div>   
 
@@ -420,7 +420,7 @@ export default function Page() {
             <div ref={wrapper3Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
               <div ref={A3} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
                 <div className="bg-yellow-50 text-yellow-500 py-[8rem] h-auto sm:h-[100vh]">
-                  <div className="relative sm:absolute inset-0 sm:top-[27vh] px-6 sm:px-8">
+                  <div className="relative sm:absolute inset-0 sm:top-[22.5vh] px-6 sm:px-8">
                     <div className="flex flex-col items-center justify-center mx-auto max-w-3xl">
                       <div className="">
                         <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] select-none text-left mb-12">
@@ -435,12 +435,12 @@ export default function Page() {
                             "Achieved 97% satisfaction with workshop design and 95% positive rating for facilitation.",
                             "Generated 90% increase in alignment and confidence with new strategy."
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
 
                         <div>
-                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-yellow-500">
+                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-yellow-500 italic">
                             &quot;The collaborative energy they sparked didn&apos;t fade when they left; it&apos;s become embedded in the table we convene at. Months later, we&apos;re still talking about it.&quot; <br /><br />
                             <span className="font-bold">— CEO, Trade Organization</span>
                           </p>

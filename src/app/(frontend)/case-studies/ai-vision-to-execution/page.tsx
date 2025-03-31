@@ -346,7 +346,7 @@ export default function Page() {
           <div id="next" ref={section2Ref} className="relative h-auto md:h-[350vh] overflow-hidden">
             
             <div ref={wrapper1Ref} className="relative h-auto md:h-[150vh] z-10 overflow-hidden">
-              <div ref={A1} className="relative h-auto md:h-[200vh] md:-mt-[25vh] z-10">
+              <div ref={A1} className="relative h-auto md:h-[200vh] md:-mt-[30vh] z-10">
                 <div className="bg-yellow-200 text-yellow-800 min-h-screen sm:h-[100vh] sm:p-[5vw]">
                   <div className="relative sm:absolute inset-0 top-[20vh] sm:top-[27vh] px-6 sm:px-8">
                     <div className="flex flex-col items-center justify-center mx-auto max-w-3xl">
@@ -354,13 +354,13 @@ export default function Page() {
                         <h2 id="next" className="text-4xl md:text-5xl font-medium sm:leading-[1.15] select-none text-left mb-12">
                           The Transformation Story
                         </h2>
-                        <ul className="text-xl">
+                        <ul className="text-xl" style={{ listStyleType: 'square' }}>
                           {[
-                            "The clear roadmap became blurry, with teams interpreting strategy through different lenses.",
+                            "The 'clear' roadmap became blurry, with teams interpreting strategy through different lenses.",
                             "Teams agreed with the strategy in theory but struggled with implementation. Aligning talented leaders proved challenging as they brought conflicting perspectives to the table.",
                             "Customer expectations evolved while competitors made moves, requiring stakeholders to have difficult conversations about changing priorities."
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
                       </div>  
@@ -372,8 +372,8 @@ export default function Page() {
   
             <div ref={wrapper2Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
               <div ref={A2} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
-                <div className="bg-yellow-100 text-yellow-800 h-auto sm:h-screen flex flex-col items-center px-6 py-[8rem] justify-center">
-                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-0 items-center mx-auto">
+                <div className="bg-yellow-100 text-yellow-800 h-auto sm:h-screen flex flex-col items-center px-6 md:px-[7vw] py-[8rem] justify-center">
+                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-0 items-center mx-auto">
                     <div className="col-span-1 flex flex-col items-start pr-0 sm:pr-[8rem]">
                       <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] select-none text-left mb-12">
                         How We Helped
@@ -381,13 +381,13 @@ export default function Page() {
                       <p className="text-lg md:text-2xl max-w-2xl mb-12">
                         We made emerging strategic insight actionable through structured collaboration:
                       </p>
-                      <ul className="text-xl">
+                      <ul className="text-xl list-square">
                         {[
                           "Developed scenario frameworks that turned different perspectives into better collective decisions.",
                           "Identified critical decision points to help leadership govern AI implementation effectively, while aligning stakeholders at all levels.",
                           "Facilitated focused sessions between technical teams, product groups, and customers"
                         ].map((item, index) => (
-                          <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                          <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                         ))}
                       </ul>
                     </div>   
@@ -407,7 +407,7 @@ export default function Page() {
             <div ref={wrapper3Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
               <div ref={A3} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
                 <div className="bg-yellow-50 text-yellow-500 py-[8rem] h-auto sm:h-[100vh]">
-                  <div className="relative sm:absolute inset-0 sm:top-[27vh] px-6 sm:px-8">
+                  <div className="relative sm:absolute inset-0 sm:top-[22.5vh] px-6 sm:px-8">
                     <div className="flex flex-col items-center justify-center mx-auto max-w-3xl">
                       <div className="">
                         <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] select-none text-left mb-12">
@@ -416,18 +416,18 @@ export default function Page() {
                         <p className="text-lg md:text-2xl max-w-2xl mb-8">
                           Within 6 months of our engagement, the company:
                         </p>
-                        <ul className="text-xl">
+                        <ul className="text-xl list-square">
                           {[
                             "Transformed how 12 core teams worked together, while turning conflicting viewpoints into strategic advantages",
                             "Secured expanded board support for accelerated timeline & investment",
                             "Achieved a 95% alignment score across senior leadership"
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
 
                         <div>
-                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-yellow-500">
+                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-yellow-500 italic">
                             &quot;W(A) showed us that real transformation isn&apos;t about perfect planning - it&apos;s about maintaining direction while being able to adapt. They helped us navigate all the unexpected challenges along the way. That made all the difference.&quot; <br /><br />
                             <span className="font-bold">— Product Manager</span>
                           </p>

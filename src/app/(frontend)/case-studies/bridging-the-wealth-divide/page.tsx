@@ -382,7 +382,7 @@ export default function Page() {
                              "Traditional markers of trust and service becoming actively counterproductive.",
                              "New forms of wealth requiring completely different risk and value frameworks."
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
                       </div>  
@@ -404,13 +404,13 @@ export default function Page() {
                         <p className="text-lg md:text-2xl max-w-2xl mb-12">
                           We dove deep into research, gathering diverse inputs to uncover critical insights into fundamental questions:
                         </p>
-                        <ul className="text-xl">
+                        <ul className="text-xl list-square">
                           {[
                             "What does wealth mean when its forms and meaning evolve between generations?",
                             "When heritage loses its power, how do you create trust and value propositions that resonate across generations?",
                             "How do you manage wealth transfer when generations see money differently?"
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
                       </div>  
@@ -422,8 +422,8 @@ export default function Page() {
   
             <div ref={wrapper2Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
               <div ref={A2} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
-                <div className="bg-blue-100 text-blue-950 h-auto sm:h-screen flex flex-col items-center px-6 py-[8rem] justify-center">
-                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-0 items-center mx-auto">
+                <div className="bg-blue-100 text-blue-950 h-auto sm:h-screen flex flex-col items-center px-6 md:px-[7vw] py-[8rem] justify-center">
+                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-0 items-center mx-auto">
                     <div className="col-span-1 flex flex-col items-start pr-0 sm:pr-[8rem]">
                       <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] select-none text-left mb-12">
                         How We Gained Altitude
@@ -431,23 +431,23 @@ export default function Page() {
                       <p className="text-lg md:text-2xl max-w-2xl mb-4">
                         First, our investigation helped them see the core issues:
                       </p>
-                      <ul className="text-xl">
+                      <ul className="text-xl list-square">
                         {[
                           "Conducted a comprehensive analysis that showed their heritage was actively pushing away next-gen wealth holders",
                           "Mapped how traditional wealth management would be disrupted by changing generational expectations",
                         ].map((item, index) => (
-                          <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                          <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                         ))}
                       </ul>
                       <p className="text-lg md:text-2xl max-w-2xl mt-12 mb-4">
-                        Then, we built momentum with precise execution:
+                        Then, we built momentum with precise solutions:
                       </p>
-                      <ul className="text-xl">
+                      <ul className="text-xl list-square">
                         {[
                           "Structured a partnership that redefined their value proposition for the next generation",
                           "Designed a new high-margin service model, capturing value from both traditional and emerging wealth needs",
                         ].map((item, index) => (
-                          <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                          <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                         ))}
                       </ul>
                     </div>   
@@ -467,7 +467,7 @@ export default function Page() {
             <div ref={wrapper3Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
               <div ref={A3} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
                 <div className="bg-blue-50 text-blue-950 py-[8rem] h-auto sm:h-[100vh]">
-                  <div className="relative sm:absolute inset-0 sm:top-[27vh] px-6 sm:px-8">
+                  <div className="relative sm:absolute inset-0 sm:top-[22.5vh] px-6 sm:px-8">
                     <div className="flex flex-col items-center justify-center mx-auto max-w-3xl">
                       <div className="">
                         <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] select-none text-left mb-12">
@@ -476,18 +476,18 @@ export default function Page() {
                         <p className="text-lg md:text-2xl max-w-2xl mb-8">
                           To date, our work has resulted in:
                         </p>
-                        <ul className="text-xl">
+                        <ul className="text-xl list-square">
                           {[
-                            "What does wealth mean when its forms and meaning evolve between generations?",
-                            "When heritage loses its power, how do you create trust and value propositions that resonate across generations?",
-                            "How do you manage wealth transfer when generations see money differently?"
+                            "A strategic partnership that generated $2B in new opportunities.",
+                            "A pilot with UHNW families that achieved 'extremely favorable' engagement across next-gen members.",
+                            "Our approach now being embedded across the firm's global wealth management business"
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
 
                         <div>
-                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-blue-950">
+                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-blue-95 italic">
                             &quot;W(A) helped us realize we couldn&apos;t have it both ways—clinging to our heritage while trying to win the next generation. They helped us stick the landing on a very bold move, and it&apos;s paying off.&quot; <br /><br />
                             <span className="font-bold">— Head of Strategy</span>
                           </p>

@@ -358,7 +358,7 @@ export default function Page() {
             <div ref={wrapper1Ref} className="relative h-auto md:h-[150vh] z-10 overflow-hidden">
               <div ref={A1} className="relative h-auto md:h-[200vh] md:-mt-[25vh] z-10">
                 <div className="bg-red-200 text-red-900 min-h-screen sm:h-[100vh] sm:p-[5vw]">
-                  <div className="relative sm:absolute inset-0 top-[20vh] sm:top-[27vh] px-6 sm:px-8">
+                  <div className="relative sm:absolute inset-0 top-[20vh] sm:top-[22.5vh] px-6 sm:px-8">
                     <div className="flex flex-col items-center justify-center mx-auto max-w-3xl">
                       <div className="col-span-1 flex flex-col items-start pr-0 sm:pr-[8rem]">
                         <h2 id="next" className="text-4xl md:text-5xl font-medium sm:leading-[1.15] select-none text-left mb-12">
@@ -373,7 +373,7 @@ export default function Page() {
                             "Competing priorities across imminent launches and product lifecycle transitions created tension between immediate market demands and future growth planning, forcing difficult resource trade-offs.",
                             "Strategy required alignment across global functions, regional markets, and stakeholders in three high-profile disease areas."
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
                       </div>  
@@ -385,8 +385,8 @@ export default function Page() {
   
             <div ref={wrapper2Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
               <div ref={A2} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
-                <div className="bg-red-100 text-red-900 h-auto sm:h-screen flex flex-col items-center px-6 py-[8rem] justify-center">
-                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-0 items-center mx-auto">
+                <div className="bg-red-100 text-red-900 h-auto sm:h-screen flex flex-col items-center px-6 md:px-[7vw] py-[8rem] justify-center">
+                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-0 items-center mx-auto">
                     <div className="col-span-1 flex flex-col items-start pr-0 sm:pr-[8rem]">
                       <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] select-none text-left mb-12">
                         How We Helped
@@ -400,7 +400,7 @@ export default function Page() {
                           "Supporting decision making about how a portfolio strategy would actually make them more competitive, and what the implications looked like at the brand and indication level.",
                           "Distilling complex strategic choices into a clear narrative that answered fundamental questions for a very senior audience."
                         ].map((item, index) => (
-                          <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                          <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                         ))}
                       </ul>
                     </div>   
@@ -435,12 +435,12 @@ export default function Page() {
                             "Elevated the profile of the TA with a cohort of local GMs to navigate a transition.",
                             "Created aligned execution plans across 20+ markets and multiple products."
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
 
                         <div>
-                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-red-950">
+                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-red-950 italic">
                             &quot;The clarity of the strategy and quality of engagement to get there were outstanding. This output is now the standard leadership wants across the enterprise.&quot; <br /><br />
                             <span className="font-bold">— Global TA Head</span>
                           </p>

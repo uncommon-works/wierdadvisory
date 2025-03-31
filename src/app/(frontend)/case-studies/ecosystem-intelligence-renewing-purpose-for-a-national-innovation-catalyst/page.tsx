@@ -328,7 +328,7 @@ export default function Page() {
                 Ecosystem Intelligence: Renewing Purpose for a National Innovation Catalyst
               </h1>
               <p ref={subtitleRef} className="text-lg md:text-2xl max-w-2xl mt-6 mb-12">
-                When a national innovation catalyst with 200+ successful ventures found itself struggling to justify its continued relevance, we discovered the problem wasn&apos;t their capabilities but their understanding of the rapidly evolving landscape around them. Despite deep connections across sectors, this organization couldn&apos;t articulate its unique value to increasingly skeptical funders and board members.
+                When a national innovation catalyst with 100+ successful ventures found itself struggling to justify its continued relevance, we discovered the problem wasn&apos;t their capabilities but their understanding of the rapidly evolving landscape around them. Despite deep connections across sectors, this organization couldn&apos;t articulate its unique value to increasingly skeptical funders and board members.
               </p>
               <Button asChild variant="blue" ref={buttonRef} className="hidden sm:flex">
                 <Link href="#next">
@@ -346,7 +346,7 @@ export default function Page() {
           <div ref={wrapper0Ref} className="relative h-auto md:h-[150vh] z-10 overflow-hidden">
               <div ref={A0} className="relative h-auto md:h-[200vh] md:-mt-[25vh] z-10">
                 <div className="bg-blue-100 text-blue-950 min-h-screen sm:h-[100vh] sm:p-[5vw]">
-                  <div className="relative sm:absolute inset-0 top-[20vh] sm:top-[27vh] px-6 sm:px-8">
+                  <div className="relative sm:absolute inset-0 top-[20vh] sm:top-[20vh] px-6 sm:px-8">
                     <div className="flex flex-col items-center justify-center mx-auto max-w-3xl">
                       <div className="col-span-1 flex flex-col items-start pr-0 sm:pr-[8rem]">
                         <h2 id="next" className="text-4xl md:text-5xl font-medium sm:leading-[1.15] select-none text-left mb-12">
@@ -354,11 +354,11 @@ export default function Page() {
                         </h2>
                         <ul className="text-xl">
                           {[
-                             "The organization was operating on outdated assumptions about national innovation dynamics, missing critical shifts in how resources, talent, and ideas were flowing",
+                            "The organization was operating on outdated assumptions about national innovation dynamics, missing critical shifts in how resources, talent, and ideas were flowing",
                             "They identified numerous promising trends they could pursue, but struggled to determine where they were uniquely positioned to add value in a landscape already crowded with similar initiatives",
                             "Their work needed to satisfy prominent leaders from political, academic, and business circles who held fundamentally different views on innovation priorities and approaches"
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
                       </div>  
@@ -370,8 +370,8 @@ export default function Page() {
 
             <div ref={wrapper1Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
               <div ref={A1} className="relative h-auto md:h-[200vh] md:-mt-[25vh] z-10">
-                <div className="bg-blue-200 text-blue-950 h-auto sm:h-screen flex flex-col items-center px-6 py-[8rem] justify-center">
-                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-0 items-center mx-auto">
+                <div className="bg-blue-200 text-blue-950 h-auto sm:h-screen flex flex-col items-center px-6 md:px-[7vw] py-[8rem] justify-center">
+                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-0 items-center mx-auto">
                     <div className="col-span-1 flex flex-col items-start pr-0 sm:pr-[8rem]">
                       <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] select-none text-left mb-12">
                         Our Approach
@@ -385,7 +385,7 @@ export default function Page() {
                           "Synthesized seemingly disconnected insights into a coherent map of the national innovation landscape, revealing counterintuitive connections and overlooked leverage points.",
                           "Transformed complex findings into clear, compelling options that resonated with even the most skeptical board members."
                         ].map((item, index) => (
-                          <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                          <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                         ))}
                       </ul>
                     </div>   
@@ -405,7 +405,7 @@ export default function Page() {
             <div ref={wrapper2Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
               <div ref={A2} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
                 <div className="bg-blue-50 text-blue-950 min-h-screen sm:h-[100vh] sm:p-[5vw]">
-                  <div className="relative sm:absolute inset-0 top-[10vh] sm:top-[15vh] px-6 sm:px-8">
+                  <div className="relative sm:absolute inset-0 top-[10vh] sm:top-[22.5vh] px-6 sm:px-8">
                     <div className="flex flex-col items-center justify-center mx-auto max-w-3xl">
                       <div className="col-span-1 flex flex-col items-start pr-0 sm:pr-[8rem]">
                         <h2 id="next" className="text-4xl md:text-5xl font-medium sm:leading-[1.15] select-none text-left mb-12">
@@ -417,15 +417,14 @@ export default function Page() {
                         <ul className="text-xl">
                           {[
                             "Secured commitment from influential ecosystem leaders across sectors, establishing essential support network for future implementation success",
-                            "Secured commitment from influential ecosystem leaders across sectors, establishing essential support network for future implementation success",
                             "Equipped the organization with a unique perspective that made them newly relevant to policy discussions they had previously been excluded from."
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
 
                         <div>
-                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-blue-950">
+                          <p className="text-lg max-w-2xl font-semibold mt-6 mb-12 pl-8 border-l border-blue-950 italic">
                             &quot;What impressed us wasn&apos;t just the thoroughness of the research, but how you transformed complex insights into clear strategic choices. You managed to speak to the concerns of our most demanding stakeholders while avoiding the academic trap of analysis without recommendation.&quot; <br /><br />
                             <span className="font-bold">— Board Chair</span>
                           </p>

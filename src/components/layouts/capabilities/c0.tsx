@@ -48,7 +48,7 @@ export default function AboutLayout() {
       bgColor: "bg-red-200",
       textColor: "text-red-900",
       case: {
-        title: "Read About How e Used Strategy To Solve Silos",
+        title: "Read About How We Used Strategy To Solve Silos",
         link: "/from-silos-to-synergy",
         buttonColor: "red",
       }
@@ -60,7 +60,7 @@ export default function AboutLayout() {
       bgColor: "bg-yellow-50",
       textColor: "text-yellow-600",
       case: {
-        title: "Read About How we Helped 200 Leaders Solve Challenges Together",
+        title: "Read About How We Helped 200 Leaders Solve Challenges Together",
         link: "/driving-200-leaders-to-one-vision/",
         buttonColor: "yellow",
       }

@@ -364,7 +364,7 @@ export default function Page() {
                           The Challenge:
                         </h2>
                         <p className="text-lg md:text-2xl max-w-2xl mb-4">
-                        Engineering celebrated architectural innovation, product teams focused on user experience, and data specialists emphasized analytics capabilities. When the new CTO tried to articulate a unified technology story, it revealed a fragmented narrative landscape where teams couldn&apos;t see their connection to a larger purpose.
+                        Engineering celebrated architectural innovation, product teams focused on user experience, and data specialists emphasized analytics capabilities. When the new CTO tried to articulate a unified technology story, it revealed a fragmented narrative landscape where teams couldn&apos;t see their connection to a larger purpo
                         </p>
                         <ul className="text-xl">
                           {[
@@ -372,7 +372,7 @@ export default function Page() {
                             "Previous attempts at creating a unified message resulted in generic corporate language that technical teams dismissed as inauthentic marketing speak",
                             "The global scale (3,000+ professionals across 11 countries) meant that stories needed cultural translation to maintain meaning and impact across contexts"
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
                       </div>  
@@ -399,7 +399,7 @@ export default function Page() {
                           "Executed strategic storytelling workshops with influential voices from each discipline, helping them discover shared themes and translate technical capabilities into meaningful business impact stories",
                           "Developed a rich storytelling toolkit with flexible frameworks that enabled leaders to adapt the core narrative for different audiences while maintaining consistent themes and purpose ",
                         ].map((item, index) => (
-                          <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                          <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                         ))}
                       </ul>
                     </div>   
@@ -434,12 +434,12 @@ export default function Page() {
                             "Elevated technical communications with senior leadership, replacing feature lists with compelling stories about customer and business impact",
                             "Sparked voluntary storytelling communities of practice where teams began sharing success stories and lessons learned across previous organizational boundaries"
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
 
                         <div>
-                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-green-900">
+                          <p className="text-lg max-w-2xl font-semibold mt-20 mb-12 pl-8 border-l border-green-900 italic">
                             &quot;What stood out was how you helped us find our authentic story—not imposed from above but discovered within our teams. Our engineers and product specialists are now telling the same story from different angles, creating a richer narrative that resonates with everyone from developers to the board room..&quot; <br /><br />
                             <span className="font-bold">— Chief Technology Officer</span>
                           </p>

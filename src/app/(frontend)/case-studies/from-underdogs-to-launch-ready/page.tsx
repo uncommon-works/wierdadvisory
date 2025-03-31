@@ -346,7 +346,7 @@ export default function Page() {
                 From Underdogs to Launch Ready
               </h1>
               <p ref={subtitleRef} className="text-lg md:text-2xl max-w-2xl mt-6 mb-12">
-              Our client was poised to introduce a groundbreaking cell therapy to the market, but beneath the surface of standard launch preparations lay a more fundamental issue: wavering confidence across their global and local teams.
+                Our client was poised to introduce a groundbreaking cell therapy to the market, but beneath the surface of standard launch preparations lay a more fundamental issue: wavering confidence across their global and local teams.
               </p>
               <Button asChild variant="red" ref={buttonRef} className="hidden sm:flex">
                 <Link href="#next">
@@ -364,7 +364,7 @@ export default function Page() {
             <div ref={wrapper1Ref} className="relative h-auto md:h-[150vh] z-10 overflow-hidden">
               <div ref={A1} className="relative h-auto md:h-[200vh] md:-mt-[25vh] z-10">
                 <div className="bg-red-200 text-red-900 sm:h-[100vh] sm:p-[5vw]">
-                  <div className="relative sm:absolute inset-0  py-[8rem] sm:top-[20vh] px-6 sm:px-8">
+                  <div className="relative sm:absolute inset-0  py-[8rem] sm:top-[6vh] px-6 sm:px-8">
                     <div className="flex flex-col items-center justify-center mx-auto max-w-3xl">
                       <div className="col-span-1 flex flex-col items-start pr-0 sm:pr-[8rem]">
                         <p className="text-lg md:text-2xl max-w-2xl mb-4">
@@ -377,7 +377,7 @@ export default function Page() {
                             "Key messages and targeting approaches varied across functions and regions.",
                             "They needed to build conviction and alignment across a group of 100 stakeholders—and fast."
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
                       </div>  
@@ -389,8 +389,8 @@ export default function Page() {
   
             <div ref={wrapper2Ref} className="relative md:h-[100vh] z-10 overflow-hidden">
               <div ref={A2} className="relative md:h-[200vh] md:-mt-[25vh] z-10">
-                <div className="bg-red-100 text-red-900 h-auto sm:h-screen flex flex-col items-center px-6 py-[8rem] justify-center">
-                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-0 items-center mx-auto">
+                <div className="bg-red-100 text-red-900 h-auto sm:h-screen flex flex-col items-center px-6 md:px-[7vw] py-[8rem] justify-center">
+                  <div className="max-w-[1440px] grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-0 items-center mx-auto">
                     <div className="col-span-1 flex flex-col items-start pr-0 sm:pr-[8rem]">
                       <h2 className="text-4xl md:text-5xl font-medium leading-[1.15] select-none text-left mb-12">
                         How We Brought Clarity
@@ -402,9 +402,9 @@ export default function Page() {
                         {[
                           "Did a deep dive with stakeholders that uncovered critical gaps in customer needs and competitive positioning.",
                           "Built a framework that showed what made them different. This helped everyone see which decisions mattered most and gave them a new way to tell their story.",
-                          "We facilitated a series of high-impact collaborative virtual and in-person sessions that aligned the team around a big 'aha realization' that would help them steal more share than initially thought possible."
+                          "We facilitated a series of high-impact collaborative virtual and in-person sessions that aligned the team around a big 'aha realization' that would help them take more share than initially thought possible."
                         ].map((item, index) => (
-                          <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                          <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                         ))}
                       </ul>
                     </div>   
@@ -436,16 +436,16 @@ export default function Page() {
                             "Internal confidence metrics showed a dramatic shift—from hesitation to certainty—in teams' ability to articulate their value proposition to even the most skeptical clinicians.",
                             "Aligned all customer-facing functions around a consistent targeting approach and messaging framework, eliminating previous cross-functional disconnects."
                           ].map((item, index) => (
-                            <li key={index} className="list-disc ml-6 mb-4">{item}</li>
+                            <li key={index} className="list-disc ml-6 mb-4" style={{ listStyleType: 'square' }}>{item}</li>
                           ))}
                         </ul>
                       </div>  
                       <div className="space-y-12">
-                        <p className="text-lg max-w-2xl font-semibold mt-12 mb-3 pl-8 border-l border-red-950">
+                        <p className="text-lg max-w-2xl font-semibold mt-12 mb-3 pl-8 border-l border-red-950 italic">
                           &quot;We started this process with fundamental questions about our ability to challenge established players. The investment in building alignment wasn&apos;t just about launch strategy—it was about creating a shared belief in our therapy&apos;s value. Now our teams don&apos;t just have a plan; they have conviction.&quot; <br /><br />
                           <span className="font-bold">— Global Marketing Leader</span>
                         </p>
-                        <p className="text-lg max-w-2xl font-semibold mt-12 mb-3 pl-8 border-l border-red-950">
+                        <p className="text-lg max-w-2xl font-semibold mt-12 mb-3 pl-8 border-l border-red-950 italic">
                           &quot;Initially, I questioned whether this effort was worth pulling our global teams away from their day-to-day launch preparation. Looking back, it was the best decision we made. What we gained wasn&apos;t just alignment on paper—it was genuine conviction across regions and functions.&quot; 
                           <br /><br />
                           <span className="font-bold">— Global Medical Affairs</span>
