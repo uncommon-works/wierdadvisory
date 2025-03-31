@@ -401,7 +401,7 @@ export default function Page() {
                         ))}
                       </ul>
                       <p className="text-lg md:text-xl max-w-2xl mt-12">
-                        This experiential, visually-driven approach generated palpable energy as participants witnessed their contributions evolve into tangible strategies. Leaders left with both aligned priorities and the emotional investment that comes from seeing their personal imprint on the organization's future direction. 
+                        This experiential, visually-driven approach generated palpable energy as participants witnessed their contributions evolve into tangible strategies. Leaders left with both aligned priorities and the emotional investment that comes from seeing their personal imprint on the organization&apos;s future direction. 
                       </p>
                     </div>   
 
