@@ -184,13 +184,11 @@ export default function AboutLayout() {
               </Button>
             </MagneticWrapper>
           </div>
-          
-          <div className={`${notoEmoji.className} flex gap-6 sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}>
-            <div className="size-12 opacity-100">🐛</div>
-            <div className="size-12 opacity-100">🦋</div>
-            <div className="size-12 opacity-100">🌟</div>
-          </div>
 
+          <div className={`${notoEmoji.variable} font-noto flex sm:hidden font-bold text-red-900 relative z-20 text-left text-6xl space-x-6 mt-12`}>
+            🐛 🦋 🌟
+          </div> 
+          
         </div>
 
         <div className={`${notoEmoji.className} hidden sm:block font-noto font-bold text-red-900 relative mx-auto w-screen min-h-[30vh]`}>
