@@ -9,6 +9,13 @@ const pageColors: { [key: string]: string } = {
   '/about': 'bg-green-900',
   '/capabilities': 'bg-red-950',
   '/case-studies': 'bg-yellow-500',
+  '/case-studies/ai-vision-to-execution': 'bg-yellow-500',
+  '/case-studies/bridging-the-wealth-divide': 'bg-blue-950',
+  '/case-studies/driving-200-leaders-to-one-vision': 'bg-yellow-500',
+  '/case-studies/ecosystem-intelligence-renewing-purpose-for-a-national-innovation-catalyst': 'bg-blue-950',
+  '/case-studies/from-silos-to-synergy': 'bg-red-950',
+  '/case-studies/from-underdogs-to-launch-ready': 'bg-red-950',
+  '/case-studies/uniting-technical-tribes-into-a-shared-narrative': 'bg-green-900',
   '/contact': 'bg-purple-400',
 }
 

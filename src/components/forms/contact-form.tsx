@@ -153,9 +153,9 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={isLoading}
-          className="bg-[#1a1f36] hover:bg-[#2a2f46] text-white rounded px-8 py-2"
+          className="bg-black hover:bg-[#2a2f46] text-white rounded-full px-10 py-6"
         >
-          {isLoading ? "SENDING..." : "SEND"}
+          {isLoading ? "SENDING..." : "SEND MESSAGE"}
         </Button>
       </form>
     </Form>

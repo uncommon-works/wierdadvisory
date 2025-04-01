@@ -13,6 +13,9 @@ const notoEmoji = Noto_Emoji({
 })
 
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+import MagneticWrapper from '@/components/ui/magnetic-wrapper';
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger)
@@ -143,8 +146,8 @@ export default function AboutLayout() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative h-auto md:h-[100vh] bg-red-50 text-red-950">
-      <div className="sticky top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-8">
+    <section ref={sectionRef} className="relative z-20 h-auto md:h-[100vh] bg-red-50 text-red-950">
+      <div className="relative z-10 top-0 flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-8">
         <div className="max-w-2xl mx-auto flex flex-col items-start text-left">
           <p className="font-medium mb-8 baskerville">From 0 → A</p>
           <h2 ref={headingRef} className="text-4xl md:text-6xl leading-[1.15] max-w-3xl select-none">
@@ -162,22 +165,34 @@ export default function AboutLayout() {
               );
             })}
           </h2>
-          <div ref={textRef} className="text-lg md:text-xl max-w-xl my-12">
+          <div ref={textRef} className="flex flex-col items-start text-lg md:text-xl max-w-xl my-12">
             <p className="mb-8 text-lg">
               Starting anything new—whether it&apos;s a fresh initiative or pushing into leading-edge territory—is hard because you have to get two things right: seeing clearly where you need to go, and executing precisely to get there. We&apos;re good at both. We help you spot the right path forward and build the momentum to actually get there.
             </p>
-            
+            <MagneticWrapper>
+              <Button asChild variant="red" size="lg">
+                <a 
+                  href="/case-studies/bridging-the-wealth-divide/" 
+                  className="flex flex-row space-x-1 items-center font-medium pt-8 pb-8 sm:pt-0 sm:pb-0 text-wrap sm:text-nowrap cursor-pointer">
+                  <p className="hidden sm:block">Read About How We Unlocked $2B In New Wealth Opportunities</p> 
+                  <p className="block sm:hidden">Read More</p> 
+                  <ArrowRight />
+                </a>
+              </Button>
+            </MagneticWrapper>
           </div>
+
           <div className={`${notoEmoji.variable} block md:hidden antialiased font-noto text-6xl `}>
-            🚂 🛫 🚀
+            🌎 🚀 🌚
           </div>
+
         </div>
       </div>
       
       <svg 
         viewBox="0 0 1000 100" 
         preserveAspectRatio="xMidYMid meet" 
-        className="absolute top-[25vh] left-0 w-full h-full hidden md:block"
+        className="absolute top-[25vh] z-0 left-0 w-full h-full hidden md:block"
       >
         <path
           ref={pathRef}

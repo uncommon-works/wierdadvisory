@@ -4,21 +4,17 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-// HERO
 import Hero from "@/components/layouts/home/h1"
 
-// INTRO SECTIONS
 import About from "@/components/layouts/home/about"
 import F1 from "@/components/layouts/home/f1"
 import Solution from "@/components/layouts/home/solution"
 
-// BODY SECTIONS
 import Sec1 from "@/components/layouts/home/s1"
 import Sec2 from "@/components/layouts/home/s2"
 import Sec3 from '@/components/layouts/home/s3'
 import Sec4 from '@/components/layouts/home/s4'
 
-// CTA
 import Cta from "@/components/layouts/home/cta"
 
 
@@ -195,7 +191,7 @@ export default function Page() {
             <Solution />
           </div>
         
-          <div ref={section4Ref} className="relative h-[300vh] overflow-hidden">
+          <div ref={section4Ref} className="relative z-20 h-[300vh] overflow-hidden">
               
             <div ref={wrapper2Ref} className="relative h-[100vh] z-10 overflow-hidden">
               <div ref={A1} className="relative h-[200vh] sm:-mt-[25vh] z-10">
@@ -209,15 +205,16 @@ export default function Page() {
               </div>
             </div>  
 
-            <div ref={wrapper4Ref} className="relative h-auto sm:h-[100vh] z-10 overflow-hidden">
-              <div ref={A3} className="relative h-auto sm:h-[200vh] sm:-mt-[25vh] z-10">
+            <div ref={wrapper4Ref} className="relative h-auto sm:h-[100vh] z-20 overflow-hidden">
+              <div ref={A3} className="relative h-auto sm:h-[200vh] sm:-mt-[25vh] z-20">
                 <Sec3 />
-                
               </div>
             </div>  
           </div>
 
-        <Sec4 />
+          <div className="relative z-0">
+            <Sec4 />
+          </div>
         </div>
 
 

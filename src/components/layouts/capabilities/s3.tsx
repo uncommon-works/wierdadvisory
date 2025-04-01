@@ -4,6 +4,9 @@ import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Noto_Emoji } from "next/font/google";
+import MagneticWrapper from '@/components/ui/magnetic-wrapper';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const notoEmoji = Noto_Emoji({
   subsets: ["emoji"],
@@ -106,7 +109,7 @@ export default function AboutLayout() {
     });
   
     const path = svgRef.current?.querySelector(".thought-path") as SVGPathElement | null;
-    const emojis = Array.from(svgRef.current?.querySelectorAll(".emoji") ?? []) as SVGGElement[];
+    const emojis = Array.from(svgRef.current?.querySelectorAll(".el") ?? []) as SVGGElement[];
   
     if (path) {
       const length = path.getTotalLength();
@@ -167,10 +170,19 @@ export default function AboutLayout() {
               );
             })}
           </h2>
-          <div ref={textRef} className="text-lg md:text-xl max-w-xl mt-12">
+          <div ref={textRef} className="flex flex-col items-start text-lg md:text-xl max-w-xl mt-12">
             <p className="mb-8 text-lg">
               Real transformation isn&apos;t just making a plan—it&apos;s navigating all the unexpected challenges that come after. We help teams stay focused on where they&apos;re going while adapting to what they find along the way. 
             </p>
+            <MagneticWrapper>
+              <Button asChild size="lg" variant="red" >
+                <a href="/case-studies/ai-vision-to-execution" className="flex flex-row space-x-1 items-center font-medium text-left pt-8 pb-8 sm:pt-0 sm:pb-0 text-wrap sm:text-nowrap">
+                  <p className="hidden sm:block">Discover how we turned AI dreams into reality</p>
+                  <p className="block sm:hidden">Read More</p>
+                  <ArrowRight />
+                </a>
+              </Button>
+            </MagneticWrapper>
           </div>
         </div>
 
@@ -192,21 +204,21 @@ export default function AboutLayout() {
 
             {/* Emoji containers with background circles - now equally distributed */}
             <circle cx="0" cy="0" r="36" transform="translate(250, 100)" fill="rgb(254 226 225)" />
-            <g className="emoji" transform="translate(250, 100)">
+            <g className="el" transform="translate(250, 100)">
               <text x="0" y="2" fontSize="36" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 🐛
               </text>
             </g>
 
             <circle cx="0" cy="0" r="36" transform="translate(450, 100)" fill="rgb(254 226 225)" />
-            <g className="emoji" transform="translate(450, 100)">
+            <g className="el" transform="translate(450, 100)">
               <text x="0" y="2" fontSize="36" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 🦋
               </text>
             </g>
 
             <circle cx="0" cy="0" r="36" transform="translate(650, 100)" fill="rgb(254 226 225)" />
-            <g className="emoji" transform="translate(650, 100)">
+            <g className="el" transform="translate(650, 100)">
               <text x="0" y="2" fontSize="36" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 🌟
               </text>

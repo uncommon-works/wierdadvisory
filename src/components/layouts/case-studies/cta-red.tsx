@@ -1,16 +1,15 @@
 'use client'
 
+import MagneticWrapper from '@/components/ui/magnetic-wrapper'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Noto_Emoji } from "next/font/google";
 import { Button } from '@/components/ui/button'
-import MagneticWrapper from '@/components/ui/magnetic-wrapper'
-// import Link from 'next/link'
-
+import Link from 'next/link'
 import { useSheet } from '@/components/ui/sheet-provider'
-import { ContactForm } from '@/components/forms/contact-form';
-import Link from 'next/link';
+import { ContactForm } from '@/components/forms/contact-form'
+
 
 const notoEmoji = Noto_Emoji({
   subsets: ["emoji"],
@@ -22,19 +21,19 @@ const notoEmoji = Noto_Emoji({
 export default function CtaLayout() {
 
   const { openSheet } = useSheet()
-  
-    const handleOpenSheet = () => {
-      openSheet(
-        <>
-          <div className="mb-10">
-            <p className="text-sm text-muted-foreground">
-              For any request, please fill in the following form. Our team will get back to you as soon as possible.
-            </p>
-          </div>
-          <ContactForm />
-        </>,
-      )
-    }
+
+  const handleOpenSheet = () => {
+    openSheet(
+      <>
+        <div className="mb-10">
+          <p className="text-sm text-muted-foreground">
+            For any request, please fill in the following form. Our team will get back to you as soon as possible.
+          </p>
+        </div>
+        <ContactForm />
+      </>,
+    )
+  }
 
   const words = [
     "Feeling",
@@ -54,6 +53,7 @@ export default function CtaLayout() {
   const headingRef = useRef<HTMLHeadingElement | null>(null)
 
   useEffect(() => {
+
     gsap.registerPlugin(ScrollTrigger)
 
     if (
@@ -64,10 +64,8 @@ export default function CtaLayout() {
       !hand5.current ||
       !ctaSection.current ||
       !headingRef.current 
-    ) {
-      return
-    }
-
+    ) return
+    
     const handItems = [
       { ref: hand1.current, rotation: "125deg" },
       { ref: hand2.current, rotation: "152deg" },
@@ -108,7 +106,7 @@ export default function CtaLayout() {
   }, [])
 
   return (
-    <div ref={ctaSection} className={`${notoEmoji.variable} antialiased text-red-950 w-full py-[10rem] flex flex-col items-center justify-center bg-white`}> 
+    <div ref={ctaSection} className={`${notoEmoji.variable} text-red-900 antialiased w-full py-[10rem] flex flex-col items-center justify-center`}> 
       <h2 ref={headingRef} className="text-4xl md:text-5xl font-regular leading-[1.15] max-w-3xl text-center select-none mb-12">
         {words.map((word, i) => {
           const isBold = word === "Let's" || word === "Talk."
@@ -132,12 +130,12 @@ export default function CtaLayout() {
         <div ref={hand5} className="text-5xl md:text-7xl font-bold">👆🏻</div>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 pt-12 ">
+      <div className="flex flex-col md:flex-row gap-4 pt-12 ">
             
         <MagneticWrapper asChild>
           <Button asChild variant="red" size="lg" className="">
             <Link href="/case-studies">
-              View Case Studies
+              Back to All Case Studies
             </Link>
           </Button>
         </MagneticWrapper>
@@ -151,6 +149,7 @@ export default function CtaLayout() {
         </MagneticWrapper>
 
       </div>
+        
     </div>
   )
 }

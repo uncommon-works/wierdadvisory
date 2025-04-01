@@ -4,6 +4,9 @@ import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Noto_Emoji } from "next/font/google"
+import MagneticWrapper from '@/components/ui/magnetic-wrapper'
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
 
 const notoEmoji = Noto_Emoji({
   subsets: ["emoji"],
@@ -97,7 +100,7 @@ export default function AboutLayout() {
     });
   
     const path = svgRef.current?.querySelector(".thought-path") as SVGPathElement | null;
-    const emojis = Array.from(svgRef.current?.querySelectorAll(".emoji") ?? []) as SVGGElement[];
+    const emojis = Array.from(svgRef.current?.querySelectorAll(".el") ?? []) as SVGGElement[];
   
     if (path) {
       const length = path.getTotalLength();
@@ -157,15 +160,26 @@ export default function AboutLayout() {
               )
             })}
           </h2>
-          <div ref={textRef} className="text-lg md:text-xl max-w-xl mt-12">
+          <div ref={textRef} className="flex flex-col items-start text-lg md:text-xl max-w-xl mt-12">
             <p className="mb-8 text-lg">
               Most strategic problems persist because something&apos;s blocking clear thinking—whether it&apos;s outdated assumptions, organizational habits, or past approaches that didn&apos;t work. We help teams cut through these barriers. By creating space to think differently, we help you see solutions that were there all along. 
             </p>
+            <MagneticWrapper>
+              <Button asChild variant="red" size="lg">
+                <a 
+                  href="/case-studies/from-underdogs-to-launch-ready/"
+                  className="flex flex-row space-x-1 items-center font-medium pt-8 pb-8 sm:pt-0 sm:pb-0 text-wrap sm:text-nowrap cursor-pointer">
+                  <p className="hidden sm:block">Read about how we unlocked hidden market potential</p> 
+                  <p className="block sm:hidden">Read More</p> 
+                  <ArrowRight />
+                </a>
+              </Button>
+            </MagneticWrapper>
           </div>
         </div>
 
         {/* Small screen emoji */}
-        <div className={`${notoEmoji.className} md:hidden font-noto font-bold text-red-900 relative text-left text-6xl mt-12`}>
+        <div className={`${notoEmoji.className} md:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}>
           <span className="">🤔</span>
           <span className="">💭</span>
           <span className="">💡</span>
@@ -188,19 +202,19 @@ export default function AboutLayout() {
             />
 
             {/* Emoji containers with background circles */}
-            <g className="emoji" transform="translate(200, 150)">
+            <g className="el" transform="translate(200, 150)">
               <text x="0" y="2" fontSize="60" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 🚧
               </text>
             </g>
 
-            <g className="emoji" transform="translate(500, 150)">
+            <g className="el" transform="translate(500, 150)">
               <text x="0" y="2" fontSize="60" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 💭
               </text>
             </g>
 
-            <g className="emoji" transform="translate(800, 150)">
+            <g className="el" transform="translate(800, 150)">
               <text x="0" y="2" fontSize="60" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 💡
               </text>
