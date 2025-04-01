@@ -189,6 +189,11 @@ export default function AboutLayout() {
             <div className="size-12 opacity-100">🦋</div>
             <div className="size-12 opacity-100">🌟</div>
           </div>
+
+          <div className={`${notoEmoji.variable} block md:hidden antialiased font-noto text-6xl `}>
+            🌎 🚀 🌚
+          </div>
+          
         </div>
 
         <div className={`${notoEmoji.className} hidden sm:block font-noto font-bold text-red-900 relative mx-auto w-screen min-h-[30vh]`}>
