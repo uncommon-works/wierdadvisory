@@ -186,7 +186,9 @@ export default function AboutLayout() {
           </div>
         </div>
 
-        <div className={`${notoEmoji.className} flex gap-6 sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}>
+        <div 
+          className={`${notoEmoji.className} flex gap-6 sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}
+          style={{ opacity: 1, visibility: 'visible', color: 'rgb(69 10 10)' }}>
           <div className="size-12 opacity-100">🐛</div>
           <div className="size-12 opacity-100">🦋</div>
           <div className="size-12 opacity-100">🌟</div>
