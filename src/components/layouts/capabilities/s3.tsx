@@ -109,7 +109,7 @@ export default function AboutLayout() {
     });
   
     const path = svgRef.current?.querySelector(".thought-path") as SVGPathElement | null;
-    const emojis = Array.from(svgRef.current?.querySelectorAll("emojiAnimate") ?? []) as SVGGElement[];
+    const emojis = Array.from(svgRef.current?.querySelectorAll(".el") ?? []) as SVGGElement[];
   
     if (path) {
       const length = path.getTotalLength();
@@ -204,21 +204,21 @@ export default function AboutLayout() {
 
             {/* Emoji containers with background circles - now equally distributed */}
             <circle cx="0" cy="0" r="36" transform="translate(250, 100)" fill="rgb(254 226 225)" />
-            <g className="emojiAnimate" transform="translate(250, 100)">
+            <g className="el" transform="translate(250, 100)">
               <text x="0" y="2" fontSize="36" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 🐛
               </text>
             </g>
 
             <circle cx="0" cy="0" r="36" transform="translate(450, 100)" fill="rgb(254 226 225)" />
-            <g className="emojiAnimate" transform="translate(450, 100)">
+            <g className="el" transform="translate(450, 100)">
               <text x="0" y="2" fontSize="36" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 🦋
               </text>
             </g>
 
             <circle cx="0" cy="0" r="36" transform="translate(650, 100)" fill="rgb(254 226 225)" />
-            <g className="emojiAnimate" transform="translate(650, 100)">
+            <g className="el" transform="translate(650, 100)">
               <text x="0" y="2" fontSize="36" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 🌟
               </text>

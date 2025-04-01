@@ -298,8 +298,8 @@ export default function Page() {
     <>
       <section className="bg-blue-50 min-h-screen">
         <div ref={section1Ref} className="relative h-auto ">
-          <div ref={S1} className="sm:sticky top-0 min-h-[60vh] px-6 text-blue-950">
-            <div className="max-w-3xl mx-auto flex flex-col items-start justify-center py-[12rem]">
+          <div ref={S1} className="sm:sticky top-0 min-h-screen px-6 text-blue-950">
+            <div className="max-w-3xl mx-auto flex flex-col items-start justify-center py-[12rem] h-screen">
               <div ref={breadcrumbRef} className="relative">
                 <Breadcrumb className="mb-12">
                   <BreadcrumbList>
@@ -376,6 +376,9 @@ export default function Page() {
                         <h2 id="next" className="text-4xl md:text-5xl font-medium sm:leading-[1.15] select-none text-left mb-12">
                           Their Situation:
                         </h2>
+                        <p className="text-lg md:text-2xl max-w-2xl mb-12">
+                          Our investigation revealed three critical gaps: 
+                        </p>
                         <ul className="text-xl">
                           {[
                              "Billions in assets moving to heirs who questioned traditional wealth concepts.",

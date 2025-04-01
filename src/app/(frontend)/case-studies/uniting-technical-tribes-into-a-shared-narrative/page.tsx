@@ -297,8 +297,8 @@ export default function Page() {
     <>
       <section className="bg-green-50 min-h-screen">
         <div ref={section1Ref} className="relative h-auto ">
-          <div ref={S1} className="sm:sticky top-0 min-h-[60vh] px-6 text-green-900">
-            <div className="max-w-3xl mx-auto flex flex-col items-start justify-center py-[12rem]">
+          <div ref={S1} className="sm:sticky top-0 min-h-screen px-6 text-green-900">
+            <div className="max-w-3xl mx-auto flex flex-col items-start justify-center py-[12rem] h-screen">
               <div ref={breadcrumbRef} className="relative">
                 <Breadcrumb className="mb-12">
                   <BreadcrumbList>

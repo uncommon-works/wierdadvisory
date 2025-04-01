@@ -163,16 +163,9 @@ export default function AboutLayout() {
                 flex flex-col items-center justify-center overflow-hidden relative
               `}
             >
-              <div className="relative inset-0 container mx-auto min-h-screen text-left font-semibold text-lg w-full">
-                <div className="relative h-screen py-24 w-full px-8 flex flex-col items-start justify-top sm:min-w-[400px] md:min-w-[500px] lg:min-w-[1080px]">
+              <div className="relative container mx-auto min-h-screen text-left font-semibold text-lg w-full">
+                <div className="relative py-36 w-full px-8 flex flex-col items-start justify-top sm:min-w-[400px] md:min-w-[500px] lg:min-w-[1080px]">
                   
-                  <div className="relative overflow-hidden w-full h-auto py-12 transition-all duration-500">
-                    <div className="w-full text-wrap">
-                    
-                      
-                    </div>
-                  </div>
-
                   <div className="relative">
 
                     {item.icon && <item.icon className="size-12 mb-8 " />}
@@ -198,15 +191,41 @@ export default function AboutLayout() {
         </div>
       </section>
 
-      <section ref={sectionRef} className="hidden sm:block relative min-h-[400vh]">
-        <div className="relative sm:sticky top-0 flex flex-col sm:flex-row w-full h-screen">
+      <section className="hidden sm:block"> 
+        <div className="relative z-20 flex flex-col items-center justify-center w-full pt-48">
+        <div className="max-w-2xl mx-auto flex flex-col items-start text-left bg-blend-color-dodge">
+          <h2 className="text-4xl md:text-6xl leading-[1.15] max-w-3xl select-none mix-blend-multiply text-black/80">
+            Our Core <strong>Capabilities</strong>
+          </h2>
+          <div className="flex flex-col items-start text-lg md:text-xl max-w-xl mt-12">
+            <p className="mb-8 text-lg mix-blend-multiply text-black/80">
+              At Wierd(A)dvisory, we treat strategy as a craft, not a formula. Our work is built on four foundations: understanding what's really going on, getting the right people having the right conversations, making tough decisions with clarity, and turning different perspectives into better solutions. Here's how we work:
+            </p>
+          </div>
+        </div>
+
+        </div>
+        <div className="absolute inset-0 z-0 flex flex-row justify-stretch items-stretch h-full w-full">
+          <div className="bg-blue-100 w-full flex items-center justify-center text-blue-100">
+          </div>
+          <div className="bg-green-100 w-full flex items-center justify-center text-green-900">
+          </div>
+          <div className="bg-red-200 w-full flex items-center justify-center text-red-900">
+          </div>
+          <div className="bg-yellow-50 w-full flex items-center justify-center text-yellow-600">
+          </div>
+        </div>
+      </section>
+
+      <section ref={sectionRef} className="hidden sm:block relative sm:min-h-[400vh]">
+        <div className="relative sm:sticky top-0 flex flex-col sm:flex-row w-full min-h-screen">
           {capabilities.map((item, index) => (
             <div
               key={index}
               ref={(el) => { if (el) divRefs.current[index] = el }}
               className={`
                 ${item.bgColor} ${item.textColor} 
-                flex-grow flex flex-col items-center justify-center p-4 overflow-hidden relative
+                flex-grow flex flex-col items-center justify-center px-4 py-24 overflow-hidden relative
               `}
             >
               <div
@@ -222,22 +241,18 @@ export default function AboutLayout() {
               </div>
 
               <div className="absolute inset-0 container mx-auto h-screen text-left font-semibold text-lg min-w-[300px]">
-                <div className="absolute h-screen pt-[10vh] w-full px-12 flex flex-col items-start justify-top sm:min-w-[400px] md:min-w-[500px] lg:min-w-[1080px]">
-                  
+                <div className="absolute sm:h-screen pt-[10vh] w-full px-12 flex flex-col items-start justify-top sm:min-w-[400px] md:min-w-[500px] lg:min-w-[1080px]">
 
-                  
-                  <div className="relative overflow-hidden w-full h-auto py-12 transition-all duration-500">
+
+                  <div className="relative overflow-hidden w-full h-auto py-24 transition-all duration-500">
                     <div className="w-full text-wrap">
-                    
+
                       
                     </div>
                   </div>
 
 
-                  <div 
-                    ref={(el) => { if (el) titleRefs1.current[index] = el }}
-                    className="relative h-auto hidden sm:block"
-                  >
+                  <div ref={(el) => { if (el) titleRefs1.current[index] = el }} className="relative h-auto hidden sm:block">
                     {item.icon && <item.icon className="size-6 md:size-12 mb-8" />}
                     <h2 className="text-3xl lg:text-4xl xl:text-5xl max-w-[240px]">
                       {item.title}

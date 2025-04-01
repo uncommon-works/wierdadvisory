@@ -183,7 +183,7 @@ export default function AboutLayout() {
           </div>
 
           <div className={`${notoEmoji.variable} block md:hidden antialiased font-noto text-6xl `}>
-            🚂 🛫 🚀
+            🌎 🚀 🌚
           </div>
 
         </div>

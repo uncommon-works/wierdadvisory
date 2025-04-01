@@ -280,8 +280,8 @@ export default function Page() {
     <>
       <section className="bg-yellow-50 min-h-screen">
         <div ref={section1Ref} className="relative h-auto ">
-          <div ref={S1} className="sm:sticky top-0 min-h-[60vh] px-6 text-yellow-500">
-            <div className="max-w-3xl mx-auto flex flex-col items-start justify-center py-[12rem]">
+          <div ref={S1} className="sm:sticky top-0 min-h-[100vh] px-6 text-yellow-500">
+            <div className="max-w-3xl mx-auto flex flex-col items-start justify-center py-[12rem] h-screen">
               <div ref={breadcrumbRef} className="relative">
                 <Breadcrumb className="mb-12">
                   <BreadcrumbList>
@@ -301,7 +301,7 @@ export default function Page() {
               </div>
 
               <div ref={containerRef}>
-                <h1 ref={textRef} className="hidden sm:block text-6xl h-[44px] md:h-[86px] overflow-hidden w-max "> 
+                <h1 ref={textRef} className="hidden sm:block text-6xl h-[44px] md:h-[86px] overflow-hidden"> 
                   <span className="relative inline-block">A</span>
                   <span className="relative inline-block">I</span>
                   <span className="relative inline-block">&nbsp;</span>
@@ -354,6 +354,9 @@ export default function Page() {
                         <h2 id="next" className="text-4xl md:text-5xl font-medium sm:leading-[1.15] select-none text-left mb-12">
                           The Transformation Story
                         </h2>
+                        <p className="text-lg md:text-2xl max-w-2xl mb-12">
+                          As execution began, the real challenges emerged:
+                        </p>
                         <ul className="text-xl" style={{ listStyleType: 'square' }}>
                           {[
                             "The 'clear' roadmap became blurry, with teams interpreting strategy through different lenses.",
