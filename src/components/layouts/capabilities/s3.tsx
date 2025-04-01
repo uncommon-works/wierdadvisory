@@ -35,8 +35,6 @@ export default function AboutLayout() {
 
   useEffect(() => {
 
-    if (window.innerWidth < 500) return;
-
     if (
       !sectionRef.current ||
       !headingRef.current ||
@@ -97,8 +95,6 @@ export default function AboutLayout() {
 
   useEffect(() => {
   
-    if (window.innerWidth < 500) return;
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
@@ -183,11 +179,12 @@ export default function AboutLayout() {
                 </a>
               </Button>
             </MagneticWrapper>
+            <div className={`${notoEmoji.variable} font-noto flex sm:hidden font-bold text-red-900 relative z-20 text-left text-6xl space-x-6 mt-12`}>
+            🐛 🦋 🌟
+            </div> 
           </div>
 
-          <div className={`${notoEmoji.variable} font-noto flex sm:hidden font-bold text-red-900 relative z-20 text-left text-6xl space-x-6 mt-12`}>
-            🐛 🦋 🌟
-          </div> 
+          
           
         </div>
 

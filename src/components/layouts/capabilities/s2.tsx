@@ -87,33 +87,12 @@ export default function AboutLayout() {
         animateEmojis(emojiLargeRef.current)
       }
 
-      // Handle mobile emoji animations
-      if (window.innerWidth < 500) {
-        const mobileEmojis = document.querySelectorAll(".mobile-emoji")
-        gsap.fromTo(
-          mobileEmojis,
-          { autoAlpha: 1, y: 20 },
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power2.out",
-            stagger: 0.2,
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top center",
-              toggleActions: "play none none reverse",
-            },
-          },
-        )
-      }
     }, sectionRef)
 
     return () => ctx.revert()
   }, [])
 
   useEffect(() => {
-    if (window.innerWidth < 500) return
 
     const tl = gsap.timeline({
       scrollTrigger: {
