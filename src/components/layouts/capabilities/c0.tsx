@@ -199,7 +199,7 @@ export default function AboutLayout() {
           </h2>
           <div className="flex flex-col items-start text-lg md:text-xl max-w-xl mt-12">
             <p className="mb-8 text-lg mix-blend-multiply text-black/80">
-              At Wierd(A)dvisory, we treat strategy as a craft, not a formula. Our work is built on four foundations: understanding what's really going on, getting the right people having the right conversations, making tough decisions with clarity, and turning different perspectives into better solutions. Here's how we work:
+              At Wierd(A)dvisory, we treat strategy as a craft, not a formula. Our work is built on four foundations: understanding what&apos;s really going on, getting the right people having the right conversations, making tough decisions with clarity, and turning different perspectives into better solutions. Here&apos;s how we work:
             </p>
           </div>
         </div>
