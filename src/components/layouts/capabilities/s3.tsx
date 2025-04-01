@@ -179,9 +179,9 @@ export default function AboutLayout() {
                 </a>
               </Button>
             </MagneticWrapper>
-            <div className={`${notoEmoji.variable} font-noto flex sm:hidden font-bold text-red-900 relative z-20 text-left text-6xl space-x-6 mt-12`}>
+            <p className={`${notoEmoji.variable} font-noto flex sm:hidden font-bold text-red-900 relative z-20 text-left text-6xl space-x-6 mt-12`}>
             🐛 🦋 🌟
-            </div> 
+            </p> 
           </div>
 
           
