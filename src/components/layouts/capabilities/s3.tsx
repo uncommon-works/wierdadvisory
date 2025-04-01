@@ -177,17 +177,18 @@ export default function AboutLayout() {
             <MagneticWrapper>
               <Button asChild size="lg" variant="red" >
                 <a href="/case-studies/ai-vision-to-execution" className="flex flex-row space-x-1 items-center font-medium text-left pt-8 pb-8 sm:pt-0 sm:pb-0 text-wrap sm:text-nowrap">
-                  <p className="hidden sm:block">Discover how we turned AI dreams into reality</p>
+                  <p className="hidden sm:block">Discover How We Turned AI Dreams Into Reality</p>
                   <p className="block sm:hidden">Read More</p>
                   <ArrowRight />
                 </a>
               </Button>
             </MagneticWrapper>
           </div>
-        </div>
 
-        <div className={`${notoEmoji.className} sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl mt-12`}>
-          🐛 🦋 🌟
+          <div className={`${notoEmoji.variable} font-noto flex sm:hidden font-bold text-red-900 relative z-20 text-left text-6xl space-x-6 mt-12`}>
+            🐛 🦋 🌟
+          </div> 
+          
         </div>
 
         <div className={`${notoEmoji.className} hidden sm:block font-noto font-bold text-red-900 relative mx-auto w-screen min-h-[30vh]`}>
@@ -202,7 +203,6 @@ export default function AboutLayout() {
               strokeLinecap="round"
             />
 
-            {/* Emoji containers with background circles - now equally distributed */}
             <circle cx="0" cy="0" r="36" transform="translate(250, 100)" fill="rgb(254 226 225)" />
             <g className="el" transform="translate(250, 100)">
               <text x="0" y="2" fontSize="36" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
