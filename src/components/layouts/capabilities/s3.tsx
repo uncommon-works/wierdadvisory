@@ -184,14 +184,11 @@ export default function AboutLayout() {
               </Button>
             </MagneticWrapper>
           </div>
-        </div>
-
-        <div 
-          className={`${notoEmoji.className} flex gap-6 sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}
-          style={{ opacity: 1, visibility: 'visible', color: 'rgb(69 10 10)' }}>
-          <div className="size-12 opacity-100">🐛</div>
-          <div className="size-12 opacity-100">🦋</div>
-          <div className="size-12 opacity-100">🌟</div>
+          <div className={`${notoEmoji.className} flex gap-6 sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}>
+            <div className="size-12 opacity-100">🐛</div>
+            <div className="size-12 opacity-100">🦋</div>
+            <div className="size-12 opacity-100">🌟</div>
+          </div>
         </div>
 
         <div className={`${notoEmoji.className} hidden sm:block font-noto font-bold text-red-900 relative mx-auto w-screen min-h-[30vh]`}>
@@ -206,7 +203,6 @@ export default function AboutLayout() {
               strokeLinecap="round"
             />
 
-            {/* Emoji containers with background circles - now equally distributed */}
             <circle cx="0" cy="0" r="36" transform="translate(250, 100)" fill="rgb(254 226 225)" />
             <g className="el" transform="translate(250, 100)">
               <text x="0" y="2" fontSize="36" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">

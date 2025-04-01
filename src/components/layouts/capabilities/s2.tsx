@@ -60,7 +60,7 @@ export default function AboutLayout() {
       // Emoji stagger animation
       const animateEmojis = (emojiContainer: HTMLDivElement | null) => {
         if (!emojiContainer) return
-        const emojiSpans = emojiContainer.querySelectorAll('.emoji') as NodeListOf<HTMLSpanElement>
+        const emojiSpans = emojiContainer.querySelectorAll('.el') as NodeListOf<HTMLSpanElement>
 
         gsap.set(emojiSpans, { autoAlpha: 0, y: 20 }) // Start hidden and slightly below
 
@@ -176,13 +176,11 @@ export default function AboutLayout() {
               </Button>
             </MagneticWrapper>
           </div>
-        </div>
-
-        {/* Small screen emoji */}
-        <div className={`${notoEmoji.className} flex gap-6 sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}>
-          <div className="size-12 opacity-100">🤔</div>
-          <div className="size-12 opacity-100">💭</div>
-          <div className="size-12 opacity-100">💡</div>
+          <div className={`${notoEmoji.className} flex gap-6 sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}>
+            <div className="size-12 opacity-100">🤔</div>
+            <div className="size-12 opacity-100">💭</div>
+            <div className="size-12 opacity-100">💡</div>
+          </div>
         </div>
 
         {/* Large screen emoji */}
