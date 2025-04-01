@@ -60,7 +60,7 @@ export default function AboutLayout() {
       // Emoji stagger animation
       const animateEmojis = (emojiContainer: HTMLDivElement | null) => {
         if (!emojiContainer) return
-        const emojiSpans = emojiContainer.querySelectorAll('.el') as NodeListOf<HTMLSpanElement>
+        const emojiSpans = emojiContainer.querySelectorAll('.el-desktop') as NodeListOf<HTMLSpanElement>
 
         gsap.set(emojiSpans, { autoAlpha: 0, y: 20 }) // Start hidden and slightly below
 
@@ -178,15 +178,10 @@ export default function AboutLayout() {
           </div>
 
           <div className={`${notoEmoji.className} flex gap-6 sm:hidden font-noto font-bold text-red-900 relative z-20 text-left text-6xl space-x-6 mt-12`}>
-            <div>🤔</div>
-            <div>💭</div>
-            <div>💡</div>
+            <div className="el-mobile !opacity-100 !visible">🤔</div>
+            <div className="el-mobile !opacity-100 !visible">💭</div>
+            <div className="el-mobile !opacity-100 !visible">💡</div>
           </div>
-
-          <div className={`${notoEmoji.variable} block md:hidden antialiased font-noto text-6xl `}>
-            🌎 🚀 🌚
-          </div>
-
         </div>
 
         {/* Large screen emoji */}
@@ -206,19 +201,19 @@ export default function AboutLayout() {
             />
 
             {/* Emoji containers with background circles */}
-            <g className="el" transform="translate(200, 150)">
+            <g className="el-desktop" transform="translate(200, 150)">
               <text x="0" y="2" fontSize="60" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 🚧
               </text>
             </g>
 
-            <g className="el" transform="translate(500, 150)">
+            <g className="el-desktop" transform="translate(500, 150)">
               <text x="0" y="2" fontSize="60" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 💭
               </text>
             </g>
 
-            <g className="el" transform="translate(800, 150)">
+            <g className="el-desktop" transform="translate(800, 150)">
               <text x="0" y="2" fontSize="60" textAnchor="middle" dominantBaseline="middle" fill="rgb(69 10 10)">
                 💡
               </text>

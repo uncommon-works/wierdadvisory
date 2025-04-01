@@ -46,6 +46,11 @@ h1 { font-family: var(--libre-baskerville); }
   .list-square {
     list-style-type: square;
   }
+  .el-mobile {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
 }
 
 @layer base {
