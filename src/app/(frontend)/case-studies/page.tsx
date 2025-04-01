@@ -42,7 +42,7 @@ export default function CaseStudiesPage() {
       title: "AI Vision to Execution",
       emoji: "🤖",
       slug: "/ai-vision-to-execution",
-      size: "col-span-2 row-span-1 md:col-span-1 md:row-span-2",
+      size: "col-span-1 row-span-1 md:col-span-1 md:row-span-2",
       bgColor: "bg-yellow-50",
       badgeColor: "bg-yellow-100",
       textColor: "text-yellow-600",
@@ -75,7 +75,7 @@ export default function CaseStudiesPage() {
       title: "Ecosystem Intelligence Renewing Purpose for a National Innovation Catalyst",
       emoji: "🔄",
       slug: "/ecosystem-intelligence-renewing-purpose-for-a-national-innovation-catalyst",
-      size: "col-span-2 row-span-1",
+      size: "col-span-1 sm:col-span-2 row-span-1",
       bgColor: "bg-blue-50",
       badgeColor: "bg-blue-100",
       textColor: "text-blue-950",
@@ -86,7 +86,7 @@ export default function CaseStudiesPage() {
       title: "From Silos to Synergy",
       emoji: "🌱",
       slug: "/from-silos-to-synergy",
-      size: "col-span-2 row-span-1",
+      size: "col-span-1 sm:col-span-2 row-span-1",
       bgColor: "bg-red-50",
       badgeColor: "bg-red-100",
       textColor: "text-red-950",
@@ -108,7 +108,7 @@ export default function CaseStudiesPage() {
       title: "Bridging the Wealth Divide",
       emoji: "💰",
       slug: "/bridging-the-wealth-divide",
-      size: "col-span-3 row-span-1",
+      size: "col-span-1 sm:col-span-3 row-span-1",
       bgColor: "bg-blue-50",
       badgeColor: "bg-blue-100",
       textColor: "text-blue-950",
@@ -239,7 +239,7 @@ export default function CaseStudiesPage() {
         className="container mx-auto px-4 py-12 md:pb-24 max-w-4xl w-full"
         aria-label="Case study cards"
       >
-        <div className="w-full grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3">
+        <div className="w-full grid sm:grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3">
           {caseStudies.map((study, index) => (
             <a
               key={index}

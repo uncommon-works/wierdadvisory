@@ -169,7 +169,7 @@ export default function AboutLayout() {
                 <a 
                   href="/case-studies/from-underdogs-to-launch-ready/"
                   className="flex flex-row space-x-1 items-center font-medium pt-8 pb-8 sm:pt-0 sm:pb-0 text-wrap sm:text-nowrap cursor-pointer">
-                  <p className="hidden sm:block">Read about how we unlocked hidden market potential</p> 
+                  <p className="hidden sm:block">Read About How We Unlocked Hidden Market Potential</p> 
                   <p className="block sm:hidden">Read More</p> 
                   <ArrowRight />
                 </a>
@@ -179,10 +179,10 @@ export default function AboutLayout() {
         </div>
 
         {/* Small screen emoji */}
-        <div className={`${notoEmoji.className} md:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}>
-          <span className="">🤔</span>
-          <span className="">💭</span>
-          <span className="">💡</span>
+        <div className={`${notoEmoji.className} flex gap-6 sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}>
+          <div className="size-12 opacity-100">🤔</div>
+          <div className="size-12 opacity-100">💭</div>
+          <div className="size-12 opacity-100">💡</div>
         </div>
 
         {/* Large screen emoji */}

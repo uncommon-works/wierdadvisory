@@ -191,8 +191,8 @@ export default function AboutLayout() {
         </div>
       </section>
 
-      <section className="hidden sm:block"> 
-        <div className="relative z-20 flex flex-col items-center justify-center w-full pt-48">
+      <section className="hidden sm:block bg-red-100"> 
+        <div className="relative z-20 flex flex-col items-center justify-center w-full pt-48 pb-36">
         <div className="max-w-2xl mx-auto flex flex-col items-start text-left bg-blend-color-dodge">
           <h2 className="text-4xl md:text-6xl leading-[1.15] max-w-3xl select-none mix-blend-multiply text-black/80">
             Our Core <strong>Capabilities</strong>
@@ -204,16 +204,6 @@ export default function AboutLayout() {
           </div>
         </div>
 
-        </div>
-        <div className="absolute inset-0 z-0 flex flex-row justify-stretch items-stretch h-full w-full">
-          <div className="bg-blue-100 w-full flex items-center justify-center text-blue-100">
-          </div>
-          <div className="bg-green-100 w-full flex items-center justify-center text-green-900">
-          </div>
-          <div className="bg-red-200 w-full flex items-center justify-center text-red-900">
-          </div>
-          <div className="bg-yellow-50 w-full flex items-center justify-center text-yellow-600">
-          </div>
         </div>
       </section>
 

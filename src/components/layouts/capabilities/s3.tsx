@@ -177,7 +177,7 @@ export default function AboutLayout() {
             <MagneticWrapper>
               <Button asChild size="lg" variant="red" >
                 <a href="/case-studies/ai-vision-to-execution" className="flex flex-row space-x-1 items-center font-medium text-left pt-8 pb-8 sm:pt-0 sm:pb-0 text-wrap sm:text-nowrap">
-                  <p className="hidden sm:block">Discover how we turned AI dreams into reality</p>
+                  <p className="hidden sm:block">Discover How We Turned AI Dreams Into Reality</p>
                   <p className="block sm:hidden">Read More</p>
                   <ArrowRight />
                 </a>
@@ -186,8 +186,10 @@ export default function AboutLayout() {
           </div>
         </div>
 
-        <div className={`${notoEmoji.className} sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl mt-12`}>
-          🐛 🦋 🌟
+        <div className={`${notoEmoji.className} flex gap-6 sm:hidden font-noto font-bold text-red-900 relative text-left text-6xl space-x-6 mt-12`}>
+          <div className="size-12 opacity-100">🐛</div>
+          <div className="size-12 opacity-100">🦋</div>
+          <div className="size-12 opacity-100">🌟</div>
         </div>
 
         <div className={`${notoEmoji.className} hidden sm:block font-noto font-bold text-red-900 relative mx-auto w-screen min-h-[30vh]`}>
