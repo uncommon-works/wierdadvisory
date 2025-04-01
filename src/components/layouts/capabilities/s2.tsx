@@ -29,6 +29,7 @@ export default function AboutLayout() {
   const svgRef = useRef<SVGSVGElement>(null)
 
   useEffect(() => {
+
     if (!sectionRef.current || !headingRef.current || !textRef.current) return
 
     const ctx = gsap.context(() => {
@@ -192,6 +193,11 @@ export default function AboutLayout() {
               through these barriers. By creating space to think differently, we help you see solutions that were there
               all along.
             </p>
+            <div className="flex sm:hidden font-noto font-bold text-red-900 relative z-20 text-left text-6xl space-x-6 mt-12">
+            <div className="mobile-emoji">🤔</div>
+            <div className="mobile-emoji">💭</div>
+            <div className="mobile-emoji">💡</div>
+          </div>
             <MagneticWrapper>
               <Button asChild variant="red" size="lg">
                 <a
@@ -206,13 +212,12 @@ export default function AboutLayout() {
             </MagneticWrapper>
           </div>
 
-          <div
-            className={`${notoEmoji.className} flex sm:hidden font-noto font-bold text-red-900 relative z-20 text-left text-6xl space-x-6 mt-12`}
-          >
+          <div className="flex sm:hidden font-noto font-bold text-red-900 relative z-20 text-left text-6xl space-x-6 mt-12">
             <div className="mobile-emoji">🤔</div>
             <div className="mobile-emoji">💭</div>
             <div className="mobile-emoji">💡</div>
           </div>
+
         </div>
 
         {/* Large screen emoji */}
